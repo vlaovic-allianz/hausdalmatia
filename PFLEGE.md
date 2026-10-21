@@ -40,7 +40,12 @@ Skript lahm – genau das war der Fehler der Version vom 07.10.2026.
   bitte neue Fotos in voller Kameraauflösung aufnehmen (Handy reicht, querformatig, bei gutem Licht).
 - Umgebungsfotos (Zadar, Krka, Kornaten): Wikimedia Commons, CC0 bzw. gemeinfrei – geprüft am 21.10.2026.
   Strand- und Wassersportfoto stammen von der eigenen Website; bitte bestätigen, dass sie selbst aufgenommen wurden.
-- Titelbild: vier Fotos blenden nacheinander über (`TITELBILD` im Skript). Reihenfolge = Reihenfolge der `hero-bg`-Bilder im HTML.
+- **Titelfilm** (`bilder/film/`): 21 Sekunden, nahtlose Schleife aus den aufgewerteten Fotos (Balkon, Pool, Strand, Pool mit Palme), ruhige Kamerafahrten.
+  Querformat 1920 × 1080 für Computer, Hochformat 720 × 1280 für Handys, jeweils als MP4 (H.264) und WebM (VP9).
+  Er wird erst nach dem Laden der Seite geholt und nicht im Datensparmodus, bei sehr langsamer Verbindung oder bei „Bewegung reduzieren“ –
+  dann blenden die vier Fotos wie bisher über. Der Pause-Knopf hält auch den Film an.
+  Neu erzeugen (z. B. mit neuen Fotos): Skript `werkzeuge/film.py` (Python + Pillow + ffmpeg); die Kamerafahrten stehen dort in `SHOTS`.
+  Echte 4K-Qualität braucht 4K-Ausgangsmaterial (Video oder Fotos ab ca. 4.000 px Breite).
 
 ## Suchmaschinen & KI-Assistenten
 

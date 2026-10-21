@@ -136,8 +136,11 @@ nav.scrolled .burger span{background:var(--sea)}
 .hero-slides{position:absolute;inset:0}
 .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.6s ease}
 .hero-bg.is-on{opacity:1;animation:drift 9s ease-out both}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.8s ease;pointer-events:none}
+.hero-video.on{opacity:1}
 .hero-cap{position:absolute;z-index:3;right:max(24px,env(safe-area-inset-right,0px));bottom:96px;display:flex;align-items:center;gap:14px;color:rgba(255,255,255,.85);font-size:13.5px;font-weight:500}
 .hero-cap .dots{display:flex;gap:6px}
+.hero-cap .dots[hidden]{display:none}
 .hero-cap .dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.4);transition:background .4s,width .4s}
 .hero-cap .dots i.on{background:#fff;width:20px;border-radius:4px}
 .hero:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,40,52,.55) 0%,rgba(15,40,52,.12) 32%,rgba(15,40,52,.2) 55%,rgba(15,40,52,.78) 100%)}
@@ -1052,6 +1055,7 @@ html.lenis{scroll-behavior:auto}
 <img alt="Heated pool at Haus Dalmatia in Bibinje near Zadar" class="hero-bg" data-i18n-alt="alt.pool1" data-src="../bilder/web/hero-pool-1600.webp" data-srcset="../bilder/web/hero-pool-960.webp 960w, ../bilder/web/hero-pool-1600.webp 1600w" height="1067" width="1600"/>
 <img alt="Pool in the evening" class="hero-bg" data-i18n-alt="alt.pool2" data-src="../bilder/web/hero-abend-1600.webp" data-srcset="../bilder/web/hero-abend-960.webp 960w, ../bilder/web/hero-abend-1600.webp 1600w" height="1067" width="1600"/>
 <img alt="Pebble beach in Bibinje" class="hero-bg" data-i18n-alt="alt.plaza" data-src="../bilder/web/hero-strand-1600.webp" data-srcset="../bilder/web/hero-strand-960.webp 960w, ../bilder/web/hero-strand-1600.webp 1600w" height="1067" width="1600"/>
+<video class="hero-video" data-src="../bilder/film/titelfilm-quer.mp4" data-src-m="../bilder/film/titelfilm-hoch.mp4" loop="" muted="" playsinline="" preload="none" tabindex="-1"></video>
 </div>
 <span aria-hidden="true" class="hero-frame"></span>
 <a aria-hidden="true" class="scroll-cue" href="#main" tabindex="-1"><span data-i18n="hero.scroll">Discover</span><i></i></a>
@@ -2418,13 +2422,14 @@ addEventListener('keydown', function(e){ if (e.key === 'Escape'){ if (lb.classLi
 (function(){
   var slides = Array.prototype.slice.call(document.querySelectorAll('.hero-bg'));
   var dots = document.querySelectorAll('#heroDots i'), cap = $('heroCap'), i = 0, timer;
-  var pb = $('heroPause'), paused = false;
+  var pb = $('heroPause'), paused = false, vid = document.querySelector('.hero-video'), film = false;
   if (slides.length < 2 || matchMedia('(prefers-reduced-motion: reduce)').matches){ $('heroDots').hidden = true; return; }
   pb.hidden = false; pb.setAttribute('aria-label', T[curLang].pause);
   pb.addEventListener('click', function(){
     paused = !paused;
     pb.setAttribute('aria-label', paused ? T[curLang].play : T[curLang].pause);
     pb.querySelector('use').setAttribute('href', paused ? '#i-play' : '#i-pause');
+    if (film){ if (paused) vid.pause(); else vid.play().catch(function(){}); }
   });
   function show(n){
     slides[i].classList.remove('is-on'); dots[i].classList.remove('on');
@@ -2432,9 +2437,32 @@ addEventListener('keydown', function(e){ if (e.key === 'Escape'){ if (lb.classLi
     cap.textContent = slides[i].alt;
   }
   function next(){ var n = (i + 1) % slides.length; if (slides[n].complete && slides[n].naturalWidth) show(n); }
-  addEventListener('load', function(){
+  // Ersatz, falls der Film nicht läuft: Fotos überblenden
+  function startSlides(){
+    if (timer || film) return;
     slides.forEach(function(s){ if (s.dataset.src){ s.sizes = '100vw'; if (s.dataset.srcset) s.srcset = s.dataset.srcset; s.src = s.dataset.src; } });
     timer = setInterval(function(){ if (!document.hidden && !paused) next(); }, 6500);
+  }
+  // Titelfilm erst nach dem Laden der Seite holen; nicht bei Datensparmodus oder sehr langsamer Verbindung
+  addEventListener('load', function(){
+    var c = navigator.connection || {};
+    // MP4 (H.264) für Safari, Chrome, Edge; WebM (VP9) für Browser ohne H.264
+    var fmt = !vid ? '' : vid.canPlayType('video/mp4; codecs="avc1.640028"') ? 'mp4' : vid.canPlayType('video/webm; codecs="vp9"') ? 'webm' : '';
+    var ok = fmt && !c.saveData && !/2g/.test(c.effectiveType || '');
+    if (!ok){ startSlides(); return; }
+    vid.muted = true;
+    vid.addEventListener('playing', function(){
+      if (film) return; film = true;
+      clearInterval(timer); vid.classList.add('on'); $('heroDots').hidden = true; cap.textContent = '';
+    });
+    vid.addEventListener('error', startSlides);
+    vid.src = (matchMedia('(max-aspect-ratio: 4/5)').matches ? vid.dataset.srcM : vid.dataset.src).replace(/mp4$/, fmt);
+    var pr = vid.play(); if (pr && pr.catch) pr.catch(startSlides);
+    // Außerhalb des Bildschirms anhalten (spart Akku)
+    if ('IntersectionObserver' in window) new IntersectionObserver(function(es){
+      if (!film || paused) return;
+      if (es[0].isIntersecting) vid.play().catch(function(){}); else vid.pause();
+    }).observe(vid);
   });
 })();
 /* =====================================================================

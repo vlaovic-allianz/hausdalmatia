@@ -32,7 +32,7 @@ def load_i18n(src):
 def relink(soup):
     """Pfade auf Bilder, Schriften und Unterseiten eine Ebene höher legen (../)."""
     for el in soup.find_all(True):
-        for attr in ('src', 'href', 'data-src', 'data-full', 'srcset', 'data-srcset', 'imagesrcset'):
+        for attr in ('src', 'href', 'data-src', 'data-src-m', 'data-full', 'srcset', 'data-srcset', 'imagesrcset'):
             v = el.get(attr)
             if not v:
                 continue
