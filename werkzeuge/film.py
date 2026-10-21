@@ -1,5 +1,5 @@
 """Titelfilm aus den aufgewerteten Fotos: ruhige Kamerafahrten mit Überblendungen, nahtlose Schleife.
-python3 film.py quer|hoch|quer4k  -> schreibt MP4 (H.264) nach scratchpad/film/"""
+python3 werkzeuge/film.py quer|hoch|quer4k [webm]  -> schreibt MP4 (H.264) bzw. WebM (VP9) nach bilder/film/"""
 import math, subprocess, sys, os
 from PIL import Image, ImageEnhance
 
