@@ -4,6 +4,18 @@ Die Startseite ist eine einzelne, statische Datei (`index.html`) ohne externe Ab
 Schriften (Marcellus für Überschriften, Figtree für Text) liegen in `fonts/`, Icons (Lucide, ISC-Lizenz) als SVG-Sprite in `index.html`, optimierte Bilder in `bilder/web/` (WebP). Es werden keine Cookies
 gesetzt und keine Drittanbieter geladen.
 
+## Sprachversionen (wichtig)
+
+`index.html` ist die **deutsche Quelle**. Die Seiten `en/`, `pl/` und `hr/` werden daraus erzeugt:
+
+```
+python3 build.py
+```
+
+Nach **jeder** Änderung an `index.html` (Texte, Bilder, Übersetzungen) einmal ausführen und die erzeugten Dateien mit veröffentlichen.
+Das Skript bricht ab, wenn das Übersetzungsobjekt einen Syntaxfehler hat, und meldet fehlende Übersetzungen.
+Eine neue Sprache (z. B. Tschechisch) = neuer Block `cs:{…}` in `I18N` + Eintrag in `LOCALES` in `build.py` + Link im Sprachumschalter.
+
 ## Häufige Änderungen
 
 | Was | Wo |
@@ -11,7 +23,7 @@ gesetzt und keine Drittanbieter geladen.
 | „ab“-Preise pro Apartment | `index.html` → Block `EINSTELLUNGEN` → `prices: { More: 180, … }` (`null` = „Preis auf Anfrage“) |
 | Webhook für Anfragen (Make, n8n, Brevo …) | `index.html` → `EINSTELLUNGEN` → `formEndpoint` |
 | Deutsche Texte | direkt im HTML |
-| Englisch / Polnisch / Kroatisch | `index.html` → Objekt `I18N` (`en`, `pl`, `hr`) – gleicher Schlüssel wie `data-i18n` im HTML |
+| Englisch / Polnisch / Kroatisch | `index.html` → Objekt `I18N` (`en`, `pl`, `hr`) – gleicher Schlüssel wie `data-i18n` im HTML, danach `python3 build.py` |
 | Impressum / Datenschutz | `impressum.html`, `datenschutz.html` (Felder in `[ … ]` ergänzen) |
 
 Neue Bilder: in `bilder/` ablegen, dann als WebP in 800 px und 1400 px Breite nach `bilder/web/` exportieren.
