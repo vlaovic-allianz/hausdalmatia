@@ -1,7 +1,7 @@
 # Haus Dalmatia – Pflege der Website
 
 Die Startseite ist eine einzelne, statische Datei (`index.html`) ohne externe Abhängigkeiten:
-Schriften (Marcellus für Überschriften, Figtree für Text) liegen in `fonts/`, Icons (Lucide, ISC-Lizenz) als SVG-Sprite in `index.html`, optimierte Bilder in `bilder/web/` (WebP). Es werden keine Cookies
+Schriften (Marcellus für Überschriften, Figtree für Text, Cormorant Garamond Kursiv für Akzente und Zitate – alle OFL) liegen in `fonts/`, Icons (Lucide, ISC-Lizenz) als SVG-Sprite in `index.html`, optimierte Bilder in `bilder/web/` (WebP). Es werden keine Cookies
 gesetzt und keine Drittanbieter geladen.
 
 ## Sprachversionen (wichtig)
@@ -61,6 +61,17 @@ Skript lahm – genau das war der Fehler der Version vom 07.10.2026.
 - Nach dem Absenden erscheint eine Rückfallebene („Anfrage kopieren“, E-Mail-Adresse, WhatsApp-Link), falls sich keine App öffnet.
 
 ## Effekte
+
+**Luxus-Details** (Skriptblock `LUXUS`, CSS „LUXUS-DETAILS“):
+- Begrüßungsvorhang mit Monogramm – nur beim ersten Seitenaufruf pro Sitzung, endet nach etwa 2,5 Sekunden auch ohne Skript.
+- Sanftes Scrollen mit Lenis 1.1.20 (MIT-Lizenz, lokal eingebettet, nur mit Maus/Trackpad; Handys scrollen nativ).
+- Eleganter Cursor mit „Ansehen“/„Ziehen“ über Fotos und Galerie (nur Maus), magnetische Gold-Knöpfe.
+- Überschriften gleiten Wort für Wort aus einer Maske; Abschnittsnummern 01–11 erscheinen automatisch.
+- „Ein Tag im Haus Dalmatia“ (`#tag`): auf dem Desktop bleibt der Abschnitt stehen und die fünf Momente fahren seitwärts;
+  auf dem Handy wischt man. Bilder und Texte im HTML bzw. `I18N` (`day.*`).
+- Ausflugskarte: Linien zeichnen sich nacheinander, das Haus pulsiert. Titelbild mit feinem Goldrahmen und „Entdecken“-Hinweis.
+- Alles schaltet sich bei „Bewegung reduzieren“ ab.
+
 
 Überschrift-Animation, Einblenden beim Scrollen, Vorhang-Effekt bei Fotos, Zähler, Parallaxe, goldene
 Fortschrittslinie, Laufband und Lichtspiel auf dem Poolfoto stehen im Skriptblock `EFFEKTE` bzw. im CSS

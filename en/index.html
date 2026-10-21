@@ -4,6 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<script>try{if(!sessionStorage.getItem('hdIntro')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('intro-on');sessionStorage.setItem('hdIntro','1')}}catch(e){}</script>
 <title>Apartments with Heated Pool near Zadar (Bibinje) · Haus Dalmatia</title>
 <meta content="4 holiday apartments with heated pool in Bibinje, 9 km from Zadar: 2–16 guests, garden, playground, parking. Enquire directly with your host." name="description"/>
 <link href="https://hausdalmatia.com/en/" rel="canonical"/>
@@ -39,6 +40,8 @@
    Figtree:   Fließtext, weich und gut lesbar */
 @font-face{font-family:'Marcellus';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/marcellus-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:'Marcellus';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/marcellus-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Cormorant';font-style:italic;font-weight:500;font-display:swap;src:url(../fonts/cormorant-garamond-latin-500-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Cormorant';font-style:italic;font-weight:500;font-display:swap;src:url(../fonts/cormorant-garamond-latin-ext-500-italic.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
 @font-face{font-family:'Figtree';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/figtree-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:'Figtree';font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/figtree-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
 @font-face{font-family:'Figtree';font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/figtree-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
@@ -133,7 +136,6 @@ nav.scrolled .burger span{background:var(--sea)}
 .hero-slides{position:absolute;inset:0}
 .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.6s ease}
 .hero-bg.is-on{opacity:1;animation:drift 9s ease-out both}
-@keyframes drift{from{transform:scale(1.07)}to{transform:scale(1)}}
 .hero-cap{position:absolute;z-index:3;right:max(24px,env(safe-area-inset-right,0px));bottom:96px;display:flex;align-items:center;gap:14px;color:rgba(255,255,255,.85);font-size:13.5px;font-weight:500}
 .hero-cap .dots{display:flex;gap:6px}
 .hero-cap .dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.4);transition:background .4s,width .4s}
@@ -541,6 +543,120 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 .marquee{cursor:pointer}
 .marquee.paused .marquee-track{animation-play-state:paused}
 .nav-contact{display:none}
+/* =====================================================================
+   LUXUS-DETAILS
+   ===================================================================== */
+/* Akzentschrift für hervorgehobene Wörter und Zitate */
+h1 em,h2 em{font-family:'Cormorant',Georgia,serif;font-style:italic;font-weight:500;font-size:1.12em;letter-spacing:-.01em;line-height:.9}
+.rev p{font-family:'Cormorant',Georgia,serif;font-style:italic;font-weight:500;font-size:22px;line-height:1.42;color:var(--sea)}
+.host .q,.apt-quote p,.form-quote p{font-family:'Cormorant',Georgia,serif;font-style:italic;font-weight:500}
+.host .q{font-size:26px;line-height:1.35}
+.apt-quote p{font-size:19px}
+.form-quote p{font-size:22px;line-height:1.4}
+/* Abschnittsnummern im Stil eines Katalogs */
+main{counter-reset:sec}
+main .eyebrow{counter-increment:sec}
+main .eyebrow:before{content:counter(sec,decimal-leading-zero);width:auto;height:auto;flex:none;opacity:1;background:linear-gradient(currentColor,currentColor) right 55%/34px 1px no-repeat;padding-right:46px;font-family:'Cormorant',Georgia,serif;font-style:italic;font-weight:500;font-size:19px;letter-spacing:0;text-transform:none;line-height:1}
+/* Intro-Vorhang */
+.hd-intro{display:none}
+.intro-on .hd-intro{display:flex;position:fixed;inset:0;z-index:300;background:var(--sea-deep);align-items:center;justify-content:center;pointer-events:none;animation:introOut 1s cubic-bezier(.77,0,.18,1) 1.55s forwards}
+.hd-intro-in{display:flex;flex-direction:column;align-items:center;gap:18px;animation:introLift 1s cubic-bezier(.77,0,.18,1) 1.5s forwards}
+.intro-seal{width:96px;height:96px;overflow:visible}
+.intro-seal circle,.intro-seal path{fill:none;stroke:var(--gold-soft);stroke-width:1}
+.intro-seal .s1{stroke-dasharray:352;stroke-dashoffset:352;animation:draw 1.1s cubic-bezier(.65,0,.35,1) .1s forwards}
+.intro-seal .s2{stroke-dasharray:308;stroke-dashoffset:308;opacity:.5;animation:draw 1.1s cubic-bezier(.65,0,.35,1) .25s forwards}
+.intro-seal .s3{opacity:0;animation:fadeIn .6s ease .7s forwards}
+.intro-seal text{font-family:var(--display);font-size:30px;letter-spacing:.08em;fill:var(--gold-soft);opacity:0;animation:fadeIn .8s ease .45s forwards}
+.intro-wm{font-family:var(--display);font-size:22px;letter-spacing:.5em;text-transform:uppercase;color:#fff;padding-left:.36em;opacity:0;animation:wm 1.1s cubic-bezier(.2,.7,.2,1) .55s forwards}
+.intro-sub{font-size:11px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-soft);opacity:0;animation:fadeIn .8s ease .85s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fadeIn{to{opacity:1}}
+@keyframes wm{from{opacity:0;letter-spacing:.7em}to{opacity:1;letter-spacing:.34em}}
+@keyframes introOut{from{clip-path:inset(0 0 0 0)}to{clip-path:inset(0 0 100% 0);visibility:hidden}}
+@keyframes introLift{to{transform:translateY(-40px);opacity:0}}
+.intro-on .hero-content{animation-delay:1.75s}
+html.intro-on.fx .hero h1 .w{animation-delay:calc(1.95s + var(--i) * .09s)}
+.intro-on .hero-bg.is-on{animation:drift 10s cubic-bezier(.2,.7,.2,1) 1.4s both}
+@keyframes drift{from{transform:scale(1.12)}to{transform:scale(1)}}
+/* Titelbild: Passepartout und Scroll-Hinweis */
+.hero-frame{position:absolute;inset:18px;z-index:2;border:1px solid rgba(220,197,156,.3);border-radius:6px;pointer-events:none}
+.scroll-cue{position:absolute;z-index:3;left:max(26px,calc((100vw - 1200px) / 2 - 64px));top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:16px;color:rgba(255,255,255,.8);font-size:11px;font-weight:600;letter-spacing:.3em;text-transform:uppercase}
+.scroll-cue span{writing-mode:vertical-rl;transform:rotate(180deg)}
+.scroll-cue i{position:relative;width:1px;height:70px;background:rgba(255,255,255,.25);overflow:hidden}
+.scroll-cue i:after{content:'';position:absolute;left:0;top:0;width:1px;height:28px;background:var(--gold-soft);animation:cue 2.4s cubic-bezier(.6,0,.3,1) infinite}
+@keyframes cue{from{transform:translateY(-30px)}to{transform:translateY(72px)}}
+@media (max-width: 1279px){ .scroll-cue{display:none} }
+@media (max-width: 640px){ .hero-frame{inset:10px} }
+/* Bilder: feine Innenlinie beim Überfahren */
+.apt-img:after,.gal-item .gi:after,.day-img:after{content:'';position:absolute;inset:14px;border:1px solid rgba(255,255,255,.7);border-radius:4px;opacity:0;transform:scale(1.04);transition:opacity .6s,transform .8s cubic-bezier(.2,.7,.2,1);pointer-events:none}
+.gal-item .gi{position:relative}
+.apt:hover .apt-img:after,.gal-item:hover .gi:after,.day-card:hover .day-img:after{opacity:1;transform:none}
+/* Ein Tag im Haus Dalmatia */
+.day{background:var(--sea-deep);color:#fff;padding-block:104px 90px;position:relative;overflow:clip}
+.day .eyebrow{color:var(--gold-soft)}
+.day h2{color:#fff}
+.day h2 em{color:var(--gold-soft)}
+.day-head{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:end;margin-bottom:46px}
+.day-side p{color:rgba(255,255,255,.72);font-size:17px;margin-bottom:14px}
+.day-hint{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-soft)}
+.day-hint .ic{width:16px;height:16px}
+.day-track{display:flex;gap:28px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 24px 10px max(24px,calc((100vw - 1200px) / 2 + 24px));scroll-padding-inline-start:max(24px,calc((100vw - 1200px) / 2 + 24px));scrollbar-width:none}
+.day-track::-webkit-scrollbar{display:none}
+.day-track:focus-visible{outline-offset:-4px}
+.day-card{flex:0 0 clamp(270px,27vw,400px);scroll-snap-align:start;margin:0}
+.day-card:nth-child(even){margin-top:56px}
+.day-img{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:4/5;background:#163a4b}
+.day-img img{width:100%;height:100%;object-fit:cover;transform:scale(1.14);will-change:transform}
+.day-txt{padding-top:22px}
+.day-time{display:block;font-family:'Cormorant',Georgia,serif;font-style:italic;font-weight:500;font-size:46px;line-height:1;color:var(--gold-soft);margin-bottom:10px}
+.day-txt h3{font-size:26px;margin-bottom:8px;color:#fff}
+.day-txt p{font-size:15.5px;line-height:1.65;color:rgba(255,255,255,.7)}
+.day-bar{height:1px;background:rgba(255,255,255,.14);margin-top:44px;overflow:hidden}
+.day-bar i{display:block;height:1px;background:var(--gold-soft);transform-origin:0 50%;transform:scaleX(0)}
+/* Horizontale Fahrt beim Scrollen (Desktop, nur mit Effekten) */
+@media (min-width: 981px){
+  .fx .day.pinned{padding:0}
+  .fx .day.pinned .day-pin{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:76px}
+  .fx .day.pinned .day-track{overflow:visible;width:max-content;scroll-snap-type:none;will-change:transform}
+  .fx .day.pinned .day-head{margin-bottom:28px}
+  .fx .day.pinned .day-card:nth-child(even){margin-top:40px}
+  .fx .day.pinned .day-time{font-size:40px}
+  .fx .day.pinned .day-img{aspect-ratio:auto;height:clamp(200px,38vh,440px)}
+  .fx .day.pinned .day-card{flex-basis:clamp(300px,25vw,380px)}
+  .fx .day.pinned .day-bar{margin-top:30px}
+}
+@media (max-width: 980px){
+  .day-head{grid-template-columns:1fr;gap:10px}
+  .day-card:nth-child(even){margin-top:0}
+  .day-card{flex-basis:78vw}
+}
+/* Überschriften gleiten aus einer Maske */
+.fx h2.mk .wm{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .08em .14em;margin:0 -.08em -.14em}
+.fx h2.mk .wi{display:inline-block;transform:translateY(112%);transition:transform 1.15s cubic-bezier(.2,.75,.15,1);transition-delay:calc(.08s + var(--i) * .055s)}
+.fx h2.mk.in .wi{transform:none}
+/* Karte: Linien zeichnen sich, Haus pulsiert */
+.fx .ex-map.mk-map .ray{stroke-dasharray:var(--len);stroke-dashoffset:var(--len);transition:stroke-dashoffset 1.4s cubic-bezier(.65,0,.35,1);transition-delay:calc(.2s + var(--i) * .07s)}
+.fx .ex-map.mk-map .pt{opacity:0;transition:opacity .5s;transition-delay:calc(.9s + var(--i) * .07s)}
+.fx .ex-map.mk-map.in .ray{stroke-dashoffset:0}
+.fx .ex-map.mk-map.in .pt{opacity:1}
+.ex-map .pulse{fill:none;stroke:var(--gold);stroke-width:1.5;transform-origin:300px 300px;animation:pulse 2.8s cubic-bezier(.2,.7,.2,1) infinite}
+@keyframes pulse{from{transform:scale(.6);opacity:.9}to{transform:scale(2.6);opacity:0}}
+/* Eleganter Cursor (nur Maus) */
+.cur,.cur-ring{position:fixed;left:0;top:0;z-index:400;pointer-events:none;border-radius:50%;opacity:0;transition:opacity .3s}
+.cur{width:6px;height:6px;margin:-3px 0 0 -3px;background:var(--gold)}
+.cur-ring{width:40px;height:40px;margin:-20px 0 0 -20px;border:1px solid rgba(180,143,85,.55);display:flex;align-items:center;justify-content:center;transition:opacity .3s,width .45s cubic-bezier(.2,.7,.2,1),height .45s cubic-bezier(.2,.7,.2,1),margin .45s cubic-bezier(.2,.7,.2,1),background .35s,border-color .35s}
+.cur-ring span{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#fff;opacity:0;transition:opacity .25s}
+.cur-on .cur,.cur-on .cur-ring{opacity:1}
+.cur-ring.link{width:58px;height:58px;margin:-29px 0 0 -29px;background:rgba(180,143,85,.12);border-color:rgba(180,143,85,.8)}
+.cur-ring.label{width:96px;height:96px;margin:-48px 0 0 -48px;background:rgba(15,40,52,.72);border-color:rgba(220,197,156,.5);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.cur-ring.label span{opacity:1}
+.cur-on .gal-track,.cur-on .gal-track img{cursor:none}
+/* Sanftes Scrollen (Lenis) */
+html.lenis,html.lenis body{height:auto}
+html.lenis{scroll-behavior:auto}
+.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}
+.lenis.lenis-stopped{overflow:clip}
+@media (prefers-reduced-motion: reduce){ .hd-intro{display:none!important} .scroll-cue i:after,.ex-map .pulse{animation:none} }
 /* ---------- Responsive ---------- */
 @media(max-width:1140px){
   .nav-links{gap:20px}
@@ -848,6 +964,13 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 <script id="ld-faq" type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How far is it to the sea?", "acceptedAnswer": {"@type": "Answer", "text": "The beach and the riva of Bibinje are a few minutes’ walk away. Bibinje has several pebble beaches with views of the islands off Zadar – at Punta beach you can also rent SUP boards."}}, {"@type": "Question", "name": "Is the pool heated – and from when?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The outdoor pool is heated and the water temperature is adjustable, so it is pleasant from the pre-season into autumn. We are happy to give you exact details for your travel dates."}}, {"@type": "Question", "name": "Which apartment is right for us?", "acceptedAnswer": {"@type": "Answer", "text": "For couples the studio Zora (up to 2 guests), for small families Maslina or Riva (up to 4 guests), for larger families and friends the apartment More with three bedrooms and three bathrooms (up to 6 guests). Groups of up to 16 can enquire about several or all apartments."}}, {"@type": "Question", "name": "Is the house suitable for children?", "acceptedAnswer": {"@type": "Answer", "text": "Very much so. The garden has a children’s playground and a covered play area with table tennis; we provide a baby cot (0–3 years) free of charge. Let us know your children’s ages when you enquire."}}, {"@type": "Question", "name": "What is the best way to get there?", "acceptedAnswer": {"@type": "Answer", "text": "Zadar Airport (ZAD) is about 13 km away and has seasonal direct flights from Germany, Austria, Switzerland and many other countries. We can arrange an airport transfer on request. By car you reach Bibinje via the A1 motorway; parking at the house is free. We recommend a car for trips to the national parks."}}, {"@type": "Question", "name": "When are check-in and check-out?", "acceptedAnswer": {"@type": "Answer", "text": "Check-in is between 2:30 pm and 11:30 pm, check-out until 10:00 am. Please let us know your expected arrival time in advance – and we will welcome you personally."}}, {"@type": "Question", "name": "What are the house rules?", "acceptedAnswer": {"@type": "Answer", "text": "The house is non-smoking, and unfortunately pets are not allowed. Parties and stag or hen events are not possible; quiet hours are from 10 pm to 8 am – so that all guests can enjoy their holiday."}}, {"@type": "Question", "name": "How does booking direct work?", "acceptedAnswer": {"@type": "Answer", "text": "You send us your travel dates, we check availability and send you a personal offer with the final price. With your confirmation and the agreed deposit the booking is fixed. Payment and cancellation terms are stated transparently in the offer."}}, {"@type": "Question", "name": "What is included in the price?", "acceptedAnswer": {"@type": "Answer", "text": "Bed linen, towels, Wi-Fi, air conditioning, parking and use of the pool, garden, playground and barbecue. The statutory tourist tax is shown transparently in the offer."}}, {"@type": "Question", "name": "In which languages can I enquire?", "acceptedAnswer": {"@type": "Answer", "text": "In German, Croatian or English – via WhatsApp, email, phone or the enquiry form."}}, {"@type": "Question", "name": "Can we rent the whole house?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Together, all four apartments sleep up to 16 guests – ideal for family reunions or groups of friends. You then share the pool, garden and barbecue area only among yourselves. Send us your dates and we will check availability for all apartments."}}, {"@type": "Question", "name": "How far are Zadar and the airport?", "acceptedAnswer": {"@type": "Answer", "text": "Zadar old town is 9 km away, about 15 minutes by car. Zadar Airport (ZAD) is 13 km away, around 15–20 minutes. Krka National Park is about an hour’s drive, the Plitvice Lakes around two hours."}}]}</script>
 </head>
 <body>
+<div aria-hidden="true" class="hd-intro">
+<div class="hd-intro-in">
+<svg class="intro-seal" viewbox="0 0 120 120"><circle class="s1" cx="60" cy="60" r="56"></circle><circle class="s2" cx="60" cy="60" r="49"></circle><path class="s3" d="M60 4v8M60 108v8M4 60h8M108 60h8"></path><text text-anchor="middle" x="60" y="71">HD</text></svg>
+<span class="intro-wm">Haus Dalmatia</span>
+<span class="intro-sub" data-i18n="logo.sub">Bibinje · Dalmatia</span>
+</div>
+</div>
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg"><!-- Icons: Lucide (ISC-Lizenz), lucide.dev -->
 <symbol id="i-pause" viewbox="0 0 24 24"><rect height="16" rx="1" width="4" x="14" y="4"></rect><rect height="16" rx="1" width="4" x="6" y="4"></rect></symbol>
 <symbol id="i-play" viewbox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"></polygon></symbol>
@@ -930,6 +1053,8 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 <img alt="Pool in the evening" class="hero-bg" data-i18n-alt="alt.pool2" data-src="../bilder/web/hero-abend-1600.webp" data-srcset="../bilder/web/hero-abend-960.webp 960w, ../bilder/web/hero-abend-1600.webp 1600w" height="1067" width="1600"/>
 <img alt="Pebble beach in Bibinje" class="hero-bg" data-i18n-alt="alt.plaza" data-src="../bilder/web/hero-strand-1600.webp" data-srcset="../bilder/web/hero-strand-960.webp 960w, ../bilder/web/hero-strand-1600.webp 1600w" height="1067" width="1600"/>
 </div>
+<span aria-hidden="true" class="hero-frame"></span>
+<a aria-hidden="true" class="scroll-cue" href="#main" tabindex="-1"><span data-i18n="hero.scroll">Discover</span><i></i></a>
 <div class="hero-cap"><button aria-label="Diashow anhalten" class="hero-pause" hidden="" id="heroPause" type="button"><svg class="ic"><use href="#i-pause"></use></svg></button><span aria-hidden="true" id="heroCap">Meerblick vom Balkon – Haus Dalmatia, Bibinje</span><span aria-hidden="true" class="dots" id="heroDots"><i class="on"></i><i></i><i></i><i></i></span></div>
 <div class="wrap hero-content">
 <a class="rating" href="#reviews"><b>9,9</b><span data-i18n="hero.rating">Exceptional · 44 reviews on Booking.com</span></a>
@@ -1089,6 +1214,34 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 <div class="am"><span class="ic-c"><svg class="ic"><use href="#i-towel"></use></svg></span><div><b data-i18n="am.8h">Bed linen &amp; towels</b><span data-i18n="am.8p">included</span></div></div>
 </div>
 </div>
+</div>
+</section>
+<!-- ======= EIN TAG IM HAUS DALMATIA ======= -->
+<section class="day" id="tag">
+<div class="day-pin">
+<div class="wrap day-head">
+<div>
+<span class="eyebrow" data-i18n="day.eyebrow">A day at Haus Dalmatia</span>
+<h2 class="h2" data-i18n="day.h2">From the first coffee <em>to sunset.</em></h2>
+</div>
+<div class="day-side">
+<p data-i18n="day.p">This is what a summer day here feels like – between the pool, the sea and Zadar’s old town.</p>
+<span class="day-hint"><span data-i18n="day.hint">Five moments of a summer day</span><svg class="ic"><use href="#i-arrow"></use></svg></span>
+</div>
+</div>
+<div aria-label="Ein Tag im Haus Dalmatia" class="day-track" id="dayTrack" role="group" tabindex="0">
+<article class="day-card"><div class="day-img"><img alt="Sea view from the balcony – Haus Dalmatia, Bibinje" data-i18n-alt="alt.view" decoding="async" height="1000" loading="lazy" sizes="(max-width: 980px) 78vw, 30vw" src="../bilder/web/hero-meerblick-960.webp" srcset="../bilder/web/hero-meerblick-960.webp 960w, ../bilder/web/hero-meerblick-1600.webp 1600w" width="800"/></div>
+<div class="day-txt"><span class="day-time">07:30</span><h3 data-i18n="day.1h">First coffee</h3><p data-i18n="day.1p">On the balcony or terrace, while the light over Bibinje is still soft and the garden lies in morning shade.</p></div></article>
+<article class="day-card"><div class="day-img"><img alt="Pebble beach in Bibinje" data-i18n-alt="alt.plaza" decoding="async" height="1000" loading="lazy" sizes="(max-width: 980px) 78vw, 30vw" src="../bilder/web/strand-bibinje-800.webp" srcset="../bilder/web/strand-bibinje-800.webp 800w, ../bilder/web/strand-bibinje-1400.webp 1400w" width="800"/></div>
+<div class="day-txt"><span class="day-time">10:00</span><h3 data-i18n="day.2h">To the sea</h3><p data-i18n="day.2p">A few minutes’ walk to Bibinje’s pebble beaches – for swimming, snorkelling or a paddle on the SUP.</p></div></article>
+<article class="day-card"><div class="day-img"><img alt="Heated pool at Haus Dalmatia in Bibinje near Zadar" data-i18n-alt="alt.pool1" decoding="async" height="1000" loading="lazy" sizes="(max-width: 980px) 78vw, 30vw" src="../bilder/web/pool-800.webp" srcset="../bilder/web/pool-800.webp 800w, ../bilder/web/pool-1400.webp 1400w" width="800"/></div>
+<div class="day-txt"><span class="day-time">14:00</span><h3 data-i18n="day.3h">Siesta by the pool</h3><p data-i18n="day.3p">When the midday heat arrives: a dip in the heated pool, a book in the shade, the children at the playground.</p></div></article>
+<article class="day-card"><div class="day-img"><img alt="Sunset in Zadar" data-i18n-alt="alt.zadar" decoding="async" height="1000" loading="lazy" sizes="(max-width: 980px) 78vw, 30vw" src="../bilder/web/zadar-800.webp" srcset="../bilder/web/zadar-800.webp 800w, ../bilder/web/zadar-1400.webp 1400w" width="800"/></div>
+<div class="day-txt"><span class="day-time">18:00</span><h3 data-i18n="day.4h">Zadar old town</h3><p data-i18n="day.4p">Fifteen minutes to the old town: the Roman Forum, St Anastasia’s Cathedral and lanes of white limestone.</p></div></article>
+<article class="day-card"><div class="day-img"><img alt="Pool in the evening" data-i18n-alt="alt.pool2" decoding="async" height="1000" loading="lazy" sizes="(max-width: 980px) 78vw, 30vw" src="../bilder/web/pool-abend-800.webp" srcset="../bilder/web/pool-abend-800.webp 800w, ../bilder/web/pool-abend-1400.webp 1400w" width="800"/></div>
+<div class="day-txt"><span class="day-time">20:30</span><h3 data-i18n="day.5h">Greeting to the Sun</h3><p data-i18n="day.5p">In the evening Zadar’s Sea Organ plays – or you stay by the pool and watch the sky glow over the Adriatic.</p></div></article>
+</div>
+<div class="wrap"><div aria-hidden="true" class="day-bar"><i id="dayBar"></i></div></div>
 </div>
 </section>
 <!-- ======= GALERIE ======= -->
@@ -1251,7 +1404,7 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 <div class="ex-bottom">
 <figure class="ex-mapbox">
 <h3 data-i18n="ex.map.h">Everything within reach</h3>
-<svg aria-labelledby="exMapT" class="ex-map" role="img" viewbox="0 0 600 600"><title id="exMapT">Karte der Ausflugsziele rund um Bibinje</title><circle class="ring" cx="300" cy="300" r="71.2"></circle><text class="rl" text-anchor="end" x="245.7" y="364.3">10 km</text><circle class="ring" cx="300" cy="300" r="159.1"></circle><text class="rl" text-anchor="end" x="183.5" y="426.5">50 km</text><circle class="ring" cx="300" cy="300" r="225.0"></circle><text class="rl" text-anchor="end" x="136.9" y="473.1">100 km</text><circle class="ring" cx="300" cy="300" r="275.6"></circle><text class="rl" text-anchor="end" x="101.2" y="508.8">150 km</text><path class="north" d="M34 16 l8 18 h-16z"></path><text class="nl" text-anchor="middle" x="34" y="50">N</text><line class="ray" x1="300" x2="255.4" y1="300" y2="260.1"></line><circle class="pt" cx="255.4" cy="260.1" r="6"></circle><text class="pl" text-anchor="end" x="245.4" y="248.1">Zadar</text><line class="ray" x1="300" x2="237.2" y1="300" y2="294.1"></line><circle class="pt" cx="237.2" cy="294.1" r="6"></circle><text class="pl" text-anchor="end" x="227.2" y="310.1">Ugljan</text><line class="ray" x1="300" x2="259.5" y1="300" y2="207.0"></line><circle class="pt" cx="259.5" cy="207.0" r="6"></circle><text class="pl" text-anchor="end" x="249.5" y="212.0">Nin</text><line class="ray" x1="300" x2="237.8" y1="300" y2="162.8"></line><circle class="pt" cx="237.8" cy="162.8" r="6"></circle><text class="pl" text-anchor="end" x="227.8" y="167.8">Pag</text><line class="ray" x1="300" x2="355.5" y1="300" y2="197.3"></line><circle class="pt" cx="355.5" cy="197.3" r="6"></circle><text class="pl" text-anchor="start" x="365.5" y="202.3">Paklenica</text><line class="ray" x1="300" x2="360.0" y1="300" y2="88.5"></line><circle class="pt" cx="360.0" cy="88.5" r="6"></circle><text class="pl" text-anchor="start" x="370.0" y="93.5">Plitvice</text><line class="ray" x1="300" x2="393.7" y1="300" y2="381.1"></line><circle class="pt" cx="393.7" cy="381.1" r="6"></circle><text class="pl" text-anchor="middle" x="393.7" y="368.1">Vransko jezero</text><line class="ray" x1="300" x2="455.1" y1="300" y2="385.2"></line><circle class="pt" cx="455.1" cy="385.2" r="6"></circle><text class="pl" text-anchor="start" x="465.1" y="377.2">Krka</text><line class="ray" x1="300" x2="438.9" y1="300" y2="407.8"></line><circle class="pt" cx="438.9" cy="407.8" r="6"></circle><text class="pl" text-anchor="start" x="448.9" y="427.8">Šibenik</text><line class="ray" x1="300" x2="308.2" y1="300" y2="419.2"></line><circle class="pt" cx="308.2" cy="419.2" r="6"></circle><text class="pl" text-anchor="start" x="318.2" y="427.2">Kornati</text><line class="ray" x1="300" x2="256.0" y1="300" y2="396.9"></line><circle class="pt" cx="256.0" cy="396.9" r="6"></circle><text class="pl" text-anchor="end" x="246.0" y="402.9">Telašćica</text><circle class="home" cx="300" cy="300" r="10"></circle><circle class="homec" cx="300" cy="300" r="4"></circle><text class="hl" x="314" y="286">Haus Dalmatia</text></svg>
+<svg aria-labelledby="exMapT" class="ex-map" role="img" viewbox="0 0 600 600"><title id="exMapT">Karte der Ausflugsziele rund um Bibinje</title><circle class="ring" cx="300" cy="300" r="71.2"></circle><text class="rl" text-anchor="end" x="245.7" y="364.3">10 km</text><circle class="ring" cx="300" cy="300" r="159.1"></circle><text class="rl" text-anchor="end" x="183.5" y="426.5">50 km</text><circle class="ring" cx="300" cy="300" r="225.0"></circle><text class="rl" text-anchor="end" x="136.9" y="473.1">100 km</text><circle class="ring" cx="300" cy="300" r="275.6"></circle><text class="rl" text-anchor="end" x="101.2" y="508.8">150 km</text><path class="north" d="M34 16 l8 18 h-16z"></path><text class="nl" text-anchor="middle" x="34" y="50">N</text><line class="ray" x1="300" x2="255.4" y1="300" y2="260.1"></line><circle class="pt" cx="255.4" cy="260.1" r="6"></circle><text class="pl" text-anchor="end" x="245.4" y="248.1">Zadar</text><line class="ray" x1="300" x2="237.2" y1="300" y2="294.1"></line><circle class="pt" cx="237.2" cy="294.1" r="6"></circle><text class="pl" text-anchor="end" x="227.2" y="310.1">Ugljan</text><line class="ray" x1="300" x2="259.5" y1="300" y2="207.0"></line><circle class="pt" cx="259.5" cy="207.0" r="6"></circle><text class="pl" text-anchor="end" x="249.5" y="212.0">Nin</text><line class="ray" x1="300" x2="237.8" y1="300" y2="162.8"></line><circle class="pt" cx="237.8" cy="162.8" r="6"></circle><text class="pl" text-anchor="end" x="227.8" y="167.8">Pag</text><line class="ray" x1="300" x2="355.5" y1="300" y2="197.3"></line><circle class="pt" cx="355.5" cy="197.3" r="6"></circle><text class="pl" text-anchor="start" x="365.5" y="202.3">Paklenica</text><line class="ray" x1="300" x2="360.0" y1="300" y2="88.5"></line><circle class="pt" cx="360.0" cy="88.5" r="6"></circle><text class="pl" text-anchor="start" x="370.0" y="93.5">Plitvice</text><line class="ray" x1="300" x2="393.7" y1="300" y2="381.1"></line><circle class="pt" cx="393.7" cy="381.1" r="6"></circle><text class="pl" text-anchor="middle" x="393.7" y="368.1">Vransko jezero</text><line class="ray" x1="300" x2="455.1" y1="300" y2="385.2"></line><circle class="pt" cx="455.1" cy="385.2" r="6"></circle><text class="pl" text-anchor="start" x="465.1" y="377.2">Krka</text><line class="ray" x1="300" x2="438.9" y1="300" y2="407.8"></line><circle class="pt" cx="438.9" cy="407.8" r="6"></circle><text class="pl" text-anchor="start" x="448.9" y="427.8">Šibenik</text><line class="ray" x1="300" x2="308.2" y1="300" y2="419.2"></line><circle class="pt" cx="308.2" cy="419.2" r="6"></circle><text class="pl" text-anchor="start" x="318.2" y="427.2">Kornati</text><line class="ray" x1="300" x2="256.0" y1="300" y2="396.9"></line><circle class="pt" cx="256.0" cy="396.9" r="6"></circle><text class="pl" text-anchor="end" x="246.0" y="402.9">Telašćica</text><circle class="pulse" cx="300" cy="300" r="10"></circle><circle class="home" cx="300" cy="300" r="10"></circle><circle class="homec" cx="300" cy="300" r="4"></circle><text class="hl" x="314" y="286">Haus Dalmatia</text></svg>
 <figcaption data-i18n="ex.map.note">Location of the destinations from Haus Dalmatia – straight-line distance, schematic. Driving times without traffic.</figcaption>
 </figure>
 <div class="ex-side">
@@ -1422,6 +1575,10 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 <!-- ======= LIGHTBOX ======= -->
 <div aria-label="Bild" aria-modal="true" class="lb" id="lb" role="dialog"><button aria-label="Schließen" class="lb-close" type="button">×</button><button aria-label="Zurück" class="lb-nav lb-prev" type="button">‹</button><figure><img alt="" id="lbImg" src="data:,"/><figcaption><b id="lbCount"></b><span id="lbCap"></span></figcaption></figure><button aria-label="Weiter" class="lb-nav lb-next" type="button">›</button></div>
 <script>
+/*! Lenis 1.1.20 – sanftes Scrollen · MIT-Lizenz · (c) darkroom.engineering · https://github.com/darkroomengineering/lenis */
+function t(t,i,e){return Math.max(t,Math.min(i,e))}var i=class{isRunning=!1;value=0;from=0;to=0;currentTime=0;lerp;duration;easing;onUpdate;advance(i){if(!this.isRunning)return;let e=!1;if(this.duration&&this.easing){this.currentTime+=i;const s=t(0,this.currentTime/this.duration,1);e=s>=1;const o=e?1:this.easing(s);this.value=this.from+(this.to-this.from)*o}else this.lerp?(this.value=function(t,i,e,s){return function(t,i,e){return(1-e)*t+e*i}(t,i,1-Math.exp(-e*s))}(this.value,this.to,60*this.lerp,i),Math.round(this.value)===this.to&&(this.value=this.to,e=!0)):(this.value=this.to,e=!0);e&&this.stop(),this.onUpdate?.(this.value,e)}stop(){this.isRunning=!1}fromTo(t,i,{lerp:e,duration:s,easing:o,onStart:n,onUpdate:r}){this.from=this.value=t,this.to=i,this.lerp=e,this.duration=s,this.easing=o,this.currentTime=0,this.isRunning=!0,n?.(),this.onUpdate=r}};var e=class{constructor(t,i,{autoResize:e=!0,debounce:s=250}={}){this.wrapper=t,this.content=i,e&&(this.debouncedResize=function(t,i){let e;return function(...s){let o=this;clearTimeout(e),e=setTimeout((()=>{e=void 0,t.apply(o,s)}),i)}}(this.resize,s),this.wrapper instanceof Window?window.addEventListener("resize",this.debouncedResize,!1):(this.wrapperResizeObserver=new ResizeObserver(this.debouncedResize),this.wrapperResizeObserver.observe(this.wrapper)),this.contentResizeObserver=new ResizeObserver(this.debouncedResize),this.contentResizeObserver.observe(this.content)),this.resize()}width=0;height=0;scrollHeight=0;scrollWidth=0;debouncedResize;wrapperResizeObserver;contentResizeObserver;destroy(){this.wrapperResizeObserver?.disconnect(),this.contentResizeObserver?.disconnect(),this.wrapper===window&&this.debouncedResize&&window.removeEventListener("resize",this.debouncedResize,!1)}resize=()=>{this.onWrapperResize(),this.onContentResize()};onWrapperResize=()=>{this.wrapper instanceof Window?(this.width=window.innerWidth,this.height=window.innerHeight):(this.width=this.wrapper.clientWidth,this.height=this.wrapper.clientHeight)};onContentResize=()=>{this.wrapper instanceof Window?(this.scrollHeight=this.content.scrollHeight,this.scrollWidth=this.content.scrollWidth):(this.scrollHeight=this.wrapper.scrollHeight,this.scrollWidth=this.wrapper.scrollWidth)};get limit(){return{x:this.scrollWidth-this.width,y:this.scrollHeight-this.height}}},s=class{events={};emit(t,...i){let e=this.events[t]||[];for(let t=0,s=e.length;t<s;t++)e[t]?.(...i)}on(t,i){return this.events[t]?.push(i)||(this.events[t]=[i]),()=>{this.events[t]=this.events[t]?.filter((t=>i!==t))}}off(t,i){this.events[t]=this.events[t]?.filter((t=>i!==t))}destroy(){this.events={}}},o=100/6,n={passive:!1},r=class{constructor(t,i={wheelMultiplier:1,touchMultiplier:1}){this.element=t,this.options=i,window.addEventListener("resize",this.onWindowResize,!1),this.onWindowResize(),this.element.addEventListener("wheel",this.onWheel,n),this.element.addEventListener("touchstart",this.onTouchStart,n),this.element.addEventListener("touchmove",this.onTouchMove,n),this.element.addEventListener("touchend",this.onTouchEnd,n)}touchStart={x:0,y:0};lastDelta={x:0,y:0};window={width:0,height:0};emitter=new s;on(t,i){return this.emitter.on(t,i)}destroy(){this.emitter.destroy(),window.removeEventListener("resize",this.onWindowResize,!1),this.element.removeEventListener("wheel",this.onWheel,n),this.element.removeEventListener("touchstart",this.onTouchStart,n),this.element.removeEventListener("touchmove",this.onTouchMove,n),this.element.removeEventListener("touchend",this.onTouchEnd,n)}onTouchStart=t=>{const{clientX:i,clientY:e}=t.targetTouches?t.targetTouches[0]:t;this.touchStart.x=i,this.touchStart.y=e,this.lastDelta={x:0,y:0},this.emitter.emit("scroll",{deltaX:0,deltaY:0,event:t})};onTouchMove=t=>{const{clientX:i,clientY:e}=t.targetTouches?t.targetTouches[0]:t,s=-(i-this.touchStart.x)*this.options.touchMultiplier,o=-(e-this.touchStart.y)*this.options.touchMultiplier;this.touchStart.x=i,this.touchStart.y=e,this.lastDelta={x:s,y:o},this.emitter.emit("scroll",{deltaX:s,deltaY:o,event:t})};onTouchEnd=t=>{this.emitter.emit("scroll",{deltaX:this.lastDelta.x,deltaY:this.lastDelta.y,event:t})};onWheel=t=>{let{deltaX:i,deltaY:e,deltaMode:s}=t;i*=1===s?o:2===s?this.window.width:1,e*=1===s?o:2===s?this.window.height:1,i*=this.options.wheelMultiplier,e*=this.options.wheelMultiplier,this.emitter.emit("scroll",{deltaX:i,deltaY:e,event:t})};onWindowResize=()=>{this.window={width:window.innerWidth,height:window.innerHeight}}},Lenis=class{_isScrolling=!1;_isStopped=!1;_isLocked=!1;_preventNextNativeScrollEvent=!1;_resetVelocityTimeout=null;__rafID=null;isTouching;time=0;userData={};lastVelocity=0;velocity=0;direction=0;options;targetScroll;animatedScroll;animate=new i;emitter=new s;dimensions;virtualScroll;constructor({wrapper:t=window,content:i=document.documentElement,eventsTarget:s=t,smoothWheel:o=!0,syncTouch:n=!1,syncTouchLerp:l=.075,touchInertiaMultiplier:h=35,duration:a,easing:c=t=>Math.min(1,1.001-Math.pow(2,-10*t)),lerp:p=.1,infinite:d=!1,orientation:u="vertical",gestureOrientation:m="vertical",touchMultiplier:v=1,wheelMultiplier:S=1,autoResize:w=!0,prevent:g,virtualScroll:f,overscroll:y=!0,autoRaf:E=!1,anchors:T=!1,__experimental__naiveDimensions:z=!1}={}){window.lenisVersion="1.1.20",t&&t!==document.documentElement||(t=window),this.options={wrapper:t,content:i,eventsTarget:s,smoothWheel:o,syncTouch:n,syncTouchLerp:l,touchInertiaMultiplier:h,duration:a,easing:c,lerp:p,infinite:d,gestureOrientation:m,orientation:u,touchMultiplier:v,wheelMultiplier:S,autoResize:w,prevent:g,virtualScroll:f,overscroll:y,autoRaf:E,anchors:T,__experimental__naiveDimensions:z},this.dimensions=new e(t,i,{autoResize:w}),this.updateClassName(),this.targetScroll=this.animatedScroll=this.actualScroll,this.options.wrapper.addEventListener("scroll",this.onNativeScroll,!1),this.options.wrapper.addEventListener("scrollend",this.onScrollEnd,{capture:!0}),this.options.anchors&&this.options.wrapper===window&&this.options.wrapper.addEventListener("click",this.onClick,!1),this.options.wrapper.addEventListener("pointerdown",this.onPointerDown,!1),this.virtualScroll=new r(s,{touchMultiplier:v,wheelMultiplier:S}),this.virtualScroll.on("scroll",this.onVirtualScroll),this.options.autoRaf&&(this.__rafID=requestAnimationFrame(this.raf))}destroy(){this.emitter.destroy(),this.options.wrapper.removeEventListener("scroll",this.onNativeScroll,!1),this.options.wrapper.removeEventListener("scrollend",this.onScrollEnd,{capture:!0}),this.options.wrapper.removeEventListener("pointerdown",this.onPointerDown,!1),this.options.anchors&&this.options.wrapper===window&&this.options.wrapper.removeEventListener("click",this.onClick,!1),this.virtualScroll.destroy(),this.dimensions.destroy(),this.cleanUpClassName(),this.__rafID&&cancelAnimationFrame(this.__rafID)}on(t,i){return this.emitter.on(t,i)}off(t,i){return this.emitter.off(t,i)}onScrollEnd=t=>{t instanceof CustomEvent||"smooth"!==this.isScrolling&&!1!==this.isScrolling||t.stopPropagation()};dispatchScrollendEvent=()=>{this.options.wrapper.dispatchEvent(new CustomEvent("scrollend",{bubbles:this.options.wrapper===window,detail:{lenisScrollEnd:!0}}))};setScroll(t){this.isHorizontal?this.options.wrapper.scrollTo({left:t,behavior:"instant"}):this.options.wrapper.scrollTo({top:t,behavior:"instant"})}onClick=t=>{const i=t.composedPath().find((t=>t instanceof HTMLAnchorElement&&t.getAttribute("href")?.startsWith("#")));if(i){const t=i.getAttribute("href");if(t){const i="object"==typeof this.options.anchors&&this.options.anchors?this.options.anchors:void 0;this.scrollTo(t,i)}}};onPointerDown=t=>{1===t.button&&this.reset()};onVirtualScroll=t=>{if("function"==typeof this.options.virtualScroll&&!1===this.options.virtualScroll(t))return;const{deltaX:i,deltaY:e,event:s}=t;if(this.emitter.emit("virtual-scroll",{deltaX:i,deltaY:e,event:s}),s.ctrlKey)return;if(s.lenisStopPropagation)return;const o=s.type.includes("touch"),n=s.type.includes("wheel");this.isTouching="touchstart"===s.type||"touchmove"===s.type;const r=0===i&&0===e;if(this.options.syncTouch&&o&&"touchstart"===s.type&&r&&!this.isStopped&&!this.isLocked)return void this.reset();const l="vertical"===this.options.gestureOrientation&&0===e||"horizontal"===this.options.gestureOrientation&&0===i;if(r||l)return;let h=s.composedPath();h=h.slice(0,h.indexOf(this.rootElement));const a=this.options.prevent;if(h.find((t=>t instanceof HTMLElement&&("function"==typeof a&&a?.(t)||t.hasAttribute?.("data-lenis-prevent")||o&&t.hasAttribute?.("data-lenis-prevent-touch")||n&&t.hasAttribute?.("data-lenis-prevent-wheel")))))return;if(this.isStopped||this.isLocked)return void s.preventDefault();if(!(this.options.syncTouch&&o||this.options.smoothWheel&&n))return this.isScrolling="native",this.animate.stop(),void(s.lenisStopPropagation=!0);let c=e;"both"===this.options.gestureOrientation?c=Math.abs(e)>Math.abs(i)?e:i:"horizontal"===this.options.gestureOrientation&&(c=i),(!this.options.overscroll||this.options.infinite||this.options.wrapper!==window&&(this.animatedScroll>0&&this.animatedScroll<this.limit||0===this.animatedScroll&&e>0||this.animatedScroll===this.limit&&e<0))&&(s.lenisStopPropagation=!0),s.preventDefault();const p=o&&this.options.syncTouch,d=o&&"touchend"===s.type&&Math.abs(c)>5;d&&(c=this.velocity*this.options.touchInertiaMultiplier),this.scrollTo(this.targetScroll+c,{programmatic:!1,...p?{lerp:d?this.options.syncTouchLerp:1}:{lerp:this.options.lerp,duration:this.options.duration,easing:this.options.easing}})};resize(){this.dimensions.resize(),this.animatedScroll=this.targetScroll=this.actualScroll,this.emit()}emit(){this.emitter.emit("scroll",this)}onNativeScroll=()=>{if(null!==this._resetVelocityTimeout&&(clearTimeout(this._resetVelocityTimeout),this._resetVelocityTimeout=null),this._preventNextNativeScrollEvent)this._preventNextNativeScrollEvent=!1;else if(!1===this.isScrolling||"native"===this.isScrolling){const t=this.animatedScroll;this.animatedScroll=this.targetScroll=this.actualScroll,this.lastVelocity=this.velocity,this.velocity=this.animatedScroll-t,this.direction=Math.sign(this.animatedScroll-t),this.isStopped||(this.isScrolling="native"),this.emit(),0!==this.velocity&&(this._resetVelocityTimeout=setTimeout((()=>{this.lastVelocity=this.velocity,this.velocity=0,this.isScrolling=!1,this.emit()}),400))}};reset(){this.isLocked=!1,this.isScrolling=!1,this.animatedScroll=this.targetScroll=this.actualScroll,this.lastVelocity=this.velocity=0,this.animate.stop()}start(){this.isStopped&&(this.reset(),this.isStopped=!1)}stop(){this.isStopped||(this.reset(),this.isStopped=!0)}raf=t=>{const i=t-(this.time||t);this.time=t,this.animate.advance(.001*i),this.options.autoRaf&&(this.__rafID=requestAnimationFrame(this.raf))};scrollTo(i,{offset:e=0,immediate:s=!1,lock:o=!1,duration:n=this.options.duration,easing:r=this.options.easing,lerp:l=this.options.lerp,onStart:h,onComplete:a,force:c=!1,programmatic:p=!0,userData:d}={}){if(!this.isStopped&&!this.isLocked||c){if("string"==typeof i&&["top","left","start"].includes(i))i=0;else if("string"==typeof i&&["bottom","right","end"].includes(i))i=this.limit;else{let t;if("string"==typeof i?t=document.querySelector(i):i instanceof HTMLElement&&i?.nodeType&&(t=i),t){if(this.options.wrapper!==window){const t=this.rootElement.getBoundingClientRect();e-=this.isHorizontal?t.left:t.top}const s=t.getBoundingClientRect();i=(this.isHorizontal?s.left:s.top)+this.animatedScroll}}if("number"==typeof i){if(i+=e,i=Math.round(i),this.options.infinite?p&&(this.targetScroll=this.animatedScroll=this.scroll):i=t(0,i,this.limit),i===this.targetScroll)return h?.(this),void a?.(this);if(this.userData=d??{},s)return this.animatedScroll=this.targetScroll=i,this.setScroll(this.scroll),this.reset(),this.preventNextNativeScrollEvent(),this.emit(),a?.(this),this.userData={},void requestAnimationFrame((()=>{this.dispatchScrollendEvent()}));p||(this.targetScroll=i),this.animate.fromTo(this.animatedScroll,i,{duration:n,easing:r,lerp:l,onStart:()=>{o&&(this.isLocked=!0),this.isScrolling="smooth",h?.(this)},onUpdate:(t,i)=>{this.isScrolling="smooth",this.lastVelocity=this.velocity,this.velocity=t-this.animatedScroll,this.direction=Math.sign(this.velocity),this.animatedScroll=t,this.setScroll(this.scroll),p&&(this.targetScroll=t),i||this.emit(),i&&(this.reset(),this.emit(),a?.(this),this.userData={},requestAnimationFrame((()=>{this.dispatchScrollendEvent()})),this.preventNextNativeScrollEvent())}})}}}preventNextNativeScrollEvent(){this._preventNextNativeScrollEvent=!0,requestAnimationFrame((()=>{this._preventNextNativeScrollEvent=!1}))}get rootElement(){return this.options.wrapper===window?document.documentElement:this.options.wrapper}get limit(){return this.options.__experimental__naiveDimensions?this.isHorizontal?this.rootElement.scrollWidth-this.rootElement.clientWidth:this.rootElement.scrollHeight-this.rootElement.clientHeight:this.dimensions.limit[this.isHorizontal?"x":"y"]}get isHorizontal(){return"horizontal"===this.options.orientation}get actualScroll(){const t=this.options.wrapper;return this.isHorizontal?t.scrollX??t.scrollLeft:t.scrollY??t.scrollTop}get scroll(){return this.options.infinite?(t=this.animatedScroll,i=this.limit,(t%i+i)%i):this.animatedScroll;var t,i}get progress(){return 0===this.limit?1:this.scroll/this.limit}get isScrolling(){return this._isScrolling}set isScrolling(t){this._isScrolling!==t&&(this._isScrolling=t,this.updateClassName())}get isStopped(){return this._isStopped}set isStopped(t){this._isStopped!==t&&(this._isStopped=t,this.updateClassName())}get isLocked(){return this._isLocked}set isLocked(t){this._isLocked!==t&&(this._isLocked=t,this.updateClassName())}get isSmooth(){return"smooth"===this.isScrolling}get className(){let t="lenis";return this.isStopped&&(t+=" lenis-stopped"),this.isLocked&&(t+=" lenis-locked"),this.isScrolling&&(t+=" lenis-scrolling"),"smooth"===this.isScrolling&&(t+=" lenis-smooth"),t}updateClassName(){this.cleanUpClassName(),this.rootElement.className=`${this.rootElement.className} ${this.className}`.trim()}cleanUpClassName(){this.rootElement.className=this.rootElement.className.replace(/lenis(-\w+)?/g,"").trim()}};globalThis.Lenis=Lenis,globalThis.Lenis.prototype=Lenis.prototype;
+</script>
+<script>
 /* =====================================================================
    EINSTELLUNGEN – hier pflegen
    ===================================================================== */
@@ -1440,6 +1597,7 @@ var CAP = { More: 6, Maslina: 4, Riva: 4, Zora: 2, 'Ganzes Haus': 16 };
    ===================================================================== */
 var I18N = {
 en:{
+  'hero.scroll':'Discover','day.eyebrow':'A day at Haus Dalmatia','day.h2':'From the first coffee <em>to sunset.</em>','day.p':'This is what a summer day here feels like – between the pool, the sea and Zadar’s old town.','day.hint':'Five moments of a summer day','day.1h':'First coffee','day.1p':'On the balcony or terrace, while the light over Bibinje is still soft and the garden lies in morning shade.','day.2h':'To the sea','day.2p':'A few minutes’ walk to Bibinje’s pebble beaches – for swimming, snorkelling or a paddle on the SUP.','day.3h':'Siesta by the pool','day.3p':'When the midday heat arrives: a dip in the heated pool, a book in the shade, the children at the playground.','day.4h':'Zadar old town','day.4p':'Fifteen minutes to the old town: the Roman Forum, St Anastasia’s Cathedral and lanes of white limestone.','day.5h':'Greeting to the Sun','day.5p':'In the evening Zadar’s Sea Organ plays – or you stay by the pool and watch the sky glow over the Adriatic.',
   'q.wa':'or message us on WhatsApp','ex.more':'Show all destinations','faq.q11':'Can we rent the whole house?','faq.a11':'Yes. Together, all four apartments sleep up to 16 guests – ideal for family reunions or groups of friends. You then share the pool, garden and barbecue area only among yourselves. Send us your dates and we will check availability for all apartments.','faq.q12':'How far are Zadar and the airport?','faq.a12':'Zadar old town is 9 km away, about 15 minutes by car. Zadar Airport (ZAD) is 13 km away, around 15–20 minutes. Krka National Park is about an hour’s drive, the Plitvice Lakes around two hours.',
   'gal.eyebrow':'Insights','gal.h2':'Haus Dalmatia <em>in pictures.</em>','gal.hint':'Swipe or drag – click to see the photo large.',
   'ex.eyebrow':'Trips & experiences',
@@ -1606,6 +1764,7 @@ en:{
   'alt.zadar':'Sunset in Zadar','alt.krka':'Skradinski Buk waterfalls in Krka National Park','alt.kornati':'Islands of Kornati National Park'
 },
 pl:{
+  'hero.scroll':'Odkryj','day.eyebrow':'Dzień w Haus Dalmatia','day.h2':'Od pierwszej kawy <em>do zachodu słońca.</em>','day.p':'Tak wygląda u nas letni dzień – między basenem, morzem a starym miastem Zadaru.','day.hint':'Pięć chwil letniego dnia','day.1h':'Pierwsza kawa','day.1p':'Na balkonie lub tarasie, gdy światło nad Bibinje jest jeszcze miękkie, a ogród leży w porannym cieniu.','day.2h':'Nad morze','day.2p':'Kilka minut spacerem do kamienistych plaż Bibinje – na pływanie, snorkeling lub przejażdżkę na SUP-ie.','day.3h':'Sjesta przy basenie','day.3p':'Gdy nadchodzi południowy upał: kąpiel w podgrzewanym basenie, książka w cieniu, dzieci na placu zabaw.','day.4h':'Stare miasto Zadar','day.4p':'W 15 minut na starówce: rzymskie forum, katedra św. Anastazji i uliczki z białego wapienia.','day.5h':'Pozdrowienie dla Słońca','day.5p':'Wieczorem w Zadarze grają Organy Morskie – albo zostają Państwo przy basenie i patrzą, jak niebo nad Adriatykiem płonie.',
   'q.wa':'lub napisz bezpośrednio na WhatsApp','ex.more':'Pokaż wszystkie miejsca','faq.q11':'Czy można wynająć cały dom?','faq.a11':'Tak. Wszystkie cztery apartamenty razem mieszczą do 16 osób – idealnie na zjazd rodzinny lub wyjazd z przyjaciółmi. Basen, ogród i grill są wtedy tylko do Państwa dyspozycji. Prosimy o podanie terminu – sprawdzimy dostępność wszystkich apartamentów.','faq.q12':'Jak daleko jest do Zadaru i lotniska?','faq.a12':'Stare miasto Zadaru leży 9 km od domu, ok. 15 minut samochodem. Lotnisko Zadar (ZAD) jest oddalone o 13 km, ok. 15–20 minut. Do Parku Narodowego Krka jedzie się ok. godziny, do Jezior Plitwickich ok. dwóch godzin.',
   'gal.eyebrow':'Wnętrza i ogród','gal.h2':'Haus Dalmatia <em>na zdjęciach.</em>','gal.hint':'Przesuń lub przeciągnij – kliknij, aby powiększyć zdjęcie.',
   'ex.eyebrow':'Wycieczki i atrakcje',
@@ -1772,6 +1931,7 @@ pl:{
   'alt.zadar':'Zachód słońca w Zadarze','alt.krka':'Wodospady Skradinski Buk w Parku Narodowym Krka','alt.kornati':'Wyspy Parku Narodowego Kornati'
 },
 hr:{
+  'hero.scroll':'Otkrijte','day.eyebrow':'Dan u kući Haus Dalmatia','day.h2':'Od prve kave <em>do zalaska sunca.</em>','day.p':'Ovako izgleda ljetni dan kod nas – između bazena, mora i staroga grada Zadra.','day.hint':'Pet trenutaka ljetnog dana','day.1h':'Prva kava','day.1p':'Na balkonu ili terasi, dok je svjetlo nad Bibinjem još meko, a vrt u jutarnjoj sjeni.','day.2h':'Na more','day.2p':'Nekoliko minuta hoda do šljunčanih plaža Bibinja – za kupanje, ronjenje s maskom ili vožnju SUP-om.','day.3h':'Siesta uz bazen','day.3p':'Kad stigne podnevna vrućina: skok u grijani bazen, knjiga u hladu, djeca na igralištu.','day.4h':'Stari grad Zadar','day.4p':'Za 15 minuta u starom gradu: rimski forum, katedrala sv. Stošije i ulice od bijelog kamena.','day.5h':'Pozdrav Suncu','day.5p':'Navečer u Zadru sviraju Morske orgulje – ili ostanete uz bazen i gledate kako nebo nad Jadranom gori.',
   'q.wa':'ili pišite izravno na WhatsApp','ex.more':'Prikaži sva odredišta','faq.q11':'Možemo li unajmiti cijelu kuću?','faq.a11':'Da. Sva četiri apartmana zajedno primaju do 16 gostiju – idealno za obiteljska okupljanja ili društvo prijatelja. Bazen, vrt i roštilj tada dijelite samo međusobno. Pošaljite nam termin i provjerit ćemo dostupnost svih apartmana.','faq.q12':'Koliko su udaljeni Zadar i zračna luka?','faq.a12':'Stari grad Zadar udaljen je 9 km, autom oko 15 minuta. Zračna luka Zadar (ZAD) udaljena je 13 km, oko 15–20 minuta. Do Nacionalnog parka Krka vozi se otprilike sat vremena, do Plitvičkih jezera oko dva sata.',
   'gal.eyebrow':'Pogled iznutra','gal.h2':'Haus Dalmatia <em>u slikama.</em>','gal.hint':'Povucite prstom ili mišem – klikom otvarate veću sliku.',
   'ex.eyebrow':'Izleti i doživljaji',
@@ -1941,7 +2101,7 @@ hr:{
 /* Texte, die per Skript erzeugt werden */
 function plPl(n, one, few, many){ var m10 = n % 10, m100 = n % 100; return n === 1 ? one : (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) ? few : many; }
 var T = {
-  de:{ fallback:'Nichts geöffnet? Anfrage kopieren und senden an', copy:'Anfrage kopieren', copied:'Kopiert ✓', taken:'Ihre Reisedaten sind übernommen – bitte nur noch Ihren Namen ergänzen.', lbClose:'Schließen', lbPrev:'Vorheriges Bild', lbNext:'Nächstes Bild', lbLabel:'Bildansicht', menuOpen:'Menü öffnen', menuClose:'Menü schließen', pause:'Diashow anhalten', play:'Diashow fortsetzen', showLess:'Weniger anzeigen', liveNow:'Bibinje jetzt', liveSun:'Sonnenuntergang heute', toTop:'Nach oben', guest:function(n){return n+(n===1?' Gast':' Gäste');}, adult:function(n){return n+(n===1?' Erwachsener':' Erwachsene');}, kid:function(n){return n===0?'keine Kinder':n+(n===1?' Kind':' Kinder');},
+  de:{ curView:'Ansehen', curDrag:'Ziehen', fallback:'Nichts geöffnet? Anfrage kopieren und senden an', copy:'Anfrage kopieren', copied:'Kopiert ✓', taken:'Ihre Reisedaten sind übernommen – bitte nur noch Ihren Namen ergänzen.', lbClose:'Schließen', lbPrev:'Vorheriges Bild', lbNext:'Nächstes Bild', lbLabel:'Bildansicht', menuOpen:'Menü öffnen', menuClose:'Menü schließen', pause:'Diashow anhalten', play:'Diashow fortsetzen', showLess:'Weniger anzeigen', liveNow:'Bibinje jetzt', liveSun:'Sonnenuntergang heute', toTop:'Nach oben', guest:function(n){return n+(n===1?' Gast':' Gäste');}, adult:function(n){return n+(n===1?' Erwachsener':' Erwachsene');}, kid:function(n){return n===0?'keine Kinder':n+(n===1?' Kind':' Kinder');},
        nights:function(n){return n+(n===1?' Nacht':' Nächte');}, priceReq:'Persönliches Angebot', from:'ab', night:'/ Nacht', upto:'bis',
        sugg:function(a){return 'Unser Vorschlag: '+a;}, aptAny:'Egal – bitte beraten', aptAll:'Ganzes Haus (bis 16)',
        errDates:'Bitte Anreise und Abreise wählen (Abreise nach Anreise).', errName:'Bitte Ihren Namen angeben.', errMail:'Bitte eine gültige E-Mail-Adresse angeben.', errConsent:'Bitte der Verarbeitung Ihrer Angaben zustimmen.',
@@ -1950,7 +2110,7 @@ var T = {
        subj:'Anfrage Haus Dalmatia', hello:'Guten Tag Marijana,', intro:'ich interessiere mich für einen Aufenthalt im Haus Dalmatia.',
        lArr:'Anreise', lDep:'Abreise', lGuests:'Gäste', lApt:'Apartment', lName:'Name', lMail:'E-Mail', lMsg:'Nachricht', bye:'Vielen Dank und viele Grüße',
        waInquiry:'Guten Tag, ich möchte gern die Verfügbarkeit im Haus Dalmatia anfragen.', waDirect:'Guten Tag, ich möchte gern direkt im Haus Dalmatia buchen.' },
-  en:{ fallback:'Nothing opened? Copy your enquiry and send it to', copy:'Copy enquiry', copied:'Copied ✓', taken:'Your travel dates have been added – just fill in your name.', lbClose:'Close', lbPrev:'Previous image', lbNext:'Next image', lbLabel:'Image viewer', menuOpen:'Open menu', menuClose:'Close menu', pause:'Pause slideshow', play:'Play slideshow', showLess:'Show less', liveNow:'Bibinje now', liveSun:'Sunset today', toTop:'Back to top', guest:function(n){return n+(n===1?' guest':' guests');}, adult:function(n){return n+(n===1?' adult':' adults');}, kid:function(n){return n===0?'no children':n+(n===1?' child':' children');},
+  en:{ curView:'View', curDrag:'Drag', fallback:'Nothing opened? Copy your enquiry and send it to', copy:'Copy enquiry', copied:'Copied ✓', taken:'Your travel dates have been added – just fill in your name.', lbClose:'Close', lbPrev:'Previous image', lbNext:'Next image', lbLabel:'Image viewer', menuOpen:'Open menu', menuClose:'Close menu', pause:'Pause slideshow', play:'Play slideshow', showLess:'Show less', liveNow:'Bibinje now', liveSun:'Sunset today', toTop:'Back to top', guest:function(n){return n+(n===1?' guest':' guests');}, adult:function(n){return n+(n===1?' adult':' adults');}, kid:function(n){return n===0?'no children':n+(n===1?' child':' children');},
        nights:function(n){return n+(n===1?' night':' nights');}, priceReq:'Personal quote', from:'from', night:'/ night', upto:'up to',
        sugg:function(a){return 'Our suggestion: '+a;}, aptAny:'Any – please advise', aptAll:'Whole house (up to 16)',
        errDates:'Please choose arrival and departure (departure after arrival).', errName:'Please enter your name.', errMail:'Please enter a valid email address.', errConsent:'Please agree to the processing of your details.',
@@ -1959,7 +2119,7 @@ var T = {
        subj:'Enquiry Haus Dalmatia', hello:'Hello Marijana,', intro:'I am interested in a stay at Haus Dalmatia.',
        lArr:'Arrival', lDep:'Departure', lGuests:'Guests', lApt:'Apartment', lName:'Name', lMail:'Email', lMsg:'Message', bye:'Many thanks and best regards',
        waInquiry:'Hello, I would like to enquire about availability at Haus Dalmatia.', waDirect:'Hello, I would like to book directly at Haus Dalmatia.' },
-  pl:{ fallback:'Nic się nie otworzyło? Skopiuj zapytanie i wyślij na', copy:'Kopiuj zapytanie', copied:'Skopiowano ✓', taken:'Daty podróży zostały przeniesione – wystarczy uzupełnić imię i nazwisko.', lbClose:'Zamknij', lbPrev:'Poprzednie zdjęcie', lbNext:'Następne zdjęcie', lbLabel:'Podgląd zdjęć', menuOpen:'Otwórz menu', menuClose:'Zamknij menu', pause:'Zatrzymaj pokaz', play:'Wznów pokaz', showLess:'Pokaż mniej', liveNow:'Bibinje teraz', liveSun:'Zachód słońca dziś', toTop:'Do góry', guest:function(n){return n+' '+plPl(n,'osoba','osoby','osób');}, adult:function(n){return n+' '+plPl(n,'dorosły','dorosłych','dorosłych');}, kid:function(n){return n===0?'bez dzieci':n+' '+plPl(n,'dziecko','dzieci','dzieci');},
+  pl:{ curView:'Zobacz', curDrag:'Przeciągnij', fallback:'Nic się nie otworzyło? Skopiuj zapytanie i wyślij na', copy:'Kopiuj zapytanie', copied:'Skopiowano ✓', taken:'Daty podróży zostały przeniesione – wystarczy uzupełnić imię i nazwisko.', lbClose:'Zamknij', lbPrev:'Poprzednie zdjęcie', lbNext:'Następne zdjęcie', lbLabel:'Podgląd zdjęć', menuOpen:'Otwórz menu', menuClose:'Zamknij menu', pause:'Zatrzymaj pokaz', play:'Wznów pokaz', showLess:'Pokaż mniej', liveNow:'Bibinje teraz', liveSun:'Zachód słońca dziś', toTop:'Do góry', guest:function(n){return n+' '+plPl(n,'osoba','osoby','osób');}, adult:function(n){return n+' '+plPl(n,'dorosły','dorosłych','dorosłych');}, kid:function(n){return n===0?'bez dzieci':n+' '+plPl(n,'dziecko','dzieci','dzieci');},
        nights:function(n){return n+' '+plPl(n,'noc','noce','nocy');}, priceReq:'Indywidualna oferta', from:'od', night:'/ noc', upto:'do',
        sugg:function(a){return 'Nasza propozycja: '+a;}, aptAny:'Obojętnie – proszę doradzić', aptAll:'Cały dom (do 16 osób)',
        errDates:'Prosimy wybrać datę przyjazdu i wyjazdu (wyjazd po przyjeździe).', errName:'Prosimy podać imię i nazwisko.', errMail:'Prosimy podać poprawny adres e-mail.', errConsent:'Prosimy wyrazić zgodę na przetwarzanie danych.',
@@ -1968,7 +2128,7 @@ var T = {
        subj:'Zapytanie Haus Dalmatia', hello:'Dzień dobry Pani Marijano,', intro:'interesuje mnie pobyt w Haus Dalmatia.',
        lArr:'Przyjazd', lDep:'Wyjazd', lGuests:'Goście', lApt:'Apartament', lName:'Imię i nazwisko', lMail:'E-mail', lMsg:'Wiadomość', bye:'Dziękuję i pozdrawiam',
        waInquiry:'Dzień dobry, chciałbym/chciałabym zapytać o dostępność w Haus Dalmatia.', waDirect:'Dzień dobry, chciałbym/chciałabym zarezerwować bezpośrednio w Haus Dalmatia.' },
-  hr:{ fallback:'Ništa se nije otvorilo? Kopirajte upit i pošaljite na', copy:'Kopiraj upit', copied:'Kopirano ✓', taken:'Datumi putovanja su preneseni – upišite još samo svoje ime.', lbClose:'Zatvori', lbPrev:'Prethodna slika', lbNext:'Sljedeća slika', lbLabel:'Pregled slika', menuOpen:'Otvori izbornik', menuClose:'Zatvori izbornik', pause:'Zaustavi prikaz', play:'Nastavi prikaz', showLess:'Prikaži manje', liveNow:'Bibinje sada', liveSun:'Zalazak sunca danas', toTop:'Na vrh', guest:function(n){var m=n%10,h=n%100;return n+((m===1&&h!==11)?' gost':(m>=2&&m<=4&&(h<12||h>14))?' gosta':' gostiju');}, adult:function(n){var m=n%10,h=n%100;return n+((m===1&&h!==11)?' odrasla osoba':(m>=2&&m<=4&&(h<12||h>14))?' odrasle osobe':' odraslih');}, kid:function(n){return n===0?'bez djece':n+(n===1?' dijete':' djece');},
+  hr:{ curView:'Pogledaj', curDrag:'Povuci', fallback:'Ništa se nije otvorilo? Kopirajte upit i pošaljite na', copy:'Kopiraj upit', copied:'Kopirano ✓', taken:'Datumi putovanja su preneseni – upišite još samo svoje ime.', lbClose:'Zatvori', lbPrev:'Prethodna slika', lbNext:'Sljedeća slika', lbLabel:'Pregled slika', menuOpen:'Otvori izbornik', menuClose:'Zatvori izbornik', pause:'Zaustavi prikaz', play:'Nastavi prikaz', showLess:'Prikaži manje', liveNow:'Bibinje sada', liveSun:'Zalazak sunca danas', toTop:'Na vrh', guest:function(n){var m=n%10,h=n%100;return n+((m===1&&h!==11)?' gost':(m>=2&&m<=4&&(h<12||h>14))?' gosta':' gostiju');}, adult:function(n){var m=n%10,h=n%100;return n+((m===1&&h!==11)?' odrasla osoba':(m>=2&&m<=4&&(h<12||h>14))?' odrasle osobe':' odraslih');}, kid:function(n){return n===0?'bez djece':n+(n===1?' dijete':' djece');},
        nights:function(n){var m=n%10,h=n%100;return n+((m===1&&h!==11)?' noć':' noći');}, priceReq:'Osobna ponuda', from:'od', night:'/ noć', upto:'do',
        sugg:function(a){return 'Naš prijedlog: '+a;}, aptAny:'Svejedno – savjetujte me', aptAll:'Cijela kuća (do 16)',
        errDates:'Odaberite datum dolaska i odlaska (odlazak nakon dolaska).', errName:'Upišite svoje ime.', errMail:'Upišite valjanu adresu e-pošte.', errConsent:'Molimo potvrdite suglasnost za obradu podataka.',
@@ -2088,7 +2248,8 @@ $('quickForm').addEventListener('submit', function(e){
   fAdults.value = Math.min(+qGuests.value || 2, 16); fKids.value = 0;
   updateSummary();
   if (qIn.value && qOut.value){ var o = $('fMsgOut'); o.className = 'form-msg info'; o.textContent = T[curLang].taken; }
-  $('anfrage').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+  if (window.hdLenis) hdLenis.scrollTo($('anfrage'), {offset: -84, duration: 1.6});
+  else $('anfrage').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
   setTimeout(function(){ (fIn.value ? $('fName') : fIn).focus({preventScroll:true}); }, 700);
 });
 // Apartment-Buttons → Formular vorbelegen
@@ -2367,7 +2528,7 @@ addEventListener('keydown', function(e){ if (e.key === 'Escape'){ if (lb.classLi
   var btn = $('toTop'), fg = $('toTopFg');
   if (btn){
     btn.setAttribute('aria-label', t.toTop);
-    btn.addEventListener('click', function(){ scrollTo({top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}); });
+    btn.addEventListener('click', function(){ if (window.hdLenis) hdLenis.scrollTo(0, {duration: 1.8}); else scrollTo({top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}); });
     var tk = false;
     addEventListener('scroll', function(){ if (tk) return; tk = true; requestAnimationFrame(function(){
       tk = false; var y = scrollY, max = document.documentElement.scrollHeight - innerHeight;
@@ -2395,6 +2556,124 @@ addEventListener('keydown', function(e){ if (e.key === 'Escape'){ if (lb.classLi
   lb.querySelector('.lb-close').setAttribute('aria-label', t.lbClose);
   lb.querySelector('.lb-prev').setAttribute('aria-label', t.lbPrev);
   lb.querySelector('.lb-next').setAttribute('aria-label', t.lbNext);
+})();
+/* =====================================================================
+   LUXUS: sanftes Scrollen, Cursor, Masken-Reveals, Tagesreise, Karte, Magnet-Knöpfe
+   ===================================================================== */
+(function(){
+  if (!document.documentElement.classList.contains('fx')) return;
+  var fine = matchMedia('(hover: hover) and (pointer: fine)').matches, t = T[curLang];
+  // Sanftes Scrollen mit Lenis (nur Maus/Trackpad; Touch bleibt nativ)
+  var lenis = null;
+  if (fine && window.Lenis){
+    lenis = new Lenis({lerp: .085, wheelMultiplier: .95});
+    window.hdLenis = lenis;
+    (function raf(time){ lenis.raf(time); requestAnimationFrame(raf); })(performance.now());
+    ['#lb', '.nav-links', '#galTrack'].forEach(function(s){ var el = document.querySelector(s); if (el) el.setAttribute('data-lenis-prevent', ''); });
+    document.addEventListener('click', function(e){
+      var a = e.target.closest('a[href^="#"]'); if (!a || a.classList.contains('skip')) return;
+      var id = a.getAttribute('href'); if (id.length < 2) return;
+      var el = document.querySelector(id); if (!el) return;
+      e.preventDefault(); lenis.start(); lenis.scrollTo(el, {offset: id === '#top' ? 0 : -84, duration: 1.6});
+    });
+    // Menü und Bildansicht halten das Scrollen an
+    var mo = new MutationObserver(function(){
+      var stop = lb.classList.contains('open') || navLinks.classList.contains('open');
+      if (stop) lenis.stop(); else lenis.start();
+    });
+    mo.observe(lb, {attributes: true, attributeFilter: ['class']}); mo.observe(navLinks, {attributes: true, attributeFilter: ['class']});
+  }
+  // Überschriften Wort für Wort aus einer Maske
+  var vh = innerHeight;
+  var mio = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); mio.unobserve(e.target); } }); }, {rootMargin: '0px 0px -10% 0px'});
+  document.querySelectorAll('main h2').forEach(function(h2){
+    if (h2.getBoundingClientRect().top < vh * .9) return;
+    var n = 0;
+    (function wrap(node){
+      Array.prototype.slice.call(node.childNodes).forEach(function(c){
+        if (c.nodeType === 3){
+          var f = document.createDocumentFragment();
+          c.textContent.split(/(\s+)/).forEach(function(w){
+            if (!w) return;
+            if (/^\s+$/.test(w)){ f.appendChild(document.createTextNode(w)); return; }
+            var o = document.createElement('span'), i = document.createElement('span');
+            o.className = 'wm'; i.className = 'wi'; i.style.setProperty('--i', n++); i.textContent = w; o.appendChild(i); f.appendChild(o);
+          });
+          node.replaceChild(f, c);
+        } else if (c.nodeType === 1) wrap(c);
+      });
+    })(h2);
+    h2.classList.add('mk'); mio.observe(h2);
+  });
+  // Karte: Linien zeichnen sich nacheinander
+  var map = document.querySelector('.ex-map');
+  if (map){
+    map.querySelectorAll('.ray').forEach(function(r, i){ var L = Math.ceil(Math.hypot(r.x2.baseVal.value - r.x1.baseVal.value, r.y2.baseVal.value - r.y1.baseVal.value)) + 2; r.style.setProperty('--len', L); r.style.setProperty('--i', i); });
+    map.querySelectorAll('.pt').forEach(function(p, i){ p.style.setProperty('--i', i); });
+    map.classList.add('mk-map'); mio.observe(map);
+  }
+  // Ein Tag im Haus Dalmatia: horizontale Fahrt (Desktop), Bild-Parallaxe überall
+  var day = $('tag'), tr = $('dayTrack'), bar = $('dayBar'), dist = 0, imgs = tr ? tr.querySelectorAll('.day-img img') : [];
+  function daySetup(){
+    if (!day) return;
+    if (innerWidth > 980 && innerHeight > 680){
+      day.classList.add('pinned'); tr.removeAttribute('tabindex');
+      dist = Math.max(0, tr.scrollWidth - innerWidth + Math.max(24, (innerWidth - 1200) / 2 + 24));
+      day.style.height = (innerHeight + dist) + 'px';
+    } else { day.classList.remove('pinned'); day.style.height = ''; tr.style.transform = ''; tr.setAttribute('tabindex', '0'); dist = 0; }
+    dayFrame();
+  }
+  function dayFrame(){
+    if (!day) return;
+    var p;
+    if (dist){
+      var top = day.getBoundingClientRect().top;
+      p = Math.min(1, Math.max(0, -top / dist));
+      tr.style.transform = 'translate3d(' + (-p * dist).toFixed(1) + 'px,0,0)';
+    } else p = tr.scrollWidth > tr.clientWidth ? tr.scrollLeft / (tr.scrollWidth - tr.clientWidth) : 0;
+    bar.style.transform = 'scaleX(' + p.toFixed(3) + ')';
+    for (var i = 0; i < imgs.length; i++){
+      var r = imgs[i].parentElement.getBoundingClientRect();
+      if (r.right < -200 || r.left > innerWidth + 200) continue;
+      var k = (r.left + r.width / 2 - innerWidth / 2) / innerWidth;
+      imgs[i].style.transform = 'scale(1.14) translate3d(' + (k * -7).toFixed(2) + '%,0,0)';
+    }
+  }
+  if (day){
+    addEventListener('scroll', function(){ requestAnimationFrame(dayFrame); }, {passive: true});
+    tr.addEventListener('scroll', function(){ requestAnimationFrame(dayFrame); }, {passive: true});
+    addEventListener('resize', daySetup); addEventListener('load', daySetup); daySetup();
+  }
+  if (!fine) return;
+  // Eleganter Cursor
+  var dot = document.createElement('div'), ring = document.createElement('div'), lab = document.createElement('span');
+  dot.className = 'cur'; ring.className = 'cur-ring'; ring.appendChild(lab);
+  dot.setAttribute('aria-hidden', 'true'); ring.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(dot); document.body.appendChild(ring);
+  var mx = -100, my = -100, rx = -100, ry = -100, on = false;
+  addEventListener('mousemove', function(e){
+    mx = e.clientX; my = e.clientY;
+    if (!on){ on = true; rx = mx; ry = my; document.documentElement.classList.add('cur-on'); }
+    dot.style.transform = 'translate3d(' + mx + 'px,' + my + 'px,0)';
+    curState(e.target);
+  }, {passive: true});
+  // Beim Scrollen liegt ein anderes Element unter der Maus
+  addEventListener('scroll', function(){ if (on) curState(document.elementFromPoint(mx, my)); }, {passive: true});
+  function curState(el){
+    var txt = '', cls = '';
+    if (!el) return;
+    if (el.closest && el.closest('#galTrack')) { txt = el.closest('img.zoom') ? t.curView : t.curDrag; cls = 'label'; }
+    else if (el.closest && el.closest('img.zoom')) { txt = t.curView; cls = 'label'; }
+    else if (el.closest && el.closest('a, button, summary, select, label, input, textarea, [role=button]')) cls = 'link';
+    ring.className = 'cur-ring' + (cls ? ' ' + cls : ''); if (lab.textContent !== txt) lab.textContent = txt;
+  }
+  document.addEventListener('mouseleave', function(){ on = false; document.documentElement.classList.remove('cur-on'); });
+  (function loop(){ rx += (mx - rx) * .16; ry += (my - ry) * .16; ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)'; requestAnimationFrame(loop); })();
+  // Magnetische Knöpfe
+  document.querySelectorAll('.btn.gold, .gal-nav button').forEach(function(b){
+    b.addEventListener('mousemove', function(e){ var r = b.getBoundingClientRect(); var x = (e.clientX - r.left - r.width / 2) * .18, y = (e.clientY - r.top - r.height / 2) * .28; b.style.transform = 'translate(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px)'; });
+    b.addEventListener('mouseleave', function(){ b.style.transform = ''; });
+  });
 })();
 </script>
 </body>
