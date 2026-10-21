@@ -42,6 +42,13 @@ Skript lahm – genau das war der Fehler der Version vom 07.10.2026.
   Strand- und Wassersportfoto stammen von der eigenen Website; bitte bestätigen, dass sie selbst aufgenommen wurden.
 - Titelbild: vier Fotos blenden nacheinander über (`TITELBILD` im Skript). Reihenfolge = Reihenfolge der `hero-bg`-Bilder im HTML.
 
+## Effekte
+
+Überschrift-Animation, Einblenden beim Scrollen, Vorhang-Effekt bei Fotos, Zähler, Parallaxe, goldene
+Fortschrittslinie, Laufband und Lichtspiel auf dem Poolfoto stehen im Skriptblock `EFFEKTE` bzw. im CSS
+unter „Effekte“. Sie schalten sich bei „Bewegung reduzieren“ automatisch ab; ohne Skript ist alles sichtbar.
+Galerie „Einblicke“: Bilder im Abschnitt `GALERIE` (Reihenfolge = Reihenfolge im HTML).
+
 ## Vor dem Livegang zu klären
 
 1. **Strandentfernung:** alte Website „300 m“, Booking.com ca. 700 m – bitte messen. Bis dahin steht „wenige Gehminuten“.

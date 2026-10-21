@@ -411,8 +411,67 @@ footer a:hover{color:#fff}
 .lb{position:fixed;inset:0;background:rgba(15,40,52,.94);z-index:200;display:none;align-items:center;justify-content:center;padding:5vmin;cursor:zoom-out}
 .lb.open{display:flex}
 .lb img{max-width:92vw;max-height:88vh;object-fit:contain;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
-.lb button{position:absolute;top:max(16px,env(safe-area-inset-top,0px));right:22px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.12);border:none;color:#fff;font-size:28px;cursor:pointer;line-height:1}
+.lb .lb-close{position:absolute;top:max(16px,env(safe-area-inset-top,0px));right:22px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.12);border:none;color:#fff;font-size:28px;cursor:pointer;line-height:1}
 
+/* ---------- Effekte (nur mit JavaScript aktiv, bei „Bewegung reduzieren“ aus) ---------- */
+.fx-progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:130;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--gold),var(--gold-soft));pointer-events:none}
+.hero:before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero-slides{will-change:transform}
+.fx .hero h1 .w{display:inline-block;opacity:0;transform:translateY(.45em);filter:blur(6px);animation:wordIn 1s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(.25s + var(--i) * .09s)}
+@keyframes wordIn{to{opacity:1;transform:none;filter:none}}
+.fx .rv{opacity:0;transform:translateY(26px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.fx .rv.in{opacity:1;transform:none}
+.fx .cv{clip-path:inset(0 0 100% 0 round var(--r));transition:clip-path 1.3s cubic-bezier(.7,0,.2,1);transition-delay:var(--d,0s)}
+.fx .cv.in{clip-path:inset(0 0 0 0 round var(--r))}
+.eyebrow{display:flex;align-items:center;gap:12px}
+.eyebrow:before{content:'';width:30px;height:1px;background:currentColor;flex:0 0 30px;opacity:.7}
+.head.c .eyebrow{justify-content:center}
+.btn{position:relative;overflow:hidden;isolation:isolate}
+.btn.gold:after{content:'';position:absolute;top:0;bottom:0;left:-60%;width:40%;z-index:-1;background:linear-gradient(100deg,transparent,rgba(255,255,255,.38),transparent);transform:skewX(-18deg);transition:left .8s ease}
+.btn.gold:hover:after{left:130%}
+.mosaic .m:first-child{position:relative}
+.mosaic .m:first-child:after{content:'';position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;opacity:.55;background:radial-gradient(40% 30% at 30% 60%,rgba(255,255,255,.9),transparent 70%),radial-gradient(30% 22% at 70% 75%,rgba(255,255,255,.7),transparent 70%);background-size:200% 200%;animation:caustic 9s ease-in-out infinite alternate}
+@keyframes caustic{0%{background-position:0% 0%,100% 0%}50%{background-position:60% 40%,30% 70%}100%{background-position:100% 100%,0% 100%}}
+/* Laufband */
+.marquee{background:var(--sea-deep);color:#fff;overflow:hidden;padding-block:26px;border-block:1px solid rgba(255,255,255,.06)}
+.marquee-track{display:flex;width:max-content;animation:marq 60s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee span{font-family:var(--display);font-size:clamp(34px,4.4vw,58px);line-height:1;white-space:nowrap;padding-right:.55em}
+.marquee span:nth-of-type(odd){color:transparent;-webkit-text-stroke:1px rgba(220,197,156,.75)}
+.marquee span:nth-of-type(even){color:var(--gold-soft)}
+.marquee i{font-style:normal;color:var(--gold);padding-right:.55em;font-size:clamp(22px,2.4vw,30px);align-self:center}
+@keyframes marq{to{transform:translateX(-50%)}}
+/* Galerie */
+.gallery{background:var(--paper);overflow:hidden}
+.gal-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:34px}
+.gal-head .head{margin-bottom:0}
+.gal-nav{display:flex;gap:10px}
+.gal-nav button{width:52px;height:52px;border-radius:50%;border:1px solid rgba(22,58,75,.25);background:#fff;color:var(--sea);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .25s,color .25s,border-color .25s}
+.gal-nav button:hover{background:var(--sea);color:#fff;border-color:var(--sea)}
+.gal-nav .ic{width:20px;height:20px}
+.gal-nav button:first-child .ic{transform:scaleX(-1)}
+.gal-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding-bottom:18px;padding-left:max(24px,calc((100vw - 1200px) / 2 + 24px));padding-right:24px;scrollbar-width:none;cursor:grab}
+.gal-track::-webkit-scrollbar{display:none}
+.gal-track.drag{cursor:grabbing;scroll-snap-type:none;scroll-behavior:auto}
+.gal-item{flex:0 0 auto;width:min(78vw,520px);scroll-snap-align:start;margin:0}
+.gal-item.tall{width:min(60vw,340px)}
+.gal-item .gi{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;background:var(--line)}
+.gal-item.tall .gi{aspect-ratio:3/4}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1);cursor:zoom-in;-webkit-user-drag:none;user-select:none}
+.gal-item:hover img{transform:scale(1.05)}
+.gal-item figcaption{display:flex;align-items:center;gap:10px;font-size:14.5px;color:var(--muted);margin-top:12px}
+.gal-item figcaption b{font-family:var(--display);font-weight:400;color:var(--gold-ink);font-size:16px;font-variant-numeric:tabular-nums}
+.gal-hint{font-size:14px;color:var(--muted);margin-top:6px}
+/* Lightbox mit Navigation */
+.lb figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:14px}
+.lb figcaption{color:rgba(255,255,255,.85);font-size:15px;display:flex;gap:14px;align-items:center}
+.lb figcaption b{font-weight:500;color:var(--gold-soft);font-variant-numeric:tabular-nums}
+.lb .lb-nav{position:absolute;top:50%;width:54px;height:54px;margin-top:-27px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;font-size:26px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lb .lb-nav:hover{background:rgba(255,255,255,.2)}
+.lb .lb-prev{left:max(16px,env(safe-area-inset-left,0px))}
+.lb .lb-next{right:max(16px,env(safe-area-inset-right,0px))}
+.lb img{transition:opacity .3s}
+@media(max-width:640px){.lb .lb-nav{top:auto;bottom:max(18px,env(safe-area-inset-bottom,0px));margin-top:0}.gal-nav{display:none}}
 /* ---------- Responsive ---------- */
 @media(max-width:1140px){
   .nav-links{gap:20px}
@@ -482,6 +541,8 @@ footer a:hover{color:#fff}
   .foot-grid{grid-template-columns:1fr;gap:36px}
 }
 @media(prefers-reduced-motion:reduce){
+  .marquee-track{animation:none}
+  .mosaic .m:first-child:after{animation:none}
   html{scroll-behavior:auto}
   *,*:before,*:after{animation:none!important;transition:none!important}
 }
@@ -591,6 +652,7 @@ footer a:hover{color:#fff}
 <symbol id="i-mountain" viewbox="0 0 24 24"><path d="m8 3 4 8 5-5 5 15H2L8 3z"></path></symbol>
 <symbol id="i-mountain-snow" viewbox="0 0 24 24"><path d="m8 3 4 8 5-5 5 15H2L8 3z"></path><path d="M4.14 15.08c2.62-1.57 5.24-1.43 7.86.42 2.74 1.94 5.49 2 8.23.19"></path></symbol>
 </svg>
+<div aria-hidden="true" class="fx-progress" id="fxProgress"></div>
 <a class="skip" data-i18n="skip" href="#main">Preskoči na sadržaj</a>
 <!-- ======= NAVIGATION ======= -->
 <nav aria-label="Hauptnavigation" id="nav">
@@ -781,6 +843,29 @@ footer a:hover{color:#fff}
 </div>
 </div>
 </section>
+<!-- ======= GALERIE ======= -->
+<section aria-label="Galerie" class="section gallery" id="galerie">
+<div class="wrap gal-head">
+<div class="head">
+<span class="eyebrow" data-i18n="gal.eyebrow">Pogled iznutra</span>
+<h2 data-i18n="gal.h2">Haus Dalmatia <em>u slikama.</em></h2>
+<p class="gal-hint" data-i18n="gal.hint">Povucite prstom ili mišem – klikom otvarate veću sliku.</p>
+</div>
+<div class="gal-nav"><button aria-label="Zurück" id="galPrev" type="button"><svg class="ic"><use href="#i-arrow"></use></svg></button><button aria-label="Weiter" id="galNext" type="button"><svg class="ic"><use href="#i-arrow"></use></svg></button></div>
+</div>
+<div class="gal-track" id="galTrack">
+<figure class="gal-item"><div class="gi"><img alt="Pogled na more s balkona" class="zoom" data-full="../bilder/web/hero-meerblick-1600.webp" data-i18n-alt="alt.view" draggable="false" height="1067" loading="lazy" src="../bilder/web/hero-meerblick-960.webp" width="1600"/></div><figcaption><b>01</b><span data-i18n="alt.view">Pogled na more s balkona</span></figcaption></figure>
+<figure class="gal-item tall"><div class="gi"><img alt="Grijani bazen ispred kuće" class="zoom" data-full="../bilder/web/pool-1400.webp" data-i18n-alt="alt.pool1" draggable="false" height="1665" loading="lazy" src="../bilder/web/pool-800.webp" width="1400"/></div><figcaption><b>02</b><span data-i18n="alt.pool1">Grijani bazen ispred kuće</span></figcaption></figure>
+<figure class="gal-item"><div class="gi"><img alt="Apartman More – dnevni boravak" class="zoom" data-full="../bilder/web/apt-more-1400.webp" data-i18n-alt="alt.more" draggable="false" height="933" loading="lazy" src="../bilder/web/apt-more-800.webp" width="1400"/></div><figcaption><b>03</b><span data-i18n="alt.more">Apartman More – dnevni boravak</span></figcaption></figure>
+<figure class="gal-item"><div class="gi"><img alt="Bazen navečer" class="zoom" data-full="../bilder/web/pool-abend-1400.webp" data-i18n-alt="alt.pool2" draggable="false" height="865" loading="lazy" src="../bilder/web/pool-abend-800.webp" width="1400"/></div><figcaption><b>04</b><span data-i18n="alt.pool2">Bazen navečer</span></figcaption></figure>
+<figure class="gal-item"><div class="gi"><img alt="Apartman Maslina – dnevni boravak" class="zoom" data-full="../bilder/web/apt-maslina-1400.webp" data-i18n-alt="alt.maslina" draggable="false" height="932" loading="lazy" src="../bilder/web/apt-maslina-800.webp" width="1400"/></div><figcaption><b>05</b><span data-i18n="alt.maslina">Apartman Maslina – dnevni boravak</span></figcaption></figure>
+<figure class="gal-item tall"><div class="gi"><img alt="Dječje igralište u vrtu" class="zoom" data-full="../bilder/web/spielplatz-1400.webp" data-i18n-alt="alt.spielplatz" draggable="false" height="1665" loading="lazy" src="../bilder/web/spielplatz-800.webp" width="1400"/></div><figcaption><b>06</b><span data-i18n="alt.spielplatz">Dječje igralište u vrtu</span></figcaption></figure>
+<figure class="gal-item"><div class="gi"><img alt="Apartman Riva – dnevni boravak" class="zoom" data-full="../bilder/web/apt-riva-1400.webp" data-i18n-alt="alt.riva" draggable="false" height="932" loading="lazy" src="../bilder/web/apt-riva-800.webp" width="1400"/></div><figcaption><b>07</b><span data-i18n="alt.riva">Apartman Riva – dnevni boravak</span></figcaption></figure>
+<figure class="gal-item"><div class="gi"><img alt="Studio Zora – dnevni boravak" class="zoom" data-full="../bilder/web/apt-zora-1400.webp" data-i18n-alt="alt.zora" draggable="false" height="932" loading="lazy" src="../bilder/web/apt-zora-800.webp" width="1400"/></div><figcaption><b>08</b><span data-i18n="alt.zora">Studio Zora – dnevni boravak</span></figcaption></figure>
+<figure class="gal-item tall"><div class="gi"><img alt="Šljunčana plaža u Bibinju" class="zoom" data-full="../bilder/web/strand-bibinje-1400.webp" data-i18n-alt="alt.plaza" draggable="false" height="1400" loading="lazy" src="../bilder/web/strand-bibinje-800.webp" width="1400"/></div><figcaption><b>09</b><span data-i18n="alt.plaza">Šljunčana plaža u Bibinju</span></figcaption></figure>
+<figure class="gal-item tall"><div class="gi"><img alt="Vodeni sportovi kod Bibinja" class="zoom" data-full="../bilder/web/wassersport-1400.webp" data-i18n-alt="alt.padobran" draggable="false" height="1400" loading="lazy" src="../bilder/web/wassersport-800.webp" width="1400"/></div><figcaption><b>10</b><span data-i18n="alt.padobran">Vodeni sportovi kod Bibinja</span></figcaption></figure>
+</div>
+</section>
 <!-- ======= DIREKT BUCHEN ======= -->
 <section class="section direct" id="direkt">
 <div class="wrap">
@@ -826,6 +911,7 @@ footer a:hover{color:#fff}
 </div>
 </div>
 </section>
+<div aria-hidden="true" class="marquee"><div class="marquee-track"><span>Zadar</span><i>✦</i><span>Krka</span><i>✦</i><span>Kornati</span><i>✦</i><span>Plitvice</span><i>✦</i><span>Nin</span><i>✦</i><span>Paklenica</span><i>✦</i><span>Telašćica</span><i>✦</i><span>Šibenik</span><i>✦</i><span>Pag</span><i>✦</i><span>Ugljan</span><i>✦</i><span>Bibinje</span><i>✦</i><span>Zadar</span><i>✦</i><span>Krka</span><i>✦</i><span>Kornati</span><i>✦</i><span>Plitvice</span><i>✦</i><span>Nin</span><i>✦</i><span>Paklenica</span><i>✦</i><span>Telašćica</span><i>✦</i><span>Šibenik</span><i>✦</i><span>Pag</span><i>✦</i><span>Ugljan</span><i>✦</i><span>Bibinje</span><i>✦</i></div></div>
 <!-- ======= ERLEBNISSE ======= -->
 <section class="section erlebnisse" id="erlebnisse">
 <div class="wrap">
@@ -1080,7 +1166,7 @@ footer a:hover{color:#fff}
 <a href="tel:+491627260657"><svg class="ic"><use href="#i-phone"></use></svg><span data-i18n="mbar.call">Nazovi</span></a>
 </div>
 <!-- ======= LIGHTBOX ======= -->
-<div aria-label="Bild" aria-modal="true" class="lb" id="lb" role="dialog"><button aria-label="Schließen" type="button">×</button><img alt="" id="lbImg" src="data:,"/></div>
+<div aria-label="Bild" aria-modal="true" class="lb" id="lb" role="dialog"><button aria-label="Schließen" class="lb-close" type="button">×</button><button aria-label="Zurück" class="lb-nav lb-prev" type="button">‹</button><figure><img alt="" id="lbImg" src="data:,"/><figcaption><b id="lbCount"></b><span id="lbCap"></span></figcaption></figure><button aria-label="Weiter" class="lb-nav lb-next" type="button">›</button></div>
 <script>
 /* =====================================================================
    EINSTELLUNGEN – hier pflegen
@@ -1100,6 +1186,7 @@ var CAP = { More: 6, Maslina: 4, Riva: 4, Zora: 2, 'Ganzes Haus': 16 };
    ===================================================================== */
 var I18N = {
 en:{
+  'gal.eyebrow':'Insights','gal.h2':'Haus Dalmatia <em>in pictures.</em>','gal.hint':'Swipe or drag – click to see the photo large.',
   'ex.eyebrow':'Trips & experiences',
   'ex.h2':'The Zadar region <em>on your doorstep.</em>',
   'ex.p':'Four national parks, two nature parks, an old town shaped by Romans and the Middle Ages, and a world of islands off the coast – from Haus Dalmatia the finest places in northern Dalmatia are an easy day trip.',
@@ -1264,6 +1351,7 @@ en:{
   'alt.zadar':'Sunset in Zadar','alt.krka':'Skradinski Buk waterfalls in Krka National Park','alt.kornati':'Islands of Kornati National Park'
 },
 pl:{
+  'gal.eyebrow':'Wnętrza i ogród','gal.h2':'Haus Dalmatia <em>na zdjęciach.</em>','gal.hint':'Przesuń lub przeciągnij – kliknij, aby powiększyć zdjęcie.',
   'ex.eyebrow':'Wycieczki i atrakcje',
   'ex.h2':'Region Zadaru <em>tuż za progiem.</em>',
   'ex.p':'Cztery parki narodowe, dwa parki przyrody, stare miasto z czasów rzymskich i średniowiecza oraz wyspy tuż przy wybrzeżu – z Haus Dalmatia najpiękniejsze miejsca północnej Dalmacji są w zasięgu jednodniowej wycieczki.',
@@ -1428,6 +1516,7 @@ pl:{
   'alt.zadar':'Zachód słońca w Zadarze','alt.krka':'Wodospady Skradinski Buk w Parku Narodowym Krka','alt.kornati':'Wyspy Parku Narodowego Kornati'
 },
 hr:{
+  'gal.eyebrow':'Pogled iznutra','gal.h2':'Haus Dalmatia <em>u slikama.</em>','gal.hint':'Povucite prstom ili mišem – klikom otvarate veću sliku.',
   'ex.eyebrow':'Izleti i doživljaji',
   'ex.h2':'Zadarska regija <em>pred vašim vratima.</em>',
   'ex.p':'Četiri nacionalna parka, dva parka prirode, stari grad iz rimskog doba i srednjeg vijeka te otoci tik uz obalu – od kuće Haus Dalmatia najljepša mjesta sjeverne Dalmacije dostupna su kao jednodnevni izlet.',
@@ -1807,15 +1896,56 @@ var burger = $('burger'), navLinks = $('navLinks');
 function setMenu(open){ navLinks.classList.toggle('open', open); burger.classList.toggle('open', open); burger.setAttribute('aria-expanded', open); document.body.style.overflow = open ? 'hidden' : ''; }
 burger.addEventListener('click', function(){ setMenu(!navLinks.classList.contains('open')); });
 navLinks.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
-var lb = $('lb'), lbImg = $('lbImg');
+var lb = $('lb'), lbImg = $('lbImg'), lbList = [], lbPos = 0;
+function lbShow(n){
+  lbPos = (n + lbList.length) % lbList.length;
+  var img = lbList[lbPos];
+  lbImg.style.opacity = 0;
+  lbImg.onload = function(){ lbImg.style.opacity = 1; };
+  lbImg.src = img.getAttribute('data-full') || img.currentSrc || img.src; lbImg.alt = img.alt;
+  $('lbCap').textContent = img.alt; $('lbCount').textContent = (lbPos + 1) + ' / ' + lbList.length;
+}
+function lbOpen(img){
+  var inGal = !!img.closest('.gal-track');
+  lbList = Array.prototype.slice.call(document.querySelectorAll(inGal ? '.gal-track img.zoom' : 'img.zoom:not(.gal-track img)'));
+  lbShow(lbList.indexOf(img)); lb.classList.add('open'); lb.querySelector('.lb-close').focus();
+}
 document.querySelectorAll('img.zoom').forEach(function(img){
   img.setAttribute('tabindex', '0');
   img.setAttribute('role', 'button');
-  function open(){ lbImg.src = img.getAttribute('data-full') || img.currentSrc || img.src; lbImg.alt = img.alt; lb.classList.add('open'); lb.querySelector('button').focus(); }
-  img.addEventListener('click', open);
-  img.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(); } });
+  img.addEventListener('click', function(){ if (!galMoved) lbOpen(img); });
+  img.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); lbOpen(img); } });
 });
-lb.addEventListener('click', function(){ lb.classList.remove('open'); });
+lb.addEventListener('click', function(e){
+  if (e.target.closest('.lb-prev')) return lbShow(lbPos - 1);
+  if (e.target.closest('.lb-next')) return lbShow(lbPos + 1);
+  if (e.target === lbImg) return;
+  lb.classList.remove('open');
+});
+addEventListener('keydown', function(e){
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'ArrowLeft') lbShow(lbPos - 1);
+  if (e.key === 'ArrowRight') lbShow(lbPos + 1);
+});
+(function(){ var x0 = null;
+  lb.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
+  lb.addEventListener('touchend', function(e){ if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) lbShow(lbPos + (dx < 0 ? 1 : -1)); x0 = null; });
+})();
+
+/* =====================================================================
+   GALERIE: Pfeile und Ziehen mit der Maus
+   ===================================================================== */
+var galMoved = false;
+(function(){
+  var tr = $('galTrack'); if (!tr) return;
+  function step(){ var it = tr.querySelector('.gal-item'); return it ? it.getBoundingClientRect().width + 18 : 400; }
+  $('galPrev').addEventListener('click', function(){ tr.scrollBy({left: -step()}); });
+  $('galNext').addEventListener('click', function(){ tr.scrollBy({left: step()}); });
+  var down = false, sx = 0, sl = 0;
+  tr.addEventListener('mousedown', function(e){ down = true; galMoved = false; sx = e.pageX; sl = tr.scrollLeft; tr.classList.add('drag'); });
+  addEventListener('mouseup', function(){ if (!down) return; down = false; tr.classList.remove('drag'); setTimeout(function(){ galMoved = false; }, 0); });
+  tr.addEventListener('mousemove', function(e){ if (!down) return; var dx = e.pageX - sx; if (Math.abs(dx) > 5) galMoved = true; tr.scrollLeft = sl - dx; });
+})();
 addEventListener('keydown', function(e){ if (e.key === 'Escape'){ lb.classList.remove('open'); setMenu(false); } });
 /* =====================================================================
    TITELBILD: sanft überblendende Fotos
@@ -1843,6 +1973,62 @@ addEventListener('keydown', function(e){ if (e.key === 'Escape'){ lb.classList.r
   var l = document.documentElement.lang || 'de';
   try { var p = new URLSearchParams(location.search).get('lang'); if (l === 'de' && p && p !== 'de' && LANGS.indexOf(p) > -1){ location.replace(p + '/' + location.hash); return; } } catch(e){}
   applyLang(l);
+})();
+/* =====================================================================
+   EFFEKTE: Einblenden, Vorhang, Zähler, Parallaxe, Fortschrittslinie
+   Inhalte sind ohne Skript sichtbar; Effekte nur, wenn Bewegung erlaubt ist.
+   ===================================================================== */
+(function(){
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('fx');
+  // Überschrift im Titelbild Wort für Wort
+  var hh = document.querySelector('.hero h1 [data-i18n="hero.h1"]'), wi = 0;
+  (function wrap(node){
+    Array.prototype.slice.call(node.childNodes).forEach(function(c){
+      if (c.nodeType === 3){
+        var f = document.createDocumentFragment();
+        c.textContent.split(/(\s+)/).forEach(function(t){
+          if (!t) return;
+          if (/^\s+$/.test(t)){ f.appendChild(document.createTextNode(t)); return; }
+          var s = document.createElement('span'); s.className = 'w'; s.style.setProperty('--i', wi++); s.textContent = t; f.appendChild(s);
+        });
+        node.replaceChild(f, c);
+      } else if (c.nodeType === 1) wrap(c);
+    });
+  })(hh);
+  // Einblenden nur für Elemente unterhalb des sichtbaren Bereichs
+  var vh = innerHeight, sel = [
+    ['.section .head, .welcome .wrap > div, .faq .intro, .form-intro, .gal-head', 'rv', 0],
+    ['.apt, .xf, .benefit, .am, .rev, .exp-grid > *, .xs, .ex-mapbox, .ex-card, .score-card, .whole, .rules, .season, .checks li, .faq-list, .iform, .keyfacts > div, .dist li', 'rv', .08],
+    ['.lage-img, .mosaic .m, .host, .xf-img', 'cv', .1]];
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {rootMargin:'0px 0px -8% 0px'});
+  sel.forEach(function(s){
+    var groups = new Map();
+    document.querySelectorAll(s[0]).forEach(function(el){
+      if (el.getBoundingClientRect().top < vh * .92) return;
+      var p = el.parentElement, n = groups.get(p) || 0; groups.set(p, n + 1);
+      el.style.setProperty('--d', Math.min(n * s[2], .5) + 's');
+      el.classList.add(s[1]); io.observe(el);
+    });
+  });
+  // Zahlen zählen hoch
+  var cio = new IntersectionObserver(function(es){ es.forEach(function(e){
+    if (!e.isIntersecting) return; cio.unobserve(e.target);
+    var el = e.target, to = +el.textContent, t0 = performance.now();
+    (function tick(t){ var p = Math.min((t - t0) / 1600, 1); el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(tick); })(t0);
+  }); }, {threshold:.6});
+  document.querySelectorAll('.keyfacts b').forEach(function(b){ if (/^\d+$/.test(b.textContent) && b.getBoundingClientRect().top > vh) cio.observe(b); });
+  // Parallaxe und Fortschrittslinie
+  var slides = document.querySelector('.hero-slides'), prog = $('fxProgress'), lageImg = document.querySelector('.lage-img img'), ticking = false;
+  function frame(){
+    ticking = false;
+    var y = scrollY, max = document.documentElement.scrollHeight - innerHeight;
+    prog.style.transform = 'scaleX(' + (max > 0 ? y / max : 0) + ')';
+    if (y < innerHeight * 1.2) slides.style.transform = 'translate3d(0,' + (y * .28).toFixed(1) + 'px,0)';
+    if (lageImg){ var r = lageImg.parentElement.getBoundingClientRect(); if (r.bottom > 0 && r.top < innerHeight){ var k = (r.top + r.height / 2 - innerHeight / 2) / innerHeight; lageImg.style.transform = 'scale(1.12) translate3d(0,' + (k * -30).toFixed(1) + 'px,0)'; } }
+  }
+  addEventListener('scroll', function(){ if (!ticking){ ticking = true; requestAnimationFrame(frame); } }, {passive:true});
+  frame();
 })();
 </script>
 </body>
