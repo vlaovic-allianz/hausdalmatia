@@ -472,6 +472,25 @@ footer a:hover{color:#fff}
 .lb .lb-next{right:max(16px,env(safe-area-inset-right,0px))}
 .lb img{transition:opacity .3s}
 @media(max-width:640px){.lb .lb-nav{top:auto;bottom:max(18px,env(safe-area-inset-bottom,0px));margin-top:0}.gal-nav{display:none}}
+/* ---------- Kleine Details ---------- */
+::selection{background:var(--gold-soft);color:var(--sea-deep)}
+html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
+.nav-links a:not(.btn){padding-block:4px;background:linear-gradient(currentColor,currentColor) 50% 100%/0 1px no-repeat;transition:background-size .35s,color .25s}
+.nav-links a:not(.btn):hover{background-size:100% 1px}
+.live{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:14px;color:rgba(255,255,255,.88);min-height:1.4em}
+.live span{display:inline-flex;align-items:center;gap:8px}
+.live .ic{width:17px;height:17px;flex-basis:17px;color:var(--gold-soft)}
+.live b{font-weight:600;color:#fff;font-variant-numeric:tabular-nums}
+.to-top{position:fixed;right:max(32px,env(safe-area-inset-right,0px));bottom:100px;z-index:90;width:46px;height:46px;border-radius:50%;border:none;background:#fff;color:var(--sea);cursor:pointer;box-shadow:0 10px 26px -12px rgba(15,40,52,.45);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .35s,transform .35s,visibility .35s}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top svg.ring{position:absolute;inset:0;width:46px;height:46px;transform:rotate(-90deg)}
+.to-top svg.ring circle{fill:none;stroke-width:2}
+.to-top .bg{stroke:var(--line)}
+.to-top .fg{stroke:var(--gold);stroke-dasharray:132;stroke-dashoffset:132;transition:stroke-dashoffset .15s linear}
+.to-top .ic{width:18px;height:18px;transform:rotate(-90deg)}
+.foot-mark{padding-block:10px 0;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;overflow:hidden}
+.foot-mark .wm{font-family:var(--display);font-size:clamp(46px,9.5vw,138px);line-height:1;letter-spacing:.02em;color:transparent;-webkit-text-stroke:1px rgba(220,197,156,.35);white-space:nowrap;padding-top:18px}
+.foot-mark .geo{font-size:13px;letter-spacing:.14em;color:var(--gold-soft);padding-bottom:14px;font-variant-numeric:tabular-nums}
 /* ---------- Responsive ---------- */
 @media(max-width:1140px){
   .nav-links{gap:20px}
@@ -497,7 +516,7 @@ footer a:hover{color:#fff}
   .nav-links.open{transform:none;visibility:visible}
   .nav-links a:not(.btn){color:#fff!important;font-size:19px}
   .burger{display:block}
-  .wa-float{display:none}
+  .wa-float,.to-top{display:none}
   .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:95;background:var(--sea-deep);box-shadow:0 -6px 20px rgba(15,40,52,.25);padding:8px max(10px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(10px,env(safe-area-inset-left,0px));gap:8px}
   .mbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;padding:12px 6px;border-radius:999px;font-size:14px;font-weight:600;color:#fff;background:rgba(255,255,255,.08)}
   .mbar a.primary{background:var(--gold)}
@@ -690,6 +709,7 @@ footer a:hover{color:#fff}
 <a class="rating" href="#reviews"><b>9,9</b><span data-i18n="hero.rating">Wyjątkowy · 44 opinie na Booking.com</span></a>
 <h1><span class="kicker" data-i18n="hero.eyebrow">Apartamenty z podgrzewanym basenem · Bibinje koło Zadaru</span><span data-i18n="hero.h1">Tam, gdzie Adriatyk <em>zaczyna się za progiem.</em></span></h1>
 <p class="sub" data-i18n="hero.sub">Cztery apartamenty z imieniem i charakterem, podgrzewany basen w ogrodzie – i morze w Bibinje w zasięgu krótkiego spaceru.</p>
+<p aria-live="off" class="live" id="live"></p>
 </div>
 </header>
 <main id="main">
@@ -1148,6 +1168,7 @@ footer a:hover{color:#fff}
 </address>
 </div>
 </div>
+<div aria-hidden="true" class="foot-mark"><span class="wm">Haus Dalmatia</span><span class="geo">44°04′28″ N · 15°17′09″ E</span></div>
 <div class="foot-bottom">
 <span data-i18n="foot.copyright">© 2026 Haus Dalmatia · Wszelkie prawa zastrzeżone</span>
 <span data-i18n="foot.credit">Zdjęcia okolicy: Wikimedia Commons (CC0 / domena publiczna)</span>
@@ -1159,6 +1180,7 @@ footer a:hover{color:#fff}
 <a aria-label="WhatsApp" class="wa-float" data-wa="quick" href="https://wa.me/491627260657" rel="noopener" target="_blank">
 <svg aria-hidden="true" viewbox="0 0 32 32"><path d="M16 .8C7.6.8.8 7.6.8 16c0 2.7.7 5.3 2 7.6L.8 31.2l7.8-2c2.2 1.2 4.7 1.9 7.4 1.9 8.4 0 15.2-6.8 15.2-15.2S24.4.8 16 .8zm0 27.7c-2.4 0-4.7-.6-6.7-1.8l-.5-.3-4.6 1.2 1.2-4.5-.3-.5c-1.3-2-2-4.4-2-6.8C3.1 8.9 8.9 3.1 16 3.1S28.9 8.9 28.9 16 23.1 28.5 16 28.5zm7-9.4c-.4-.2-2.3-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.4.3-.8.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.7.2-.2.3-.4.4-.7.1-.3.1-.5 0-.7-.1-.2-.9-2.1-1.2-2.9-.3-.8-.6-.7-.9-.7h-.8c-.3 0-.7.1-1.1.5-.4.4-1.4 1.4-1.4 3.4s1.5 3.9 1.7 4.2c.2.3 2.9 4.4 7 6.2 1 .4 1.7.7 2.3.9 1 .3 1.9.3 2.6.2.8-.1 2.3-1 2.7-1.9.3-.9.3-1.7.2-1.9-.1-.2-.4-.3-.8-.5z"></path></svg>
 </a>
+<button aria-label="Nach oben" class="to-top" id="toTop" type="button"><svg aria-hidden="true" class="ring" viewbox="0 0 46 46"><circle class="bg" cx="23" cy="23" r="21"></circle><circle class="fg" cx="23" cy="23" id="toTopFg" r="21"></circle></svg><svg class="ic"><use href="#i-arrow"></use></svg></button>
 <!-- ======= MOBILE SCHNELLZUGRIFF ======= -->
 <div class="mbar">
 <a class="primary" href="#anfrage"><svg class="ic"><use href="#i-cal"></use></svg><span data-i18n="mbar.inq">Zapytaj</span></a>
@@ -1684,7 +1706,7 @@ hr:{
 /* Texte, die per Skript erzeugt werden */
 function plPl(n, one, few, many){ var m10 = n % 10, m100 = n % 100; return n === 1 ? one : (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) ? few : many; }
 var T = {
-  de:{ guest:function(n){return n+(n===1?' Gast':' Gäste');}, adult:function(n){return n+(n===1?' Erwachsener':' Erwachsene');}, kid:function(n){return n===0?'keine Kinder':n+(n===1?' Kind':' Kinder');},
+  de:{ liveNow:'Bibinje jetzt', liveSun:'Sonnenuntergang heute', toTop:'Nach oben', guest:function(n){return n+(n===1?' Gast':' Gäste');}, adult:function(n){return n+(n===1?' Erwachsener':' Erwachsene');}, kid:function(n){return n===0?'keine Kinder':n+(n===1?' Kind':' Kinder');},
        nights:function(n){return n+(n===1?' Nacht':' Nächte');}, priceReq:'Preis auf Anfrage', from:'ab', night:'/ Nacht', upto:'bis',
        sugg:function(a){return 'Unser Vorschlag: '+a;}, aptAny:'Egal – bitte beraten', aptAll:'Ganzes Haus (bis 16)',
        errDates:'Bitte Anreise und Abreise wählen (Abreise nach Anreise).', errName:'Bitte Ihren Namen angeben.', errMail:'Bitte eine gültige E-Mail-Adresse angeben.', errConsent:'Bitte der Verarbeitung Ihrer Angaben zustimmen.',
@@ -1693,7 +1715,7 @@ var T = {
        subj:'Anfrage Haus Dalmatia', hello:'Guten Tag Marijana,', intro:'ich interessiere mich für einen Aufenthalt im Haus Dalmatia.',
        lArr:'Anreise', lDep:'Abreise', lGuests:'Gäste', lApt:'Apartment', lName:'Name', lMail:'E-Mail', lMsg:'Nachricht', bye:'Vielen Dank und viele Grüße',
        waInquiry:'Guten Tag, ich möchte gern die Verfügbarkeit im Haus Dalmatia anfragen.', waDirect:'Guten Tag, ich möchte gern direkt im Haus Dalmatia buchen.' },
-  en:{ guest:function(n){return n+(n===1?' guest':' guests');}, adult:function(n){return n+(n===1?' adult':' adults');}, kid:function(n){return n===0?'no children':n+(n===1?' child':' children');},
+  en:{ liveNow:'Bibinje now', liveSun:'Sunset today', toTop:'Back to top', guest:function(n){return n+(n===1?' guest':' guests');}, adult:function(n){return n+(n===1?' adult':' adults');}, kid:function(n){return n===0?'no children':n+(n===1?' child':' children');},
        nights:function(n){return n+(n===1?' night':' nights');}, priceReq:'Price on request', from:'from', night:'/ night', upto:'up to',
        sugg:function(a){return 'Our suggestion: '+a;}, aptAny:'Any – please advise', aptAll:'Whole house (up to 16)',
        errDates:'Please choose arrival and departure (departure after arrival).', errName:'Please enter your name.', errMail:'Please enter a valid email address.', errConsent:'Please agree to the processing of your details.',
@@ -1702,7 +1724,7 @@ var T = {
        subj:'Enquiry Haus Dalmatia', hello:'Hello Marijana,', intro:'I am interested in a stay at Haus Dalmatia.',
        lArr:'Arrival', lDep:'Departure', lGuests:'Guests', lApt:'Apartment', lName:'Name', lMail:'Email', lMsg:'Message', bye:'Many thanks and best regards',
        waInquiry:'Hello, I would like to enquire about availability at Haus Dalmatia.', waDirect:'Hello, I would like to book directly at Haus Dalmatia.' },
-  pl:{ guest:function(n){return n+' '+plPl(n,'osoba','osoby','osób');}, adult:function(n){return n+' '+plPl(n,'dorosły','dorosłych','dorosłych');}, kid:function(n){return n===0?'bez dzieci':n+' '+plPl(n,'dziecko','dzieci','dzieci');},
+  pl:{ liveNow:'Bibinje teraz', liveSun:'Zachód słońca dziś', toTop:'Do góry', guest:function(n){return n+' '+plPl(n,'osoba','osoby','osób');}, adult:function(n){return n+' '+plPl(n,'dorosły','dorosłych','dorosłych');}, kid:function(n){return n===0?'bez dzieci':n+' '+plPl(n,'dziecko','dzieci','dzieci');},
        nights:function(n){return n+' '+plPl(n,'noc','noce','nocy');}, priceReq:'Cena na zapytanie', from:'od', night:'/ noc', upto:'do',
        sugg:function(a){return 'Nasza propozycja: '+a;}, aptAny:'Obojętnie – proszę doradzić', aptAll:'Cały dom (do 16 osób)',
        errDates:'Prosimy wybrać datę przyjazdu i wyjazdu (wyjazd po przyjeździe).', errName:'Prosimy podać imię i nazwisko.', errMail:'Prosimy podać poprawny adres e-mail.', errConsent:'Prosimy wyrazić zgodę na przetwarzanie danych.',
@@ -1711,7 +1733,7 @@ var T = {
        subj:'Zapytanie Haus Dalmatia', hello:'Dzień dobry Pani Marijano,', intro:'interesuje mnie pobyt w Haus Dalmatia.',
        lArr:'Przyjazd', lDep:'Wyjazd', lGuests:'Goście', lApt:'Apartament', lName:'Imię i nazwisko', lMail:'E-mail', lMsg:'Wiadomość', bye:'Dziękuję i pozdrawiam',
        waInquiry:'Dzień dobry, chciałbym/chciałabym zapytać o dostępność w Haus Dalmatia.', waDirect:'Dzień dobry, chciałbym/chciałabym zarezerwować bezpośrednio w Haus Dalmatia.' },
-  hr:{ guest:function(n){var m=n%10,h=n%100;return n+((m===1&&h!==11)?' gost':(m>=2&&m<=4&&(h<12||h>14))?' gosta':' gostiju');}, adult:function(n){var m=n%10,h=n%100;return n+((m===1&&h!==11)?' odrasla osoba':(m>=2&&m<=4&&(h<12||h>14))?' odrasle osobe':' odraslih');}, kid:function(n){return n===0?'bez djece':n+(n===1?' dijete':' djece');},
+  hr:{ liveNow:'Bibinje sada', liveSun:'Zalazak sunca danas', toTop:'Na vrh', guest:function(n){var m=n%10,h=n%100;return n+((m===1&&h!==11)?' gost':(m>=2&&m<=4&&(h<12||h>14))?' gosta':' gostiju');}, adult:function(n){var m=n%10,h=n%100;return n+((m===1&&h!==11)?' odrasla osoba':(m>=2&&m<=4&&(h<12||h>14))?' odrasle osobe':' odraslih');}, kid:function(n){return n===0?'bez djece':n+(n===1?' dijete':' djece');},
        nights:function(n){var m=n%10,h=n%100;return n+((m===1&&h!==11)?' noć':' noći');}, priceReq:'Cijena na upit', from:'od', night:'/ noć', upto:'do',
        sugg:function(a){return 'Naš prijedlog: '+a;}, aptAny:'Svejedno – savjetujte me', aptAll:'Cijela kuća (do 16)',
        errDates:'Odaberite datum dolaska i odlaska (odlazak nakon dolaska).', errName:'Upišite svoje ime.', errMail:'Upišite valjanu adresu e-pošte.', errConsent:'Molimo potvrdite suglasnost za obradu podataka.',
@@ -2029,6 +2051,40 @@ addEventListener('keydown', function(e){ if (e.key === 'Escape'){ lb.classList.r
   }
   addEventListener('scroll', function(){ if (!ticking){ ticking = true; requestAnimationFrame(frame); } }, {passive:true});
   frame();
+})();
+/* =====================================================================
+   DETAILS: Ortszeit & Sonnenuntergang in Bibinje, Nach-oben-Knopf
+   ===================================================================== */
+(function(){
+  var LAT = 44.0744, LON = 15.2858, TZ = 'Europe/Zagreb', live = $('live'), t = T[curLang];
+  var loc = {de:'de-DE', en:'en-GB', pl:'pl-PL', hr:'hr-HR'}[curLang] || 'de-DE';
+  function fmt(d){ return d.toLocaleTimeString(loc, {timeZone: TZ, hour: '2-digit', minute: '2-digit'}); }
+  // Sonnenuntergang nach NOAA-Näherung (Genauigkeit etwa ±2 Minuten)
+  function sunset(now){
+    var y = now.getUTCFullYear(), start = Date.UTC(y, 0, 1), n = Math.floor((now - start) / 864e5) + 1;
+    var g = 2 * Math.PI / 365 * (n - 1), r = Math.PI / 180;
+    var eq = 229.18 * (0.000075 + 0.001868 * Math.cos(g) - 0.032077 * Math.sin(g) - 0.014615 * Math.cos(2 * g) - 0.040849 * Math.sin(2 * g));
+    var de = 0.006918 - 0.399912 * Math.cos(g) + 0.070257 * Math.sin(g) - 0.006758 * Math.cos(2 * g) + 0.000907 * Math.sin(2 * g) - 0.002697 * Math.cos(3 * g) + 0.00148 * Math.sin(3 * g);
+    var ha = Math.acos(Math.cos(90.833 * r) / (Math.cos(LAT * r) * Math.cos(de)) - Math.tan(LAT * r) * Math.tan(de)) / r;
+    var min = 720 - 4 * (LON - ha) - eq;
+    return new Date(Date.UTC(y, now.getUTCMonth(), now.getUTCDate()) + min * 6e4);
+  }
+  function draw(){
+    var now = new Date();
+    live.innerHTML = '<span><svg class="ic"><use href="#i-clock"/></svg>' + t.liveNow + ' <b>' + fmt(now) + '</b></span>' +
+                     '<span><svg class="ic"><use href="#i-sun"/></svg>' + t.liveSun + ' <b>' + fmt(sunset(now)) + '</b></span>';
+  }
+  if (live){ try { draw(); setInterval(draw, 30000); } catch(e){ live.hidden = true; } }
+  var btn = $('toTop'), fg = $('toTopFg');
+  if (btn){
+    btn.setAttribute('aria-label', t.toTop);
+    btn.addEventListener('click', function(){ scrollTo({top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}); });
+    var tk = false;
+    addEventListener('scroll', function(){ if (tk) return; tk = true; requestAnimationFrame(function(){
+      tk = false; var y = scrollY, max = document.documentElement.scrollHeight - innerHeight;
+      btn.classList.toggle('show', y > 700); fg.style.strokeDashoffset = (132 * (1 - (max > 0 ? y / max : 0))).toFixed(1);
+    }); }, {passive:true});
+  }
 })();
 </script>
 </body>
