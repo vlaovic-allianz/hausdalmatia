@@ -1,7 +1,7 @@
 # Haus Dalmatia – Pflege der Website
 
 Die Startseite ist eine einzelne, statische Datei (`index.html`) ohne externe Abhängigkeiten:
-Schriften liegen in `fonts/`, optimierte Bilder in `bilder/web/` (WebP). Es werden keine Cookies
+Schriften (Marcellus für Überschriften, Figtree für Text) liegen in `fonts/`, Icons (Lucide, ISC-Lizenz) als SVG-Sprite in `index.html`, optimierte Bilder in `bilder/web/` (WebP). Es werden keine Cookies
 gesetzt und keine Drittanbieter geladen.
 
 ## Häufige Änderungen
