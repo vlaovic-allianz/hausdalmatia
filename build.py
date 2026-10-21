@@ -44,6 +44,18 @@ def relink(soup):
         st.string = st.string.replace('url(fonts/', 'url(../fonts/')
 
 
+def faq_ld(soup):
+    """FAQPage-Daten aus den sichtbaren Fragen erzeugen (Wortlaut identisch mit der Seite)."""
+    items = [{'@type': 'Question', 'name': d.summary.get_text(' ', strip=True),
+              'acceptedAnswer': {'@type': 'Answer', 'text': d.select_one('.ans').get_text(' ', strip=True)}}
+             for d in soup.select('.faq-list details')]
+    return json.dumps({'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': items}, ensure_ascii=False)
+
+
+def set_faq(soup):
+    soup.find('script', id='ld-faq').string = faq_ld(soup)
+
+
 def build(lang, src, d):
     soup = BeautifulSoup(src, 'html.parser')
     soup.html['lang'] = lang
@@ -73,6 +85,16 @@ def build(lang, src, d):
     for el in soup.select('[data-i18n-ph]'):
         if el['data-i18n-ph'] in d:
             el['placeholder'] = d[el['data-i18n-ph']]
+    # Strukturierte Daten in der jeweiligen Sprache
+    for sc in soup.find_all('script', type='application/ld+json'):
+        try:
+            data = json.loads(sc.string)
+        except (TypeError, ValueError):
+            continue
+        if data.get('@type') == 'LodgingBusiness':
+            data.update(url=url, inLanguage=lang, description=d['__desc'])
+            sc.string = json.dumps(data, ensure_ascii=False, indent=2)
+    set_faq(soup)
     relink(soup)
     for a in soup.select('.lang-switch a'):
         l = a['data-lang']
@@ -88,6 +110,14 @@ def build(lang, src, d):
 def main():
     src = (ROOT / 'index.html').read_text(encoding='utf-8')
     i18n = load_i18n(src)
+    # FAQ-Daten der deutschen Seite aktualisieren (nur der Inhalt dieses einen Skript-Blocks)
+    m = re.search(r'(<script type="application/ld\+json" id="ld-faq">)(.*?)(</script>)', src, re.S)
+    if m:
+        new = faq_ld(BeautifulSoup(src, 'html.parser'))
+        if m.group(2) != new:
+            src = src[:m.start(2)] + new + src[m.end(2):]
+            (ROOT / 'index.html').write_text(src, encoding='utf-8')
+            print('aktualisiert: FAQ-Daten in index.html')
     for lang in [l for l in LOCALES if l != 'de']:
         if lang not in i18n:
             continue

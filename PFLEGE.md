@@ -42,12 +42,31 @@ Skript lahm – genau das war der Fehler der Version vom 07.10.2026.
   Strand- und Wassersportfoto stammen von der eigenen Website; bitte bestätigen, dass sie selbst aufgenommen wurden.
 - Titelbild: vier Fotos blenden nacheinander über (`TITELBILD` im Skript). Reihenfolge = Reihenfolge der `hero-bg`-Bilder im HTML.
 
+## Suchmaschinen & KI-Assistenten
+
+- `build.py` erzeugt pro Sprache übersetzte Strukturdaten (Schema.org) und die FAQ-Daten (`ld-faq`) automatisch aus den sichtbaren Fragen.
+  FAQ-Fragen also nur im HTML bzw. in `I18N` pflegen, danach `python3 build.py`.
+- `llms.txt` fasst die wichtigsten Fakten für KI-Assistenten zusammen. Bei geänderten Fakten (z. B. Strandentfernung) mitpflegen.
+- Bewertungssterne (aggregateRating) sind bewusst **nicht** eingebaut: Booking-Bewertungen dürfen laut Google-Richtlinien nicht als eigenes Markup erscheinen.
+- **Beim Umzug von WordPress (wichtig):** Beim Hoster 301-Weiterleitungen einrichten, z. B. `/amenities/` → `/en/#pool`, `/contact/` → `/en/#anfrage`
+  sowie alte deutsche und polnische Unterseiten → `/` bzw. `/pl/`. Das Meta-Tag `google-site-verification` aus der alten Seite übernehmen
+  (oder die Domain per DNS in der Search Console bestätigen) und danach `sitemap.xml` einreichen.
+- Beim Hosting Brotli/Gzip aktivieren und für `bilder/` und `fonts/` lange Cache-Zeiten setzen. Im CDN keine „KI-Bots blockieren“-Option aktivieren.
+
+## Formular
+
+- Die Einwilligungs-Checkbox wurde durch einen Datenschutzhinweis ersetzt (Verarbeitung zur Beantwortung der Anfrage, Art. 6 Abs. 1 lit. b DSGVO).
+  **Bitte vor dem Livegang rechtlich bestätigen lassen.**
+- Beim Versand per WhatsApp ist die E-Mail-Adresse freiwillig; beim Versand per E-Mail Pflicht.
+- Nach dem Absenden erscheint eine Rückfallebene („Anfrage kopieren“, E-Mail-Adresse, WhatsApp-Link), falls sich keine App öffnet.
+
 ## Effekte
 
 Überschrift-Animation, Einblenden beim Scrollen, Vorhang-Effekt bei Fotos, Zähler, Parallaxe, goldene
 Fortschrittslinie, Laufband und Lichtspiel auf dem Poolfoto stehen im Skriptblock `EFFEKTE` bzw. im CSS
 unter „Effekte“. Sie schalten sich bei „Bewegung reduzieren“ automatisch ab; ohne Skript ist alles sichtbar.
 Galerie „Einblicke“: Bilder im Abschnitt `GALERIE` (Reihenfolge = Reihenfolge im HTML).
+Barrierefreiheit: Die Titel-Diashow hat einen Pause-Knopf, das Laufband hält beim Antippen an; Menü und Bildansicht halten den Tastaturfokus.
 
 ## Vor dem Livegang zu klären
 
@@ -57,5 +76,6 @@ Galerie „Einblicke“: Bilder im Abschnitt `GALERIE` (Reihenfolge = Reihenfolg
 4. **Preise & Mindestaufenthalt** je Apartment und Saison.
 5. **Sprachen der Gastgeberin:** „Deutsch, Kroatisch, Englisch“ bestätigen.
 6. **Impressum:** OIB, Rješenje, Kategorie eintragen; Hosting-Anbieter in der Datenschutzerklärung.
-7. **Booking.com-Listing:** „Lake view“ und „2 swimming pools“ korrigieren; Wert 9,9/10 (44 Bewertungen, Stand 21.10.2026) regelmäßig aktualisieren.
-8. Alte Booking-Links der WordPress-Seite (fremde `aid`, Datum 2025) entfallen mit dieser Seite.
+7. **Porträt der Gastgeberin** (rund, gern mit Unterschrift) für die Willkommenskarte – stärkt das Vertrauen bei Direktbuchung.
+8. **Booking.com-Listing:** „Lake view“ und „2 swimming pools“ korrigieren; Wert 9,9/10 (44 Bewertungen, Stand 21.10.2026) regelmäßig aktualisieren.
+9. Alte Booking-Links der WordPress-Seite (fremde `aid`, Datum 2025) entfallen mit dieser Seite.

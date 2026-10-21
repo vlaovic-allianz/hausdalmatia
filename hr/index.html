@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
-<title>Apartmani s grijanim bazenom u Bibinju kod Zadra · Haus Dalmatia</title>
-<meta content="Četiri moderna apartmana s grijanim bazenom, vrtom i dječjim igralištem u Bibinju kod Zadra – za 2 do 16 gostiju, ocjena 9,9/10 na Booking.comu. Upitajte izravno domaćicu." name="description"/>
+<title>Apartmani s grijanim bazenom, Bibinje kod Zadra · Haus Dalmatia</title>
+<meta content="4 apartmana s grijanim bazenom u Bibinju, 9 km od Zadra: 2–16 gostiju, vrt, igralište, parking. Upitajte izravno domaćicu." name="description"/>
 <link href="https://hausdalmatia.com/hr/" rel="canonical"/>
 <link href="https://hausdalmatia.com/" hreflang="de" rel="alternate"/>
 <link href="https://hausdalmatia.com/en/" hreflang="en" rel="alternate"/>
@@ -19,8 +19,8 @@
 <!-- Teilen-Vorschau (WhatsApp / Facebook / Instagram) -->
 <meta content="website" property="og:type"/>
 <meta content="Haus Dalmatia" property="og:site_name"/>
-<meta content="Apartmani s grijanim bazenom u Bibinju kod Zadra · Haus Dalmatia" property="og:title"/>
-<meta content="Četiri moderna apartmana s grijanim bazenom, vrtom i dječjim igralištem u Bibinju kod Zadra – za 2 do 16 gostiju, ocjena 9,9/10 na Booking.comu. Upitajte izravno domaćicu." property="og:description"/>
+<meta content="Apartmani s grijanim bazenom, Bibinje kod Zadra · Haus Dalmatia" property="og:title"/>
+<meta content="4 apartmana s grijanim bazenom u Bibinju, 9 km od Zadra: 2–16 gostiju, vrt, igralište, parking. Upitajte izravno domaćicu." property="og:description"/>
 <meta content="https://hausdalmatia.com/bilder/web/og-haus-dalmatia.jpg" property="og:image"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
@@ -491,6 +491,56 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 .foot-mark{padding-block:10px 0;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;overflow:hidden}
 .foot-mark .wm{font-family:var(--display);font-size:clamp(46px,9.5vw,138px);line-height:1;letter-spacing:.02em;color:transparent;-webkit-text-stroke:1px rgba(220,197,156,.35);white-space:nowrap;padding-top:18px}
 .foot-mark .geo{font-size:13px;letter-spacing:.14em;color:var(--gold-soft);padding-bottom:14px;font-variant-numeric:tabular-nums}
+/* ---------- Feinschliff nach Design- & Barrierefreiheitsprüfung ---------- */
+.btn.gold,.mbar a.primary{background:linear-gradient(180deg,#9a7741,#87662f);color:#fff}
+.btn.gold:hover{background:linear-gradient(180deg,#8b6a37,#7a5a28)}
+:focus-visible{outline-color:var(--sea)}
+.hero :focus-visible,nav:not(.scrolled) :focus-visible,footer :focus-visible,.inquiry .form-intro :focus-visible,.whole :focus-visible,.lb :focus-visible,.nav-links.open :focus-visible,.mbar :focus-visible{outline-color:var(--gold-soft)}
+.hero .kicker{font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.92);margin-bottom:18px}
+.hero:after{background:linear-gradient(90deg,rgba(15,40,52,.5),transparent 62%),linear-gradient(180deg,rgba(15,40,52,.55) 0%,rgba(15,40,52,.12) 32%,rgba(15,40,52,.2) 55%,rgba(15,40,52,.78) 100%)}
+.score-card .big small,.gal-item figcaption b{font-family:var(--body);font-weight:500;font-variant-numeric:lining-nums tabular-nums}
+.bf input[type=date]{position:relative;cursor:pointer}
+.bf input[type=date]::-webkit-calendar-picker-indicator{position:absolute;inset:0;width:auto;height:auto;opacity:0;cursor:pointer}
+.bf:focus-within{box-shadow:inset 0 0 0 2px var(--sea)}
+.price .req{color:var(--gold-ink);font-weight:600;letter-spacing:.01em}
+.gal-track{--gh:clamp(260px,34vw,460px);scroll-padding-inline-start:max(24px,calc((100vw - 1200px) / 2 + 24px))}
+.gal-item{width:calc(var(--gh) * 4 / 3)}
+.gal-item.tall{width:calc(var(--gh) * .75)}
+.gal-item .gi,.gal-item.tall .gi{aspect-ratio:auto;height:var(--gh)}
+.wa-float{background:var(--sea);border:1px solid rgba(220,197,156,.4)}
+.wa-float svg{fill:var(--gold-soft)}
+.wa-float:hover{background:var(--sea-deep)}
+.ff input,.ff select,.ff textarea{border-color:#8a959a}
+.ff input::placeholder,.ff textarea::placeholder{color:#66737a}
+.ex-map .rl{fill:#5f6b70}
+.ff label small{font-weight:400;color:var(--muted);text-transform:none;letter-spacing:0}
+.ferr{display:block;margin-top:6px;font-size:13.5px;color:#b0462e}
+.consent .ic{width:17px;height:17px;flex:0 0 17px;margin-top:2px;color:var(--gold-ink)}
+.consent{cursor:default}
+.form-msg p + p{margin-top:8px}
+.form-msg .fb{font-size:14.5px;color:var(--muted);display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.form-msg .fb a{color:var(--sea);text-decoration:underline}
+.copy-btn{display:inline-flex;align-items:center;gap:7px;padding:7px 14px;border-radius:999px;border:1px solid rgba(22,58,75,.28);background:#fff;color:var(--sea);font:500 14px var(--body);cursor:pointer}
+.copy-btn .ic{width:15px;height:15px}
+.form-msg.info{color:var(--sea)}
+.book-wa{display:inline-flex;align-items:center;gap:7px;color:var(--sea);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(22,58,75,.3)}
+.book-wa:hover{text-decoration-color:var(--sea)}
+.apt-quote{margin:4px 0 18px;padding:14px 18px;border-left:2px solid var(--gold-soft);background:var(--paper);border-radius:0 12px 12px 0}
+.apt-quote p{font-family:var(--display);font-size:16px;line-height:1.5;color:var(--sea)}
+.apt-quote cite,.form-quote cite{display:block;margin-top:6px;font-style:normal;font-size:13.5px;color:var(--muted)}
+.apt-quote cite b{color:var(--ink);font-weight:600}
+.form-quote{margin:0 0 26px;padding:20px 22px;border-radius:var(--r-sm);background:rgba(220,197,156,.08);border:1px solid rgba(220,197,156,.22)}
+.form-quote p{font-family:var(--display);font-size:18px;line-height:1.5;color:#fff}
+.form-quote p:before{content:'“';color:var(--gold-soft);margin-right:2px}
+.form-quote cite{color:rgba(255,255,255,.65)}
+.form-quote cite b{color:var(--gold-soft);font-weight:600}
+.ex-more{display:none}
+.hero-pause{width:30px;height:30px;border-radius:50%;border:1px solid rgba(255,255,255,.45);background:rgba(15,40,52,.25);color:#fff;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background .25s}
+.hero-pause:hover{background:rgba(15,40,52,.5)}
+.hero-pause .ic{width:13px;height:13px;fill:currentColor;stroke:none}
+.marquee{cursor:pointer}
+.marquee.paused .marquee-track{animation-play-state:paused}
+.nav-contact{display:none}
 /* ---------- Responsive ---------- */
 @media(max-width:1140px){
   .nav-links{gap:20px}
@@ -565,47 +615,213 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
   html{scroll-behavior:auto}
   *,*:before,*:after{animation:none!important;transition:none!important}
 }
+
+/* ---------- Feinschliff mobil ---------- */
+@media (max-width: 980px){
+  .burger{width:44px;height:44px;margin-right:-8px}
+  .burger span{left:8px;width:28px}
+  .burger span:nth-child(1){top:13px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:29px}
+  .burger.open span:nth-child(1),.burger.open span:nth-child(3){top:21px}
+  body.menu-open nav,body.menu-open nav.scrolled{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none}
+  body.menu-open nav .logo{color:#fff;position:relative;z-index:110}
+  body.menu-open nav .logo small{color:var(--gold-soft)}
+  body.menu-open .nav-right{position:relative;z-index:110}
+  body.menu-open .burger span{background:#fff}
+  body.menu-open .lang-switch{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22)}
+  body.menu-open .lang-switch a,body.menu-open nav.scrolled .lang-switch a{color:rgba(255,255,255,.85)}
+  body.menu-open .lang-switch a.active,body.menu-open nav.scrolled .lang-switch a.active{background:#fff;color:var(--sea)}
+  .nav-links{align-items:flex-start;justify-content:flex-start;padding:120px 32px 40px;gap:6px;overflow-y:auto}
+  .nav-links li{opacity:0;transform:translateY(12px);transition:opacity .45s,transform .45s}
+  .nav-links.open li{opacity:1;transform:none}
+  .nav-links.open li:nth-child(2){transition-delay:.05s}.nav-links.open li:nth-child(3){transition-delay:.1s}.nav-links.open li:nth-child(4){transition-delay:.15s}.nav-links.open li:nth-child(5){transition-delay:.2s}.nav-links.open li:nth-child(6){transition-delay:.25s}.nav-links.open li:nth-child(7){transition-delay:.3s}
+  .nav-links a:not(.btn){font-family:var(--display);font-size:32px!important;line-height:1.3;padding-block:4px;background:none!important}
+  .nav-links .btn{margin-top:18px}
+  .nav-contact{display:flex;flex-direction:column;gap:12px;margin-top:auto;padding-top:28px;border-top:1px solid rgba(255,255,255,.12);width:100%}
+  .nav-contact a:not(.btn){font-family:var(--body);font-size:16px!important;display:inline-flex;align-items:center;gap:10px}
+  .nav-contact .ic{width:18px;height:18px;color:var(--gold-soft)}
+  .xs-grid:not(.open) > .xs:nth-child(n+4){display:none}
+  .ex-more{display:flex;margin:24px auto 0}
+  .ex-more[aria-expanded="true"] .ic{transform:rotate(-90deg)}
+  .ex-more .ic{transform:rotate(90deg);transition:transform .3s}
+}
+@media (max-width: 640px){
+  .live{display:none}
+  .ex-mapbox{display:none}
+  .lang-switch{gap:2px}
+  .lang-switch a{min-height:32px;padding:9px 8px;display:inline-flex;align-items:center}
+}
+@media (prefers-reduced-motion: reduce){ .nav-links li{transition:none} }
 </style>
 <!-- Google: strukturierte Daten -->
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "LodgingBusiness",
   "@id": "https://hausdalmatia.com/#haus",
   "name": "Haus Dalmatia",
-  "description": "Vier moderne Ferienapartments mit beheiztem Pool, Garten und Kinderspielplatz in Bibinje bei Zadar, Dalmatien – persönlich geführt.",
-  "url": "https://hausdalmatia.com/",
-  "image": ["https://hausdalmatia.com/bilder/web/og-haus-dalmatia.jpg", "https://hausdalmatia.com/bilder/web/pool-1400.webp"],
+  "description": "4 apartmana s grijanim bazenom u Bibinju, 9 km od Zadra: 2–16 gostiju, vrt, igralište, parking. Upitajte izravno domaćicu.",
+  "url": "https://hausdalmatia.com/hr/",
+  "image": [
+    "https://hausdalmatia.com/bilder/web/og-haus-dalmatia.jpg",
+    "https://hausdalmatia.com/bilder/web/pool-1400.webp"
+  ],
   "telephone": "+491627260657",
   "email": "info@hausdalmatia.com",
-  "geo": {"@type": "GeoCoordinates", "latitude": 44.0744, "longitude": 15.2858},
-  "address": {"@type": "PostalAddress", "streetAddress": "Škrbotina put 17", "addressLocality": "Bibinje", "postalCode": "23205", "addressRegion": "Zadarska županija", "addressCountry": "HR"},
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 44.0744,
+    "longitude": 15.2858
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Škrbotina put 17",
+    "addressLocality": "Bibinje",
+    "postalCode": "23205",
+    "addressRegion": "Zadarska županija",
+    "addressCountry": "HR"
+  },
   "numberOfRooms": 4,
   "checkinTime": "14:30",
   "checkoutTime": "10:00",
   "petsAllowed": false,
   "smokingAllowed": false,
-  "availableLanguage": ["de", "hr", "en"],
-  "sameAs": ["https://www.instagram.com/haus_dalmatia/"],
+  "availableLanguage": [
+    "de",
+    "hr",
+    "en"
+  ],
+  "inLanguage": "hr",
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=%C5%A0krbotina+put+17%2C+23205+Bibinje",
+  "containedInPlace": {
+    "@type": "Place",
+    "name": "Bibinje",
+    "sameAs": "https://en.wikipedia.org/wiki/Bibinje"
+  },
+  "sameAs": [
+    "https://www.instagram.com/haus_dalmatia/",
+    "https://www.booking.com/hotel/hr/haus-dalmatia-bibinje.html"
+  ],
   "containsPlace": [
-    {"@type": "Accommodation", "name": "Apartment More", "description": "Erdgeschoss, 3 Schlafzimmer, 3 Bäder, Terrasse und Garten", "floorSize": {"@type": "QuantitativeValue", "value": 125, "unitCode": "MTK"}, "numberOfBedrooms": 3, "numberOfBathroomsTotal": 3, "occupancy": {"@type": "QuantitativeValue", "maxValue": 6}},
-    {"@type": "Accommodation", "name": "Apartment Maslina", "description": "Obergeschoss, 2 Schlafzimmer, 1 Bad und Gäste-WC, Balkon", "floorSize": {"@type": "QuantitativeValue", "value": 70, "unitCode": "MTK"}, "numberOfBedrooms": 2, "numberOfBathroomsTotal": 1, "occupancy": {"@type": "QuantitativeValue", "maxValue": 4}},
-    {"@type": "Accommodation", "name": "Apartment Riva", "description": "Obergeschoss, 2 Schlafzimmer, 2 Bäder, Balkon", "floorSize": {"@type": "QuantitativeValue", "value": 70, "unitCode": "MTK"}, "numberOfBedrooms": 2, "numberOfBathroomsTotal": 2, "occupancy": {"@type": "QuantitativeValue", "maxValue": 4}},
-    {"@type": "Accommodation", "name": "Studio Zora", "description": "Obergeschoss, separates Schlafzimmer, Bad mit Dusche, Balkon", "floorSize": {"@type": "QuantitativeValue", "value": 40, "unitCode": "MTK"}, "numberOfBedrooms": 1, "numberOfBathroomsTotal": 1, "occupancy": {"@type": "QuantitativeValue", "maxValue": 2}}
+    {
+      "@type": "Accommodation",
+      "@id": "https://hausdalmatia.com/#more",
+      "name": "Apartment More",
+      "image": "https://hausdalmatia.com/bilder/web/apt-more-1400.webp",
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "maxValue": 6
+      },
+      "description": "Erdgeschoss, 3 Schlafzimmer, 3 Bäder, Terrasse und Garten",
+      "floorSize": {
+        "@type": "QuantitativeValue",
+        "value": 125,
+        "unitCode": "MTK"
+      },
+      "numberOfBedrooms": 3,
+      "numberOfBathroomsTotal": 3
+    },
+    {
+      "@type": "Accommodation",
+      "@id": "https://hausdalmatia.com/#maslina",
+      "name": "Apartment Maslina",
+      "image": "https://hausdalmatia.com/bilder/web/apt-maslina-1400.webp",
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "maxValue": 4
+      },
+      "description": "Obergeschoss, 2 Schlafzimmer, 1 Bad und Gäste-WC, Balkon",
+      "floorSize": {
+        "@type": "QuantitativeValue",
+        "value": 70,
+        "unitCode": "MTK"
+      },
+      "numberOfBedrooms": 2,
+      "numberOfBathroomsTotal": 1
+    },
+    {
+      "@type": "Accommodation",
+      "@id": "https://hausdalmatia.com/#riva",
+      "name": "Apartment Riva",
+      "image": "https://hausdalmatia.com/bilder/web/apt-riva-1400.webp",
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "maxValue": 4
+      },
+      "description": "Obergeschoss, 2 Schlafzimmer, 2 Bäder, Balkon",
+      "floorSize": {
+        "@type": "QuantitativeValue",
+        "value": 70,
+        "unitCode": "MTK"
+      },
+      "numberOfBedrooms": 2,
+      "numberOfBathroomsTotal": 2
+    },
+    {
+      "@type": "Accommodation",
+      "@id": "https://hausdalmatia.com/#zora",
+      "name": "Studio Zora",
+      "image": "https://hausdalmatia.com/bilder/web/apt-zora-1400.webp",
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "maxValue": 2
+      },
+      "description": "Obergeschoss, separates Schlafzimmer, Bad mit Dusche, Balkon",
+      "floorSize": {
+        "@type": "QuantitativeValue",
+        "value": 40,
+        "unitCode": "MTK"
+      },
+      "numberOfBedrooms": 1,
+      "numberOfBathroomsTotal": 1
+    }
   ],
   "amenityFeature": [
-    {"@type": "LocationFeatureSpecification", "name": "Beheizter Außenpool", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Garten mit Sonnenterrasse", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Kinderspielplatz", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Tischtennis", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Grillplatz", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Kostenloser Privatparkplatz", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Klimaanlage", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Kostenloses WLAN", "value": true},
-    {"@type": "LocationFeatureSpecification", "name": "Voll ausgestattete Küche", "value": true}
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Beheizter Außenpool",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Garten mit Sonnenterrasse",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Kinderspielplatz",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Tischtennis",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Grillplatz",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Kostenloser Privatparkplatz",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Klimaanlage",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Kostenloses WLAN",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Voll ausgestattete Küche",
+      "value": true
+    }
   ]
-}
-</script>
+}</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -620,13 +836,22 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
     {"@type": "ListItem", "position": 6, "item": {"@type": "TouristAttraction", "name": "Nationalpark Paklenica", "geo": {"@type": "GeoCoordinates", "latitude": 44.2885, "longitude": 15.4457}}},
     {"@type": "ListItem", "position": 7, "item": {"@type": "TouristAttraction", "name": "Naturpark Telašćica", "geo": {"@type": "GeoCoordinates", "latitude": 43.89, "longitude": 15.17}}},
     {"@type": "ListItem", "position": 8, "item": {"@type": "TouristAttraction", "name": "Naturpark Vransko jezero", "geo": {"@type": "GeoCoordinates", "latitude": 43.8949, "longitude": 15.5727}}},
-    {"@type": "ListItem", "position": 9, "item": {"@type": "TouristAttraction", "name": "Šibenik", "geo": {"@type": "GeoCoordinates", "latitude": 43.7356, "longitude": 15.8891}}}
+    {"@type": "ListItem", "position": 9, "item": {"@type": "TouristAttraction", "name": "Šibenik", "geo": {"@type": "GeoCoordinates", "latitude": 43.7356, "longitude": 15.8891}}},
+    {"@type": "ListItem", "position": 10, "item": {"@type": "TouristAttraction", "name": "Insel Pag", "geo": {"@type": "GeoCoordinates", "latitude": 44.4446, "longitude": 15.0577}}},
+    {"@type": "ListItem", "position": 11, "item": {"@type": "TouristAttraction", "name": "Insel Ugljan", "geo": {"@type": "GeoCoordinates", "latitude": 44.0833, "longitude": 15.1833}}}
   ]
 }
 </script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "WebSite", "@id": "https://hausdalmatia.com/#web", "name": "Haus Dalmatia", "url": "https://hausdalmatia.com/", "inLanguage": ["de", "en", "pl", "hr"], "publisher": {"@id": "https://hausdalmatia.com/#haus"}}
+</script>
+<script id="ld-faq" type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Koliko je daleko more?", "acceptedAnswer": {"@type": "Answer", "text": "Plaža i riva u Bibinju udaljene su nekoliko minuta hoda. Bibinje ima više šljunčanih plaža s pogledom na otoke ispred Zadra – na plaži Punta možete unajmiti i SUP daske."}}, {"@type": "Question", "name": "Je li bazen grijan – i od kada?", "acceptedAnswer": {"@type": "Answer", "text": "Da. Vanjski bazen je grijan, a temperatura vode podesiva, pa je ugodan već u predsezoni i sve do jeseni. Za vaš termin rado ćemo vam dati točne informacije."}}, {"@type": "Question", "name": "Koji apartman je pravi za nas?", "acceptedAnswer": {"@type": "Answer", "text": "Za parove studio Zora (do 2 gosta), za manje obitelji Maslina ili Riva (do 4 gosta), za veće obitelji i prijatelje apartman More s tri spavaće sobe i tri kupaonice (do 6 gostiju). Grupe do 16 osoba mogu upitati za više ili sve apartmane."}}, {"@type": "Question", "name": "Je li kuća prikladna za djecu?", "acceptedAnswer": {"@type": "Answer", "text": "Itekako. U vrtu je dječje igralište i natkriveni prostor sa stolnim tenisom, a dječji krevetić (0–3 godine) osiguravamo besplatno. Recite nam u upitu koliko vaša djeca imaju godina."}}, {"@type": "Question", "name": "Kako najlakše doći?", "acceptedAnswer": {"@type": "Answer", "text": "Zračna luka Zadar (ZAD) udaljena je oko 13 km, a u sezoni ima izravne letove iz Njemačke, Austrije, Švicarske i mnogih drugih zemalja. Transfer iz zračne luke organiziramo na upit. Automobilom stižete autocestom A1; parking uz kuću je besplatan. Za izlete u nacionalne parkove preporučujemo automobil."}}, {"@type": "Question", "name": "Kada je prijava i odjava?", "acceptedAnswer": {"@type": "Answer", "text": "Prijava je između 14:30 i 23:30, odjava do 10:00. Molimo javite nam unaprijed očekivano vrijeme dolaska – dočekat ćemo vas osobno."}}, {"@type": "Question", "name": "Koja kućna pravila vrijede?", "acceptedAnswer": {"@type": "Answer", "text": "Kuća je nepušačka, a kućni ljubimci nažalost nisu dopušteni. Zabave te momačke i djevojačke večeri nisu moguće; noćni mir vrijedi od 22 do 8 sati – kako bi svi gosti mogli uživati u odmoru."}}, {"@type": "Question", "name": "Kako funkcionira izravna rezervacija?", "acceptedAnswer": {"@type": "Answer", "text": "Pošaljete nam datume, mi provjerimo dostupnost i pošaljemo osobnu ponudu s konačnom cijenom. Vašom potvrdom i dogovorenim predujmom rezervacija je sigurna. Uvjeti plaćanja i otkazivanja jasno su navedeni u ponudi."}}, {"@type": "Question", "name": "Što je uključeno u cijenu?", "acceptedAnswer": {"@type": "Answer", "text": "Posteljina, ručnici, Wi-Fi, klima-uređaj, parking te korištenje bazena, vrta, igrališta i roštilja. Zakonsku boravišnu pristojbu jasno navodimo u ponudi."}}, {"@type": "Question", "name": "Na kojim jezicima mogu poslati upit?", "acceptedAnswer": {"@type": "Answer", "text": "Na njemačkom, hrvatskom ili engleskom – putem WhatsAppa, e-pošte, telefona ili obrasca za upit."}}, {"@type": "Question", "name": "Možemo li unajmiti cijelu kuću?", "acceptedAnswer": {"@type": "Answer", "text": "Da. Sva četiri apartmana zajedno primaju do 16 gostiju – idealno za obiteljska okupljanja ili društvo prijatelja. Bazen, vrt i roštilj tada dijelite samo međusobno. Pošaljite nam termin i provjerit ćemo dostupnost svih apartmana."}}, {"@type": "Question", "name": "Koliko su udaljeni Zadar i zračna luka?", "acceptedAnswer": {"@type": "Answer", "text": "Stari grad Zadar udaljen je 9 km, autom oko 15 minuta. Zračna luka Zadar (ZAD) udaljena je 13 km, oko 15–20 minuta. Do Nacionalnog parka Krka vozi se otprilike sat vremena, do Plitvičkih jezera oko dva sata."}}]}</script>
 </head>
 <body>
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg"><!-- Icons: Lucide (ISC-Lizenz), lucide.dev -->
+<symbol id="i-pause" viewbox="0 0 24 24"><rect height="16" rx="1" width="4" x="14" y="4"></rect><rect height="16" rx="1" width="4" x="6" y="4"></rect></symbol>
+<symbol id="i-play" viewbox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"></polygon></symbol>
+<symbol id="i-copy" viewbox="0 0 24 24"><rect height="14" rx="2" ry="2" width="14" x="8" y="8"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></symbol>
 <symbol id="i-bed" viewbox="0 0 24 24"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"></path><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"></path><path d="M12 4v6"></path><path d="M2 18h20"></path></symbol>
 <symbol id="i-bath" viewbox="0 0 24 24"><path d="M10 4 8 6"></path><path d="M17 19v2"></path><path d="M2 12h20"></path><path d="M7 19v2"></path><path d="M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"></path></symbol>
 <symbol id="i-users" viewbox="0 0 24 24"><path d="M18 21a8 8 0 0 0-16 0"></path><circle cx="10" cy="8" r="5"></circle><path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3"></path></symbol>
@@ -684,6 +909,7 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 <li><a data-i18n="nav.reviews" href="#reviews">Dojmovi</a></li>
 <li><a data-i18n="nav.faq" href="#faq">Pitanja</a></li>
 <li><a class="btn gold" data-i18n="nav.book" href="#anfrage">Upit</a></li>
+<li class="nav-contact"><a data-wa="quick" href="https://wa.me/491627260657" rel="noopener" target="_blank"><svg class="ic"><use href="#i-chat"></use></svg>WhatsApp</a><a href="tel:+491627260657"><svg class="ic"><use href="#i-phone"></use></svg>+49 162 726 0657</a></li>
 </ul>
 <div class="nav-right">
 <div aria-label="Sprache / Language / Język / Jezik" class="lang-switch" role="group">
@@ -699,12 +925,12 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 <!-- ======= HERO ======= -->
 <header class="hero" id="top">
 <div aria-hidden="true" class="hero-slides">
-<img alt="Pogled na more s balkona" class="hero-bg is-on" data-i18n-alt="alt.view" fetchpriority="high" height="1467" sizes="100vw" src="../bilder/web/hero-meerblick-1600.webp" srcset="../bilder/web/hero-meerblick-960.webp 960w, ../bilder/web/hero-meerblick-1600.webp 1600w, ../bilder/web/hero-meerblick-2200.webp 2200w" width="2200"/>
-<img alt="Grijani bazen ispred kuće" class="hero-bg" data-i18n-alt="alt.pool1" data-src="../bilder/web/hero-pool-1600.webp" data-srcset="../bilder/web/hero-pool-960.webp 960w, ../bilder/web/hero-pool-1600.webp 1600w" height="1067" width="1600"/>
+<img alt="Pogled na more s balkona – Haus Dalmatia, Bibinje" class="hero-bg is-on" data-i18n-alt="alt.view" fetchpriority="high" height="1467" sizes="100vw" src="../bilder/web/hero-meerblick-1600.webp" srcset="../bilder/web/hero-meerblick-960.webp 960w, ../bilder/web/hero-meerblick-1600.webp 1600w, ../bilder/web/hero-meerblick-2200.webp 2200w" width="2200"/>
+<img alt="Grijani bazen kuće Haus Dalmatia u Bibinju kod Zadra" class="hero-bg" data-i18n-alt="alt.pool1" data-src="../bilder/web/hero-pool-1600.webp" data-srcset="../bilder/web/hero-pool-960.webp 960w, ../bilder/web/hero-pool-1600.webp 1600w" height="1067" width="1600"/>
 <img alt="Bazen navečer" class="hero-bg" data-i18n-alt="alt.pool2" data-src="../bilder/web/hero-abend-1600.webp" data-srcset="../bilder/web/hero-abend-960.webp 960w, ../bilder/web/hero-abend-1600.webp 1600w" height="1067" width="1600"/>
 <img alt="Šljunčana plaža u Bibinju" class="hero-bg" data-i18n-alt="alt.plaza" data-src="../bilder/web/hero-strand-1600.webp" data-srcset="../bilder/web/hero-strand-960.webp 960w, ../bilder/web/hero-strand-1600.webp 1600w" height="1067" width="1600"/>
 </div>
-<div aria-hidden="true" class="hero-cap"><span id="heroCap">Meerblick vom Balkon</span><span class="dots" id="heroDots"><i class="on"></i><i></i><i></i><i></i></span></div>
+<div class="hero-cap"><button aria-label="Diashow anhalten" class="hero-pause" hidden="" id="heroPause" type="button"><svg class="ic"><use href="#i-pause"></use></svg></button><span aria-hidden="true" id="heroCap">Meerblick vom Balkon – Haus Dalmatia, Bibinje</span><span aria-hidden="true" class="dots" id="heroDots"><i class="on"></i><i></i><i></i><i></i></span></div>
 <div class="wrap hero-content">
 <a class="rating" href="#reviews"><b>9,9</b><span data-i18n="hero.rating">Izvanredno · 44 ocjene na Booking.comu</span></a>
 <h1><span class="kicker" data-i18n="hero.eyebrow">Apartmani s grijanim bazenom · Bibinje kod Zadra</span><span data-i18n="hero.h1">Tamo gdje Jadran <em>počinje pred vratima.</em></span></h1>
@@ -727,8 +953,9 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 <p class="book-note">
 <span aria-live="polite" id="quickNote"></span>
 <span><svg class="ic"><use href="#i-check"></use></svg><span data-i18n="bn.1">Izravno kod domaćice</span></span>
-<span><svg class="ic"><use href="#i-check"></use></svg><span data-i18n="bn.2">Bez naknada platformi</span></span>
+<span><svg class="ic"><use href="#i-check"></use></svg><span data-i18n="bn.2">Bez posredničkog portala</span></span>
 <span><svg class="ic"><use href="#i-check"></use></svg><span data-i18n="bn.3">Neobvezujuća ponuda</span></span>
+<a class="book-wa" data-wa="quick" href="https://wa.me/491627260657" rel="noopener" target="_blank"><svg class="ic"><use href="#i-chat"></use></svg><span data-i18n="q.wa">ili pišite izravno na WhatsApp</span></a>
 </p>
 </div>
 </section>
@@ -761,7 +988,7 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 <div class="wrap">
 <div class="head">
 <span class="eyebrow" data-i18n="apts.eyebrow">Apartmani</span>
-<h2 data-i18n="apts.h2">Četiri doma. <em>Četiri karaktera.</em></h2>
+<h2 data-i18n="apts.h2">Četiri apartmana. <em>Četiri karaktera.</em></h2>
 <p data-i18n="apts.p">Svaki apartman nosi dalmatinsko ime – i ima svoje lice. Svi imaju klima-uređaj, potpuno opremljenu kuhinju, Wi-Fi i vlastiti vanjski prostor.</p>
 </div>
 <div class="apt-grid">
@@ -773,6 +1000,7 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 <div class="specs"><span><svg class="ic"><use href="#i-bed"></use></svg><span data-i18n="more.s1">3 spavaće sobe</span></span><span><svg class="ic"><use href="#i-bath"></use></svg><span data-i18n="more.s2">3 kupaonice</span></span><span><svg class="ic"><use href="#i-users"></use></svg><span data-i18n="more.s3">Do 6 gostiju</span></span><span><svg class="ic"><use href="#i-garden"></use></svg><span data-i18n="more.s4">Terasa &amp; vrt</span></span></div>
 <p class="desc" data-i18n="more.desc">Admiral kuće: tri odvojene spavaće sobe, tri kupaonice s kadom i tušem, veliki dnevni boravak – i izravan izlaz u vrt do bazena. Stvoren za obitelji i prijatelje koji vole prostor.</p>
 <p class="beds"><svg class="ic"><use href="#i-bed"></use></svg><span data-i18n="more.beds">3 velika bračna kreveta (king-size)</span></p>
+<blockquote class="apt-quote"><p data-i18n="rev.peter">Vrlo dobro opremljen, puno prostora – i sjajno što smo imali tri kupaonice. Vanjski prostor s velikom terasom, bazenom i stolnim tenisom također je bio jako lijep.</p><cite data-i18n="rev.peter.who"><b>Peter</b> · Njemačka</cite></blockquote>
 <div class="apt-foot"><div class="price" data-price="More"></div><a class="btn line" data-apt="More" href="#anfrage"><span data-i18n="apts.anfragen">Upitajte</span><svg class="ic"><use href="#i-arrow"></use></svg></a></div>
 </div>
 </article>
@@ -812,7 +1040,7 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 </div>
 <div class="whole">
 <span class="ic-c"><svg class="ic"><use href="#i-house"></use></svg></span>
-<div><b data-i18n="ov.n1h">Cijela kuća</b><span data-i18n="ov.n1p">Više obitelji ili veća grupa? Sva četiri apartmana zajedno nude mjesta za do 16 gostiju.</span></div>
+<div><b data-i18n="ov.n1h">Cijela kuća</b><span data-i18n="ov.n1p">Obiteljsko okupljanje, društvo prijatelja ili dvije obitelji zajedno: unajmite sva četiri apartmana – do 16 gostiju, jedan bazen, jedan vrt, samo za vas.</span></div>
 <a class="btn gold" data-apt="Ganzes Haus" data-i18n="apts.anfragen" href="#anfrage">Upitajte</a>
 </div>
 <div class="rules">
@@ -829,9 +1057,9 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 <div class="wrap split">
 <div>
 <span class="eyebrow" data-i18n="pool.eyebrow">Bazen &amp; vrt</span>
-<h2 class="h2" data-i18n="pool.h2">Srce kuće <em>je grijano.</em></h2>
+<h2 class="h2" data-i18n="pool.h2">Grijani bazen – <em>srce kuće.</em></h2>
 <p class="lead" data-i18n="pool.p">Veliki vanjski bazen je grijan – temperatura vode može se podesiti, tako da sezona počinje ranije i završava kasnije. Oko njega: sunčana terasa, vrt i mjesta za sve.</p>
-<div class="season"><svg class="ic"><use href="#i-heat"></use></svg><div><b data-i18n="ov.n3h">Predsezona i posezona</b><span data-i18n="ov.n3p">Zahvaljujući grijanom bazenu Dalmacija se isplati i u svibnju, lipnju, rujnu i listopadu – s mirnijim plažama i povoljnijim cijenama.</span></div></div>
+<div class="season"><svg class="ic"><use href="#i-heat"></use></svg><div><b data-i18n="ov.n3h">Predsezona i posezona</b><span data-i18n="ov.n3p">Zahvaljujući grijanom bazenu Dalmacija se isplati i u svibnju, lipnju, rujnu i listopadu – s mirnijim plažama i opuštenijim ritmom nego usred ljeta.</span></div></div>
 <ul class="checks">
 <li><svg class="ic"><use href="#i-check"></use></svg><span data-i18n="pool.l1">Veliki grijani bazen s podesivom temperaturom</span></li>
 <li><svg class="ic"><use href="#i-check"></use></svg><span data-i18n="pool.l2">Sunčana terasa s ležaljkama</span></li>
@@ -842,7 +1070,7 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 </ul>
 </div>
 <div class="mosaic">
-<div class="m"><img alt="Grijani bazen ispred kuće" class="zoom" data-full="../bilder/web/pool-1400.webp" data-i18n-alt="alt.pool1" height="1665" loading="lazy" sizes="(max-width:980px) 55vw, 30vw" src="../bilder/web/pool-800.webp" srcset="../bilder/web/pool-800.webp 800w, ../bilder/web/pool-1400.webp 1400w" width="1400"/></div>
+<div class="m"><img alt="Grijani bazen kuće Haus Dalmatia u Bibinju kod Zadra" class="zoom" data-full="../bilder/web/pool-1400.webp" data-i18n-alt="alt.pool1" height="1665" loading="lazy" sizes="(max-width:980px) 55vw, 30vw" src="../bilder/web/pool-800.webp" srcset="../bilder/web/pool-800.webp 800w, ../bilder/web/pool-1400.webp 1400w" width="1400"/></div>
 <div class="m"><img alt="Bazen navečer" class="zoom" data-full="../bilder/web/pool-abend-1400.webp" data-i18n-alt="alt.pool2" height="495" loading="lazy" src="../bilder/web/pool-abend-800.webp" width="800"/></div>
 <div class="m"><img alt="Dječje igralište u vrtu" class="zoom" data-full="../bilder/web/spielplatz-1400.webp" data-i18n-alt="alt.spielplatz" height="951" loading="lazy" src="../bilder/web/spielplatz-800.webp" width="800"/></div>
 </div>
@@ -874,8 +1102,8 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 <div class="gal-nav"><button aria-label="Zurück" id="galPrev" type="button"><svg class="ic"><use href="#i-arrow"></use></svg></button><button aria-label="Weiter" id="galNext" type="button"><svg class="ic"><use href="#i-arrow"></use></svg></button></div>
 </div>
 <div class="gal-track" id="galTrack">
-<figure class="gal-item"><div class="gi"><img alt="Pogled na more s balkona" class="zoom" data-full="../bilder/web/hero-meerblick-1600.webp" data-i18n-alt="alt.view" draggable="false" height="1067" loading="lazy" src="../bilder/web/hero-meerblick-960.webp" width="1600"/></div><figcaption><b>01</b><span data-i18n="alt.view">Pogled na more s balkona</span></figcaption></figure>
-<figure class="gal-item tall"><div class="gi"><img alt="Grijani bazen ispred kuće" class="zoom" data-full="../bilder/web/pool-1400.webp" data-i18n-alt="alt.pool1" draggable="false" height="1665" loading="lazy" src="../bilder/web/pool-800.webp" width="1400"/></div><figcaption><b>02</b><span data-i18n="alt.pool1">Grijani bazen ispred kuće</span></figcaption></figure>
+<figure class="gal-item"><div class="gi"><img alt="Pogled na more s balkona – Haus Dalmatia, Bibinje" class="zoom" data-full="../bilder/web/hero-meerblick-1600.webp" data-i18n-alt="alt.view" draggable="false" height="1067" loading="lazy" src="../bilder/web/hero-meerblick-960.webp" width="1600"/></div><figcaption><b>01</b><span data-i18n="alt.view">Pogled na more s balkona – Haus Dalmatia, Bibinje</span></figcaption></figure>
+<figure class="gal-item tall"><div class="gi"><img alt="Grijani bazen kuće Haus Dalmatia u Bibinju kod Zadra" class="zoom" data-full="../bilder/web/pool-1400.webp" data-i18n-alt="alt.pool1" draggable="false" height="1665" loading="lazy" src="../bilder/web/pool-800.webp" width="1400"/></div><figcaption><b>02</b><span data-i18n="alt.pool1">Grijani bazen kuće Haus Dalmatia u Bibinju kod Zadra</span></figcaption></figure>
 <figure class="gal-item"><div class="gi"><img alt="Apartman More – dnevni boravak" class="zoom" data-full="../bilder/web/apt-more-1400.webp" data-i18n-alt="alt.more" draggable="false" height="933" loading="lazy" src="../bilder/web/apt-more-800.webp" width="1400"/></div><figcaption><b>03</b><span data-i18n="alt.more">Apartman More – dnevni boravak</span></figcaption></figure>
 <figure class="gal-item"><div class="gi"><img alt="Bazen navečer" class="zoom" data-full="../bilder/web/pool-abend-1400.webp" data-i18n-alt="alt.pool2" draggable="false" height="865" loading="lazy" src="../bilder/web/pool-abend-800.webp" width="1400"/></div><figcaption><b>04</b><span data-i18n="alt.pool2">Bazen navečer</span></figcaption></figure>
 <figure class="gal-item"><div class="gi"><img alt="Apartman Maslina – dnevni boravak" class="zoom" data-full="../bilder/web/apt-maslina-1400.webp" data-i18n-alt="alt.maslina" draggable="false" height="932" loading="lazy" src="../bilder/web/apt-maslina-800.webp" width="1400"/></div><figcaption><b>05</b><span data-i18n="alt.maslina">Apartman Maslina – dnevni boravak</span></figcaption></figure>
@@ -892,10 +1120,10 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 <div class="head">
 <span class="eyebrow" data-i18n="dir.eyebrow">Izravna rezervacija</span>
 <h2 data-i18n="dir.h2">Najbolja cijena nastaje <em>bez posrednika.</em></h2>
-<p data-i18n="dir.p">Tko rezervira izravno kod nas, ne plaća naknade platformi – i uz to dobiva osobnu uslugu.</p>
+<p data-i18n="dir.p">Tko rezervira izravno, od prve poruke razgovara s domaćicom – bez posredničkog portala i uz osobnu uslugu.</p>
 </div>
 <div class="benefits">
-<div class="benefit"><span class="ic-c"><svg class="ic"><use href="#i-star"></use></svg></span><h3 data-i18n="dir.b1h">Najbolja cijena</h3><p data-i18n="dir.b1p">Bez provizija i naknada booking platformi – izravno kod nas nikad ne plaćate više nego na platformi.</p></div>
+<div class="benefit"><span class="ic-c"><svg class="ic"><use href="#i-star"></use></svg></span><h3 data-i18n="dir.b1h">Poštena izravna cijena</h3><p data-i18n="dir.b1p">Bez naknada booking portala: ponuda stiže izravno od domaćice – s konačnom cijenom prije nego što se odlučite.</p></div>
 <div class="benefit"><span class="ic-c"><svg class="ic"><use href="#i-leaf"></use></svg></span><h3 data-i18n="dir.b2h">Osobni doček</h3><p data-i18n="dir.b2p">Dočekujemo vas osobno – s malom pažnjom iz Dalmacije i svim savjetima za Bibinje i Zadar.</p></div>
 <div class="benefit"><span class="ic-c"><svg class="ic"><use href="#i-chat"></use></svg></span><h3 data-i18n="dir.b3h">Izravan kontakt</h3><p data-i18n="dir.b3p">Dovoljna je jedna WhatsApp poruka: brzi odgovori i fleksibilni dogovori oko dolaska i odlaska – prije, tijekom i nakon boravka.</p></div>
 </div>
@@ -914,14 +1142,14 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 </div>
 <div>
 <span class="eyebrow" data-i18n="bib.eyebrow">Lokacija i okolica</span>
-<h2 class="h2" data-i18n="bib.h2">Bibinje. <em>Dalmacija u malom.</em></h2>
+<h2 class="h2" data-i18n="bib.h2">Bibinje kod Zadra. <em>Dalmacija u malom.</em></h2>
 <p data-i18n="bib.p1">Šljunčane plaže s pogledom na zadarske otoke, riva puna tradicije i pjesme, miris cvijeća i mora – Bibinje je Dalmacija u svom najmirnijem obliku.</p>
 <p data-i18n="bib.p2">A kad poželite malo više živosti: stari grad Zadar s morskim orguljama i spektaklom zalaska sunca udaljen je samo četvrt sata. Na plaži Punta možete unajmiti SUP, a u mjestu e-bicikle i e-romobile.</p>
 <ul class="dist">
 <li><span data-i18n="dist.1">Plaža i riva u Bibinju</span><span data-i18n="dist.1v">nekoliko minuta hoda</span></li>
 <li><span data-i18n="dist.2">Zračna luka Zadar (ZAD) · 13 km</span><span data-i18n="dist.2v">≈ 15–20 min</span></li>
 <li><span data-i18n="dist.3">Stari grad Zadar · 9 km</span><span data-i18n="dist.3v">≈ 15 min</span></li>
-<li><span data-i18n="dist.4">Nin i laguna · 23 km</span><span data-i18n="dist.4v">≈ 30 min</span></li>
+<li><span data-i18n="dist.4">Nin i laguna · 24 km</span><span data-i18n="dist.4v">≈ 30 min</span></li>
 <li><span data-i18n="dist.5">NP Paklenica · 52 km</span><span data-i18n="dist.5v">≈ 50 min</span></li>
 <li><span data-i18n="dist.6">NP Krka (Skradin) · 71 km</span><span data-i18n="dist.6v">≈ 1 h</span></li>
 <li><span data-i18n="dist.7">NP Plitvička jezera · ≈ 145 km</span><span data-i18n="dist.7v">≈ 2 h</span></li>
@@ -969,7 +1197,7 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 <a class="link" href="https://www.google.com/maps/dir/?api=1&amp;origin=44.0744,15.2858&amp;destination=43.9377,15.4478" rel="noopener" target="_blank"><svg class="ic"><use href="#i-route"></use></svg><span data-i18n="ex.route">Planirajte rutu</span></a>
 </article>
 </div>
-<div class="xs-grid">
+<div class="xs-grid" id="xsGrid">
 <article class="xs">
 <div class="xs-top"><span class="ic-c"><svg class="ic"><use href="#i-mountain-snow"></use></svg></span><div><h3 data-i18n="ex.plit.h">Plitvička jezera</h3><span class="chip"><span data-i18n="ex.plit.chip">≈ 145 km · ≈ 2 h</span></span></div></div>
 <p data-i18n="ex.plit.p">16 jezera u kaskadama povezanih slapovima – prvi hrvatski nacionalni park (1949.) i UNESCO-ova svjetska baština od 1979.</p>
@@ -1019,6 +1247,7 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 <a class="link" href="https://www.google.com/maps/dir/?api=1&amp;origin=44.0744,15.2858&amp;destination=44.4438,15.0545" rel="noopener" target="_blank"><svg class="ic"><use href="#i-route"></use></svg><span data-i18n="ex.route">Planirajte rutu</span></a>
 </article>
 </div>
+<button aria-controls="xsGrid" aria-expanded="false" class="btn line ex-more" id="exMore" type="button"><span data-i18n="ex.more">Prikaži sva odredišta</span><svg class="ic"><use href="#i-arrow"></use></svg></button>
 <div class="ex-bottom">
 <figure class="ex-mapbox">
 <h3 data-i18n="ex.map.h">Sve nadohvat ruke</h3>
@@ -1076,6 +1305,8 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 <details><summary data-i18n="faq.q8">Kako funkcionira izravna rezervacija?</summary><div class="ans" data-i18n="faq.a8">Pošaljete nam datume, mi provjerimo dostupnost i pošaljemo osobnu ponudu s konačnom cijenom. Vašom potvrdom i dogovorenim predujmom rezervacija je sigurna. Uvjeti plaćanja i otkazivanja jasno su navedeni u ponudi.</div></details>
 <details><summary data-i18n="faq.q9">Što je uključeno u cijenu?</summary><div class="ans" data-i18n="faq.a9">Posteljina, ručnici, Wi-Fi, klima-uređaj, parking te korištenje bazena, vrta, igrališta i roštilja. Zakonsku boravišnu pristojbu jasno navodimo u ponudi.</div></details>
 <details><summary data-i18n="faq.q10">Na kojim jezicima mogu poslati upit?</summary><div class="ans" data-i18n="faq.a10">Na njemačkom, hrvatskom ili engleskom – putem WhatsAppa, e-pošte, telefona ili obrasca za upit.</div></details>
+<details><summary data-i18n="faq.q11">Možemo li unajmiti cijelu kuću?</summary><div class="ans" data-i18n="faq.a11">Da. Sva četiri apartmana zajedno primaju do 16 gostiju – idealno za obiteljska okupljanja ili društvo prijatelja. Bazen, vrt i roštilj tada dijelite samo međusobno. Pošaljite nam termin i provjerit ćemo dostupnost svih apartmana.</div></details>
+<details><summary data-i18n="faq.q12">Koliko su udaljeni Zadar i zračna luka?</summary><div class="ans" data-i18n="faq.a12">Stari grad Zadar udaljen je 9 km, autom oko 15 minuta. Zračna luka Zadar (ZAD) udaljena je 13 km, oko 15–20 minuta. Do Nacionalnog parka Krka vozi se otprilike sat vremena, do Plitvičkih jezera oko dva sata.</div></details>
 </div>
 </div>
 </section>
@@ -1085,7 +1316,7 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 <div class="form-intro">
 <span class="eyebrow" data-i18n="form.eyebrow">Upit</span>
 <h2 class="h2" data-i18n="form.h2">Vaše ljeto <em>počinje ovdje.</em></h2>
-<p data-i18n="form.p">Recite nam željeni termin. Osobnu ponudu dobivate izravno od domaćice – neobvezujuće i bez naknada platformi.</p>
+<p data-i18n="form.p">Recite nam željeni termin. Osobnu ponudu dobivate izravno od domaćice – neobvezujuće i bez posredničkog portala.</p>
 <div class="steps">
 <h3 data-i18n="st.h">Kako funkcionira</h3>
 <ol>
@@ -1095,6 +1326,7 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 <li><div><b data-i18n="st.4h">Dođite i uživajte</b><span data-i18n="st.4p">Prije putovanja dobivate sve informacije o dolasku i preuzimanju ključeva.</span></div></li>
 </ol>
 </div>
+<blockquote class="form-quote"><p data-i18n="rev.sandra">Prekrasan apartman, točno kako je opisano. Fantastična komunikacija. Besprijekorno čisto. Sve što bi vam moglo zatrebati bilo je tu.</p><cite data-i18n="rev.sandra.who"><b>Sandra</b> · Velika Britanija</cite></blockquote>
 <ul class="contact-direct">
 <li><a data-wa="inquiry" href="https://wa.me/491627260657" rel="noopener" target="_blank"><svg class="ic"><use href="#i-chat"></use></svg><span><small>WhatsApp</small>+49 162 726 0657</span></a></li>
 <li><a href="mailto:info@hausdalmatia.com"><svg class="ic"><use href="#i-mail"></use></svg><span><small data-i18n="form.mail">E-pošta</small>info@hausdalmatia.com</span></a></li>
@@ -1124,17 +1356,17 @@ html{scrollbar-color:var(--gold) var(--stone);scrollbar-width:thin}
 </div>
 <div class="frow">
 <div class="ff"><label data-i18n="f.name" for="fName">Ime i prezime</label><input autocomplete="name" id="fName" name="name" required="" type="text"/></div>
-<div class="ff"><label data-i18n="f.email" for="fMail">E-pošta</label><input autocomplete="email" id="fMail" name="email" required="" type="email"/></div>
+<div class="ff"><label data-i18n="f.email" for="fMail">E-pošta <small>(neobavezno uz WhatsApp)</small></label><input autocomplete="email" id="fMail" name="email" type="email"/></div>
 </div>
 <div class="frow one">
 <div class="ff"><label data-i18n="f.msg" for="fMsg">Poruka (neobavezno)</label><textarea data-i18n-ph="f.msgPh" id="fMsg" name="message" placeholder="Dob djece, vrijeme dolaska, posebne želje …" rows="3"></textarea></div>
 </div>
-<label class="consent"><input id="fConsent" required="" type="checkbox"/><span data-i18n="f.consent">Slažem se da se moji podaci koriste za obradu upita. Više u <a href="../datenschutz.html">izjavi o privatnosti</a>.</span></label>
+<p class="consent"><svg class="ic"><use href="#i-check"></use></svg><span data-i18n="f.consent">Vaše podatke koristimo isključivo za odgovor na upit. Više u <a href="../datenschutz.html">izjavi o privatnosti</a>.</span></p>
 <div class="form-actions">
 <button class="btn gold" data-send="wa" type="submit"><svg class="ic"><use href="#i-chat"></use></svg><span data-i18n="f.sendWa">Pošalji putem WhatsAppa</span></button>
 <button class="btn line" data-send="mail" type="submit"><svg class="ic"><use href="#i-mail"></use></svg><span data-i18n="f.sendMail">Pošalji e-poštom</span></button>
 </div>
-<p aria-live="polite" class="form-msg" id="fMsgOut" role="status"></p>
+<div aria-live="polite" class="form-msg" id="fMsgOut" role="status"></div>
 </form>
 </div>
 </section>
@@ -1208,6 +1440,7 @@ var CAP = { More: 6, Maslina: 4, Riva: 4, Zora: 2, 'Ganzes Haus': 16 };
    ===================================================================== */
 var I18N = {
 en:{
+  'q.wa':'or message us on WhatsApp','ex.more':'Show all destinations','faq.q11':'Can we rent the whole house?','faq.a11':'Yes. Together, all four apartments sleep up to 16 guests – ideal for family reunions or groups of friends. You then share the pool, garden and barbecue area only among yourselves. Send us your dates and we will check availability for all apartments.','faq.q12':'How far are Zadar and the airport?','faq.a12':'Zadar old town is 9 km away, about 15 minutes by car. Zadar Airport (ZAD) is 13 km away, around 15–20 minutes. Krka National Park is about an hour’s drive, the Plitvice Lakes around two hours.',
   'gal.eyebrow':'Insights','gal.h2':'Haus Dalmatia <em>in pictures.</em>','gal.hint':'Swipe or drag – click to see the photo large.',
   'ex.eyebrow':'Trips & experiences',
   'ex.h2':'The Zadar region <em>on your doorstep.</em>',
@@ -1275,9 +1508,9 @@ en:{
   'ex.food.4':'<b>Salt from Nin</b> – harvested the traditional way in the salt pans.',
   'ex.food.5':'<b>Peka</b> – meat or octopus slow-cooked under an iron bell in the embers.',
   'ex.food.6':'<b>Olive oil</b> – from the olive groves around Zadar.',
-  'hero.rating':'Exceptional · 44 reviews on Booking.com','bn.1':'Directly with your host','bn.2':'No platform fees','bn.3':'Non-binding offer','rev.link':'See all reviews','st.h':'How it works','form.title':'Your enquiry',
-  __title:'Holiday apartments with heated pool in Bibinje near Zadar · Haus Dalmatia',
-  __desc:'Four modern holiday apartments with heated pool, garden and playground in Bibinje near Zadar, Croatia – for 2 to 16 guests, rated 9.9/10 on Booking.com. Enquire directly with your host.',
+  'hero.rating':'Exceptional · 44 reviews on Booking.com','bn.1':'Directly with your host','bn.2':'No booking portal in between','bn.3':'Non-binding offer','rev.link':'See all reviews','st.h':'How it works','form.title':'Your enquiry',
+  __title:'Apartments with Heated Pool near Zadar (Bibinje) · Haus Dalmatia',
+  __desc:'4 holiday apartments with heated pool in Bibinje, 9 km from Zadar: 2–16 guests, garden, playground, parking. Enquire directly with your host.',
   'skip':'Skip to content','logo.sub':'Bibinje · Dalmatia',
   'nav.apt':'Apartments','nav.pool':'Pool & garden','nav.lage':'Location','nav.reviews':'Reviews','nav.faq':'FAQ','nav.book':'Enquire',
   'hero.eyebrow':'Holiday apartments with heated pool · Bibinje near Zadar',
@@ -1291,7 +1524,7 @@ en:{
   'wel.q':'“We built this house for people who want to experience Dalmatia the way we love it – calm, warm-hearted and close to the sea.”',
   'wel.role':'Your host','wel.langs':'We speak German, Croatian and English.',
   'fac.1':'Apartments with names','fac.2':'guests – the whole house','fac.3':'m² – the largest apartment',
-  'apts.eyebrow':'The apartments','apts.h2':'Four homes. <em>Four characters.</em>',
+  'apts.eyebrow':'The apartments','apts.h2':'Four holiday apartments. <em>Four characters.</em>',
   'apts.p':'Each apartment bears a Dalmatian name – and has its own personality. All have air conditioning, a fully equipped kitchen, Wi-Fi and their own outdoor space.',
   'apts.anfragen':'Enquire',
   'more.tag':'For families & friends','more.loc':'Ground floor · 125 m²','more.meaning':'more — the sea',
@@ -1313,17 +1546,17 @@ en:{
   
   
   
-  'ov.n1h':'The whole house','ov.n1p':'Several families or a larger group? Together, all four apartments sleep up to 16 guests.',
-  'ov.n3h':'Spring & autumn','ov.n3p':'Thanks to the heated pool, Dalmatia is worth it in May, June, September and October too – with quieter beaches and lower prices.',
+  'ov.n1h':'The whole house','ov.n1p':'Family reunion, a group of friends or two families together: rent all four apartments – up to 16 guests, one pool, one garden, all yours.',
+  'ov.n3h':'Spring & autumn','ov.n3p':'Thanks to the heated pool, Dalmatia is worth it in May, June, September and October too – with quieter beaches and a gentler pace than in high summer.',
   'ru.1h':'Check-in','ru.1':'2:30 pm – 11:30 pm','ru.2h':'Check-out','ru.2':'until 10:00 am','ru.3h':'Parking','ru.3':'free on site','ru.4h':'Children','ru.4':'free baby cot','ru.5h':'House rules','ru.5':'non-smoking · no pets',
-  'pool.eyebrow':'Pool & garden','pool.h2':'The heart of the house <em>is heated.</em>',
+  'pool.eyebrow':'Pool & garden','pool.h2':'Heated pool – <em>the heart of the house.</em>',
   'pool.p':'The large outdoor pool is heated – the water temperature can be adjusted so the season starts earlier and ends later. All around: sun terrace, garden and room for everyone.',
   'pool.l1':'Large heated pool with adjustable temperature','pool.l2':'Sun terrace with loungers','pool.l3':'Children’s playground in the garden','pool.l4':'Table tennis in the covered play area','pool.l5':'Barbecue area for long summer evenings','pool.l6':'Fruit from our own garden – when the season allows',
   'am.h':'Facilities & service','am.1h':'Air conditioning','am.1p':'in every apartment','am.2h':'Wi-Fi','am.2p':'free of charge','am.3h':'Fully equipped kitchen','am.3p':'for self-catering','am.4h':'Private outdoor space','am.4p':'terrace or balcony',
   'am.5h':'Private parking','am.5p':'free on site','am.6h':'Airport transfer','am.6p':'on request','am.7h':'Baby cot','am.7p':'free (0–3 years)','am.8h':'Bed linen & towels','am.8p':'included',
   'dir.eyebrow':'Book direct','dir.h2':'The best price comes <em>without detours.</em>',
-  'dir.p':'Book directly with us and you pay no platform fees – and get personal service on top.',
-  'dir.b1h':'Best price','dir.b1p':'No commissions or service fees from booking portals – booking direct, you never pay more than on a platform.',
+  'dir.p':'Book directly and you deal with your host from the very first message – no booking portal in between, and personal service on top.',
+  'dir.b1h':'A fair direct price','dir.b1p':'No booking-portal service fees: your offer comes straight from your host – with the final price before you commit.',
   'dir.b2h':'Personal welcome','dir.b2p':'We welcome you in person – with a small treat from Dalmatia and all our tips for Bibinje and Zadar.',
   'dir.b3h':'Direct line','dir.b3p':'One WhatsApp message is enough: quick answers and flexible arrangements for arrival and departure – before, during and after your stay.',
   'st.1h':'Send an enquiry','st.1p':'Travel dates and number of guests – via form, WhatsApp or email.',
@@ -1331,10 +1564,10 @@ en:{
   'st.3h':'Confirm your booking','st.3p':'With your confirmation and the agreed deposit, the apartment is reserved for you.',
   'st.4h':'Arrive & enjoy','st.4p':'Before your trip you get all the information about arrival and key handover.',
   'dir.btn':'Enquire directly now','dir.wa':'Via WhatsApp',
-  'bib.eyebrow':'Location & surroundings','bib.h2':'Bibinje. <em>Dalmatia in miniature.</em>',
+  'bib.eyebrow':'Location & surroundings','bib.h2':'Bibinje near Zadar. <em>Dalmatia in miniature.</em>',
   'bib.p1':'Pebble beaches with views of the Zadar islands, a riva full of tradition and song, the scent of flowers and sea – Bibinje is Dalmatia at its most peaceful.',
   'bib.p2':'And when you feel like something livelier: Zadar’s old town with its Sea Organ and spectacular sunsets is just a quarter of an hour away. Punta beach offers SUP rental, and e-bikes and e-scooters can be hired in the village.',
-  'dist.1':'Beach & riva of Bibinje','dist.1v':'a few minutes’ walk','dist.2':'Zadar Airport (ZAD) · 13 km','dist.2v':'≈ 15–20 min','dist.3':'Zadar old town · 9 km','dist.3v':'≈ 15 min','dist.4':'Nin & lagoon · 23 km','dist.4v':'≈ 30 min','dist.5':'Paklenica National Park · 52 km','dist.5v':'≈ 50 min','dist.6':'Krka National Park (Skradin) · 71 km','dist.6v':'≈ 1 h','dist.7':'Plitvice Lakes National Park · ≈ 145 km','dist.7v':'≈ 2 h',
+  'dist.1':'Beach & riva of Bibinje','dist.1v':'a few minutes’ walk','dist.2':'Zadar Airport (ZAD) · 13 km','dist.2v':'≈ 15–20 min','dist.3':'Zadar old town · 9 km','dist.3v':'≈ 15 min','dist.4':'Nin & lagoon · 24 km','dist.4v':'≈ 30 min','dist.5':'Paklenica National Park · 52 km','dist.5v':'≈ 50 min','dist.6':'Krka National Park (Skradin) · 71 km','dist.6v':'≈ 1 h','dist.7':'Plitvice Lakes National Park · ≈ 145 km','dist.7v':'≈ 2 h',
   'dist.note':'Approximate driving times without traffic.','bib.map':'View on map',
   
   
@@ -1358,21 +1591,22 @@ en:{
   'faq.q9':'What is included in the price?','faq.a9':'Bed linen, towels, Wi-Fi, air conditioning, parking and use of the pool, garden, playground and barbecue. The statutory tourist tax is shown transparently in the offer.',
   'faq.q10':'In which languages can I enquire?','faq.a10':'In German, Croatian or English – via WhatsApp, email, phone or the enquiry form.',
   'form.eyebrow':'Enquiry','form.h2':'Your summer <em>starts here.</em>',
-  'form.p':'Tell us your preferred dates. You will receive a personal offer directly from your host – without obligation and without platform fees.',
+  'form.p':'Tell us your preferred dates. You will receive a personal offer directly from your host – without obligation and with no booking portal in between.',
   'form.mail':'Email','form.tel':'Phone',
   'f.adults':'Adults','f.kids':'Children','f.apt':'Apartment','f.aptAny':'Any – please advise','f.aptAll':'Whole house (up to 16)',
-  'f.name':'Name','f.email':'Email','f.msg':'Message (optional)','f.msgPh':'Children’s ages, arrival time, special requests …',
-  'f.consent':'I agree that my details will be used to process this enquiry. More in the <a href="datenschutz.html">privacy policy</a>.',
+  'f.name':'Name','f.email':'Email <small>(optional with WhatsApp)</small>','f.msg':'Message (optional)','f.msgPh':'Children’s ages, arrival time, special requests …',
+  'f.consent':'We use your details solely to answer your enquiry. More in the <a href="datenschutz.html">privacy policy</a>.',
   'f.sendWa':'Send via WhatsApp','f.sendMail':'Send via email',
   'foot.p':'A newly built property with four modern apartments, a heated pool and garden – personally run, for couples and families.',
   'foot.kontakt':'Contact','foot.wa':'Message on WhatsApp','foot.adresse':'Address','foot.ort':'23205 Bibinje, Croatia','foot.map':'View on map',
   'foot.copyright':'© 2026 Haus Dalmatia · All rights reserved','foot.credit':'Surroundings photos: Wikimedia Commons (CC0 / public domain)','foot.imp':'Imprint','foot.ds':'Privacy',
   'mbar.inq':'Enquire','mbar.call':'Call',
   'alt.more':'Apartment More – living area','alt.maslina':'Apartment Maslina – living area','alt.riva':'Apartment Riva – living area','alt.zora':'Studio Zora – living area',
-  'alt.view':'Sea view from the balcony','alt.pool1':'Heated pool in front of the house','alt.pool2':'Pool in the evening','alt.spielplatz':'Children’s playground in the garden','alt.plaza':'Pebble beach in Bibinje','alt.padobran':'Water sports off Bibinje',
+  'alt.view':'Sea view from the balcony – Haus Dalmatia, Bibinje','alt.pool1':'Heated pool at Haus Dalmatia in Bibinje near Zadar','alt.pool2':'Pool in the evening','alt.spielplatz':'Children’s playground in the garden','alt.plaza':'Pebble beach in Bibinje','alt.padobran':'Water sports off Bibinje',
   'alt.zadar':'Sunset in Zadar','alt.krka':'Skradinski Buk waterfalls in Krka National Park','alt.kornati':'Islands of Kornati National Park'
 },
 pl:{
+  'q.wa':'lub napisz bezpośrednio na WhatsApp','ex.more':'Pokaż wszystkie miejsca','faq.q11':'Czy można wynająć cały dom?','faq.a11':'Tak. Wszystkie cztery apartamenty razem mieszczą do 16 osób – idealnie na zjazd rodzinny lub wyjazd z przyjaciółmi. Basen, ogród i grill są wtedy tylko do Państwa dyspozycji. Prosimy o podanie terminu – sprawdzimy dostępność wszystkich apartamentów.','faq.q12':'Jak daleko jest do Zadaru i lotniska?','faq.a12':'Stare miasto Zadaru leży 9 km od domu, ok. 15 minut samochodem. Lotnisko Zadar (ZAD) jest oddalone o 13 km, ok. 15–20 minut. Do Parku Narodowego Krka jedzie się ok. godziny, do Jezior Plitwickich ok. dwóch godzin.',
   'gal.eyebrow':'Wnętrza i ogród','gal.h2':'Haus Dalmatia <em>na zdjęciach.</em>','gal.hint':'Przesuń lub przeciągnij – kliknij, aby powiększyć zdjęcie.',
   'ex.eyebrow':'Wycieczki i atrakcje',
   'ex.h2':'Region Zadaru <em>tuż za progiem.</em>',
@@ -1440,9 +1674,9 @@ pl:{
   'ex.food.4':'<b>Sól z Nin</b> – zbierana tradycyjnie w salinach.',
   'ex.food.5':'<b>Peka</b> – mięso lub ośmiornica wolno pieczone pod kloszem w żarze.',
   'ex.food.6':'<b>Oliwa</b> – z gajów oliwnych wokół Zadaru.',
-  'hero.rating':'Wyjątkowy · 44 opinie na Booking.com','bn.1':'Bezpośrednio u gospodyni','bn.2':'Bez opłat serwisowych','bn.3':'Niezobowiązująca oferta','rev.link':'Zobacz wszystkie opinie','st.h':'Jak to działa','form.title':'Państwa zapytanie',
-  __title:'Apartamenty z podgrzewanym basenem w Bibinje koło Zadaru · Haus Dalmatia',
-  __desc:'Cztery nowoczesne apartamenty z podgrzewanym basenem, ogrodem i placem zabaw w Bibinje koło Zadaru – dla 2 do 16 osób, ocena 9,9/10 na Booking.com. Zapytaj bezpośrednio gospodynię.',
+  'hero.rating':'Wyjątkowy · 44 opinie na Booking.com','bn.1':'Bezpośrednio u gospodyni','bn.2':'Bez pośrednictwa portalu','bn.3':'Niezobowiązująca oferta','rev.link':'Zobacz wszystkie opinie','st.h':'Jak to działa','form.title':'Państwa zapytanie',
+  __title:'Apartamenty z basenem koło Zadaru (Bibinje) · Haus Dalmatia',
+  __desc:'4 apartamenty z podgrzewanym basenem w Bibinje, 9 km od Zadaru: 2–16 osób, ogród, plac zabaw, parking. Zapytaj bezpośrednio gospodynię.',
   'skip':'Przejdź do treści','logo.sub':'Bibinje · Dalmacja',
   'nav.apt':'Apartamenty','nav.pool':'Basen i ogród','nav.lage':'Lokalizacja','nav.reviews':'Opinie','nav.faq':'FAQ','nav.book':'Zapytaj',
   'hero.eyebrow':'Apartamenty z podgrzewanym basenem · Bibinje koło Zadaru',
@@ -1456,7 +1690,7 @@ pl:{
   'wel.q':'„Zbudowaliśmy ten dom dla ludzi, którzy chcą przeżyć Dalmację tak, jak my ją kochamy – spokojnie, serdecznie i blisko morza.”',
   'wel.role':'Państwa gospodyni','wel.langs':'Mówimy po niemiecku, chorwacku i angielsku.',
   'fac.1':'apartamenty z imieniem','fac.2':'osób – cały dom','fac.3':'m² – największy apartament',
-  'apts.eyebrow':'Apartamenty','apts.h2':'Cztery domy. <em>Cztery charaktery.</em>',
+  'apts.eyebrow':'Apartamenty','apts.h2':'Cztery apartamenty. <em>Cztery charaktery.</em>',
   'apts.p':'Każdy apartament nosi dalmatyńskie imię – i ma własny charakter. Wszystkie mają klimatyzację, w pełni wyposażoną kuchnię, Wi-Fi i własną przestrzeń na zewnątrz.',
   'apts.anfragen':'Zapytaj',
   'more.tag':'Dla rodzin i przyjaciół','more.loc':'Parter · 125 m²','more.meaning':'more — morze',
@@ -1478,17 +1712,17 @@ pl:{
   
   
   
-  'ov.n1h':'Cały dom','ov.n1p':'Kilka rodzin lub większa grupa? Wszystkie cztery apartamenty razem pomieszczą do 16 osób.',
-  'ov.n3h':'Przed i po sezonie','ov.n3p':'Dzięki podgrzewanemu basenowi Dalmacja kusi także w maju, czerwcu, wrześniu i październiku – z cichszymi plażami i niższymi cenami.',
+  'ov.n1h':'Cały dom','ov.n1p':'Zjazd rodzinny, grupa przyjaciół lub dwie rodziny razem: wynajmijcie wszystkie cztery apartamenty – do 16 osób, jeden basen, jeden ogród, tylko dla Was.',
+  'ov.n3h':'Przed i po sezonie','ov.n3p':'Dzięki podgrzewanemu basenowi Dalmacja kusi także w maju, czerwcu, wrześniu i październiku – z cichszymi plażami i spokojniejszym rytmem niż w środku lata.',
   'ru.1h':'Zameldowanie','ru.1':'14:30 – 23:30','ru.2h':'Wymeldowanie','ru.2':'do 10:00','ru.3h':'Parking','ru.3':'bezpłatny przy domu','ru.4h':'Dzieci','ru.4':'łóżeczko gratis','ru.5h':'Zasady','ru.5':'dla niepalących · bez zwierząt',
-  'pool.eyebrow':'Basen i ogród','pool.h2':'Serce domu <em>jest podgrzewane.</em>',
+  'pool.eyebrow':'Basen i ogród','pool.h2':'Podgrzewany basen – <em>serce domu.</em>',
   'pool.p':'Duży basen zewnętrzny jest podgrzewany – temperaturę wody można regulować, dzięki czemu sezon zaczyna się wcześniej i kończy później. Wokół: taras słoneczny, ogród i miejsce dla wszystkich.',
   'pool.l1':'Duży podgrzewany basen z regulacją temperatury','pool.l2':'Taras słoneczny z leżakami','pool.l3':'Plac zabaw dla dzieci w ogrodzie','pool.l4':'Tenis stołowy w zadaszonej strefie zabaw','pool.l5':'Miejsce na grilla na długie letnie wieczory','pool.l6':'Owoce z własnego ogrodu – gdy sezon pozwala',
   'am.h':'Wyposażenie i usługi','am.1h':'Klimatyzacja','am.1p':'w każdym apartamencie','am.2h':'Wi-Fi','am.2p':'bezpłatne','am.3h':'W pełni wyposażona kuchnia','am.3p':'do samodzielnego gotowania','am.4h':'Własna przestrzeń na zewnątrz','am.4p':'taras lub balkon',
   'am.5h':'Prywatny parking','am.5p':'bezpłatny przy domu','am.6h':'Transfer z lotniska','am.6p':'na życzenie','am.7h':'Łóżeczko dziecięce','am.7p':'bezpłatnie (0–3 lata)','am.8h':'Pościel i ręczniki','am.8p':'w cenie',
   'dir.eyebrow':'Rezerwacja bezpośrednia','dir.h2':'Najlepsza cena powstaje <em>bez pośredników.</em>',
-  'dir.p':'Rezerwując bezpośrednio u nas, nie płacą Państwo opłat serwisowych platform – a do tego otrzymują osobistą obsługę.',
-  'dir.b1h':'Najlepsza cena','dir.b1p':'Bez prowizji i opłat serwisowych portali rezerwacyjnych – bezpośrednio u nas nigdy nie zapłacą Państwo więcej niż na platformie.',
+  'dir.p':'Rezerwując bezpośrednio, od pierwszej wiadomości rozmawiają Państwo z gospodynią – bez portalu pośredniczącego i z osobistą obsługą.',
+  'dir.b1h':'Uczciwa cena bezpośrednia','dir.b1p':'Bez opłat serwisowych portalu: oferta przychodzi bezpośrednio od gospodyni – z ceną końcową, zanim podejmą Państwo decyzję.',
   'dir.b2h':'Osobiste powitanie','dir.b2p':'Witamy Państwa osobiście – z małym upominkiem z Dalmacji i wszystkimi wskazówkami dotyczącymi Bibinje i Zadaru.',
   'dir.b3h':'Bezpośredni kontakt','dir.b3p':'Wystarczy jedna wiadomość na WhatsApp: szybkie odpowiedzi i elastyczne ustalenia dotyczące przyjazdu i wyjazdu – przed, w trakcie i po pobycie.',
   'st.1h':'Wyślij zapytanie','st.1p':'Termin i liczba osób – przez formularz, WhatsApp lub e-mail.',
@@ -1496,10 +1730,10 @@ pl:{
   'st.3h':'Potwierdź rezerwację','st.3p':'Po Państwa potwierdzeniu i wpłacie uzgodnionej zaliczki apartament jest zarezerwowany.',
   'st.4h':'Przyjedź i odpoczywaj','st.4p':'Przed podróżą otrzymają Państwo wszystkie informacje o dojeździe i przekazaniu kluczy.',
   'dir.btn':'Zapytaj bezpośrednio','dir.wa':'Przez WhatsApp',
-  'bib.eyebrow':'Lokalizacja i okolica','bib.h2':'Bibinje. <em>Dalmacja w miniaturze.</em>',
+  'bib.eyebrow':'Lokalizacja i okolica','bib.h2':'Bibinje koło Zadaru. <em>Dalmacja w miniaturze.</em>',
   'bib.p1':'Kamieniste plaże z widokiem na wyspy Zadaru, riva pełna tradycji i śpiewu, zapach kwiatów i morza – Bibinje to Dalmacja w swojej najspokojniejszej odsłonie.',
   'bib.p2':'A gdy zechcą Państwo więcej życia: stare miasto Zadaru z Organami Morskimi i spektakularnymi zachodami słońca jest zaledwie kwadrans drogi stąd. Na plaży Punta działa wypożyczalnia SUP, a w miejscowości można wypożyczyć rowery i hulajnogi elektryczne.',
-  'dist.1':'Plaża i riva w Bibinje','dist.1v':'kilka minut pieszo','dist.2':'Lotnisko Zadar (ZAD) · 13 km','dist.2v':'≈ 15–20 min','dist.3':'Stare miasto Zadar · 9 km','dist.3v':'≈ 15 min','dist.4':'Nin i laguna · 23 km','dist.4v':'≈ 30 min','dist.5':'Park Narodowy Paklenica · 52 km','dist.5v':'≈ 50 min','dist.6':'Park Narodowy Krka (Skradin) · 71 km','dist.6v':'≈ 1 godz.','dist.7':'Park Narodowy Jezior Plitwickich · ≈ 145 km','dist.7v':'≈ 2 godz.',
+  'dist.1':'Plaża i riva w Bibinje','dist.1v':'kilka minut pieszo','dist.2':'Lotnisko Zadar (ZAD) · 13 km','dist.2v':'≈ 15–20 min','dist.3':'Stare miasto Zadar · 9 km','dist.3v':'≈ 15 min','dist.4':'Nin i laguna · 24 km','dist.4v':'≈ 30 min','dist.5':'Park Narodowy Paklenica · 52 km','dist.5v':'≈ 50 min','dist.6':'Park Narodowy Krka (Skradin) · 71 km','dist.6v':'≈ 1 godz.','dist.7':'Park Narodowy Jezior Plitwickich · ≈ 145 km','dist.7v':'≈ 2 godz.',
   'dist.note':'Przybliżony czas jazdy samochodem, bez korków.','bib.map':'Zobacz na mapie',
   
   
@@ -1523,21 +1757,22 @@ pl:{
   'faq.q9':'Co jest wliczone w cenę?','faq.a9':'Pościel, ręczniki, Wi-Fi, klimatyzacja, parking oraz korzystanie z basenu, ogrodu, placu zabaw i grilla. Ustawową opłatę turystyczną wykazujemy przejrzyście w ofercie.',
   'faq.q10':'W jakich językach mogę wysłać zapytanie?','faq.a10':'Po niemiecku, chorwacku lub angielsku – przez WhatsApp, e-mail, telefon lub formularz zapytania. Zapytania po polsku również chętnie przyjmujemy.',
   'form.eyebrow':'Zapytanie','form.h2':'Państwa lato <em>zaczyna się tutaj.</em>',
-  'form.p':'Prosimy podać wymarzony termin. Indywidualną ofertę otrzymają Państwo bezpośrednio od gospodyni – niezobowiązująco i bez opłat serwisowych platform.',
+  'form.p':'Prosimy podać wymarzony termin. Indywidualną ofertę otrzymają Państwo bezpośrednio od gospodyni – niezobowiązująco i bez pośrednictwa portalu.',
   'form.mail':'E-mail','form.tel':'Telefon',
   'f.adults':'Dorośli','f.kids':'Dzieci','f.apt':'Apartament','f.aptAny':'Obojętnie – proszę doradzić','f.aptAll':'Cały dom (do 16 osób)',
-  'f.name':'Imię i nazwisko','f.email':'E-mail','f.msg':'Wiadomość (opcjonalnie)','f.msgPh':'Wiek dzieci, godzina przyjazdu, specjalne życzenia …',
-  'f.consent':'Wyrażam zgodę na wykorzystanie moich danych w celu obsługi zapytania. Więcej w <a href="datenschutz.html">polityce prywatności</a>.',
+  'f.name':'Imię i nazwisko','f.email':'E-mail <small>(opcjonalnie przy WhatsApp)</small>','f.msg':'Wiadomość (opcjonalnie)','f.msgPh':'Wiek dzieci, godzina przyjazdu, specjalne życzenia …',
+  'f.consent':'Państwa dane wykorzystujemy wyłącznie do odpowiedzi na zapytanie. Więcej w <a href="datenschutz.html">polityce prywatności</a>.',
   'f.sendWa':'Wyślij przez WhatsApp','f.sendMail':'Wyślij e-mailem',
   'foot.p':'Nowo wybudowany dom z czterema nowoczesnymi apartamentami, podgrzewanym basenem i ogrodem – prowadzony osobiście, dla par i rodzin.',
   'foot.kontakt':'Kontakt','foot.wa':'Napisz na WhatsApp','foot.adresse':'Adres','foot.ort':'23205 Bibinje, Chorwacja','foot.map':'Zobacz na mapie',
   'foot.copyright':'© 2026 Haus Dalmatia · Wszelkie prawa zastrzeżone','foot.credit':'Zdjęcia okolicy: Wikimedia Commons (CC0 / domena publiczna)','foot.imp':'Impressum','foot.ds':'Prywatność',
   'mbar.inq':'Zapytaj','mbar.call':'Zadzwoń',
   'alt.more':'Apartament More – salon','alt.maslina':'Apartament Maslina – salon','alt.riva':'Apartament Riva – salon','alt.zora':'Studio Zora – salon',
-  'alt.view':'Widok na morze z balkonu','alt.pool1':'Podgrzewany basen przed domem','alt.pool2':'Basen wieczorem','alt.spielplatz':'Plac zabaw w ogrodzie','alt.plaza':'Kamienista plaża w Bibinje','alt.padobran':'Sporty wodne przy Bibinje',
+  'alt.view':'Widok na morze z balkonu – Haus Dalmatia, Bibinje','alt.pool1':'Podgrzewany basen Haus Dalmatia w Bibinje koło Zadaru','alt.pool2':'Basen wieczorem','alt.spielplatz':'Plac zabaw w ogrodzie','alt.plaza':'Kamienista plaża w Bibinje','alt.padobran':'Sporty wodne przy Bibinje',
   'alt.zadar':'Zachód słońca w Zadarze','alt.krka':'Wodospady Skradinski Buk w Parku Narodowym Krka','alt.kornati':'Wyspy Parku Narodowego Kornati'
 },
 hr:{
+  'q.wa':'ili pišite izravno na WhatsApp','ex.more':'Prikaži sva odredišta','faq.q11':'Možemo li unajmiti cijelu kuću?','faq.a11':'Da. Sva četiri apartmana zajedno primaju do 16 gostiju – idealno za obiteljska okupljanja ili društvo prijatelja. Bazen, vrt i roštilj tada dijelite samo međusobno. Pošaljite nam termin i provjerit ćemo dostupnost svih apartmana.','faq.q12':'Koliko su udaljeni Zadar i zračna luka?','faq.a12':'Stari grad Zadar udaljen je 9 km, autom oko 15 minuta. Zračna luka Zadar (ZAD) udaljena je 13 km, oko 15–20 minuta. Do Nacionalnog parka Krka vozi se otprilike sat vremena, do Plitvičkih jezera oko dva sata.',
   'gal.eyebrow':'Pogled iznutra','gal.h2':'Haus Dalmatia <em>u slikama.</em>','gal.hint':'Povucite prstom ili mišem – klikom otvarate veću sliku.',
   'ex.eyebrow':'Izleti i doživljaji',
   'ex.h2':'Zadarska regija <em>pred vašim vratima.</em>',
@@ -1605,9 +1840,9 @@ hr:{
   'ex.food.4':'<b>Sol iz Nina</b> – tradicionalno ubrana u solani.',
   'ex.food.5':'<b>Peka</b> – meso ili hobotnica polako pečeni ispod peke na žaru.',
   'ex.food.6':'<b>Maslinovo ulje</b> – iz maslinika oko Zadra.',
-  'hero.rating':'Izvanredno · 44 ocjene na Booking.comu','bn.1':'Izravno kod domaćice','bn.2':'Bez naknada platformi','bn.3':'Neobvezujuća ponuda','rev.link':'Pogledajte sve ocjene','st.h':'Kako funkcionira','form.title':'Vaš upit',
-  __title:'Apartmani s grijanim bazenom u Bibinju kod Zadra · Haus Dalmatia',
-  __desc:'Četiri moderna apartmana s grijanim bazenom, vrtom i dječjim igralištem u Bibinju kod Zadra – za 2 do 16 gostiju, ocjena 9,9/10 na Booking.comu. Upitajte izravno domaćicu.',
+  'hero.rating':'Izvanredno · 44 ocjene na Booking.comu','bn.1':'Izravno kod domaćice','bn.2':'Bez posredničkog portala','bn.3':'Neobvezujuća ponuda','rev.link':'Pogledajte sve ocjene','st.h':'Kako funkcionira','form.title':'Vaš upit',
+  __title:'Apartmani s grijanim bazenom, Bibinje kod Zadra · Haus Dalmatia',
+  __desc:'4 apartmana s grijanim bazenom u Bibinju, 9 km od Zadra: 2–16 gostiju, vrt, igralište, parking. Upitajte izravno domaćicu.',
   'skip':'Preskoči na sadržaj','logo.sub':'Bibinje · Dalmacija',
   'nav.apt':'Apartmani','nav.pool':'Bazen & vrt','nav.lage':'Lokacija','nav.reviews':'Dojmovi','nav.faq':'Pitanja','nav.book':'Upit',
   'hero.eyebrow':'Apartmani s grijanim bazenom · Bibinje kod Zadra',
@@ -1621,7 +1856,7 @@ hr:{
   'wel.q':'„Sagradili smo ovu kuću za ljude koji žele doživjeti Dalmaciju onako kako je mi volimo – mirno, srdačno i blizu mora.“',
   'wel.role':'Vaša domaćica','wel.langs':'Govorimo njemački, hrvatski i engleski.',
   'fac.1':'apartmana s imenom','fac.2':'gostiju – cijela kuća','fac.3':'m² – najveći apartman',
-  'apts.eyebrow':'Apartmani','apts.h2':'Četiri doma. <em>Četiri karaktera.</em>',
+  'apts.eyebrow':'Apartmani','apts.h2':'Četiri apartmana. <em>Četiri karaktera.</em>',
   'apts.p':'Svaki apartman nosi dalmatinsko ime – i ima svoje lice. Svi imaju klima-uređaj, potpuno opremljenu kuhinju, Wi-Fi i vlastiti vanjski prostor.',
   'apts.anfragen':'Upitajte',
   'more.tag':'Za obitelji i prijatelje','more.loc':'Prizemlje · 125 m²','more.meaning':'more — more',
@@ -1643,17 +1878,17 @@ hr:{
   
   
   
-  'ov.n1h':'Cijela kuća','ov.n1p':'Više obitelji ili veća grupa? Sva četiri apartmana zajedno nude mjesta za do 16 gostiju.',
-  'ov.n3h':'Predsezona i posezona','ov.n3p':'Zahvaljujući grijanom bazenu Dalmacija se isplati i u svibnju, lipnju, rujnu i listopadu – s mirnijim plažama i povoljnijim cijenama.',
+  'ov.n1h':'Cijela kuća','ov.n1p':'Obiteljsko okupljanje, društvo prijatelja ili dvije obitelji zajedno: unajmite sva četiri apartmana – do 16 gostiju, jedan bazen, jedan vrt, samo za vas.',
+  'ov.n3h':'Predsezona i posezona','ov.n3p':'Zahvaljujući grijanom bazenu Dalmacija se isplati i u svibnju, lipnju, rujnu i listopadu – s mirnijim plažama i opuštenijim ritmom nego usred ljeta.',
   'ru.1h':'Prijava','ru.1':'14:30 – 23:30','ru.2h':'Odjava','ru.2':'do 10:00','ru.3h':'Parking','ru.3':'besplatan uz kuću','ru.4h':'Djeca','ru.4':'dječji krevetić besplatno','ru.5h':'Kućni red','ru.5':'nepušački · bez kućnih ljubimaca',
-  'pool.eyebrow':'Bazen & vrt','pool.h2':'Srce kuće <em>je grijano.</em>',
+  'pool.eyebrow':'Bazen & vrt','pool.h2':'Grijani bazen – <em>srce kuće.</em>',
   'pool.p':'Veliki vanjski bazen je grijan – temperatura vode može se podesiti, tako da sezona počinje ranije i završava kasnije. Oko njega: sunčana terasa, vrt i mjesta za sve.',
   'pool.l1':'Veliki grijani bazen s podesivom temperaturom','pool.l2':'Sunčana terasa s ležaljkama','pool.l3':'Dječje igralište u vrtu','pool.l4':'Stolni tenis u natkrivenom prostoru','pool.l5':'Mjesto za roštilj za duge ljetne večeri','pool.l6':'Voće iz vlastitog vrta – kad sezona dopusti',
   'am.h':'Oprema i usluge','am.1h':'Klima-uređaj','am.1p':'u svakom apartmanu','am.2h':'Wi-Fi','am.2p':'besplatno','am.3h':'Potpuno opremljena kuhinja','am.3p':'kao kod kuće','am.4h':'Vlastiti vanjski prostor','am.4p':'terasa ili balkon',
   'am.5h':'Privatni parking','am.5p':'besplatan uz kuću','am.6h':'Transfer iz zračne luke','am.6p':'na upit','am.7h':'Dječji krevetić','am.7p':'besplatno (0–3 god.)','am.8h':'Posteljina i ručnici','am.8p':'uključeni',
   'dir.eyebrow':'Izravna rezervacija','dir.h2':'Najbolja cijena nastaje <em>bez posrednika.</em>',
-  'dir.p':'Tko rezervira izravno kod nas, ne plaća naknade platformi – i uz to dobiva osobnu uslugu.',
-  'dir.b1h':'Najbolja cijena','dir.b1p':'Bez provizija i naknada booking platformi – izravno kod nas nikad ne plaćate više nego na platformi.',
+  'dir.p':'Tko rezervira izravno, od prve poruke razgovara s domaćicom – bez posredničkog portala i uz osobnu uslugu.',
+  'dir.b1h':'Poštena izravna cijena','dir.b1p':'Bez naknada booking portala: ponuda stiže izravno od domaćice – s konačnom cijenom prije nego što se odlučite.',
   'dir.b2h':'Osobni doček','dir.b2p':'Dočekujemo vas osobno – s malom pažnjom iz Dalmacije i svim savjetima za Bibinje i Zadar.',
   'dir.b3h':'Izravan kontakt','dir.b3p':'Dovoljna je jedna WhatsApp poruka: brzi odgovori i fleksibilni dogovori oko dolaska i odlaska – prije, tijekom i nakon boravka.',
   'st.1h':'Pošaljite upit','st.1p':'Datumi i broj gostiju – putem obrasca, WhatsAppa ili e-pošte.',
@@ -1661,10 +1896,10 @@ hr:{
   'st.3h':'Potvrdite rezervaciju','st.3p':'Vašom potvrdom i dogovorenim predujmom apartman je rezerviran za vas.',
   'st.4h':'Dođite i uživajte','st.4p':'Prije putovanja dobivate sve informacije o dolasku i preuzimanju ključeva.',
   'dir.btn':'Upitajte izravno','dir.wa':'Putem WhatsAppa',
-  'bib.eyebrow':'Lokacija i okolica','bib.h2':'Bibinje. <em>Dalmacija u malom.</em>',
+  'bib.eyebrow':'Lokacija i okolica','bib.h2':'Bibinje kod Zadra. <em>Dalmacija u malom.</em>',
   'bib.p1':'Šljunčane plaže s pogledom na zadarske otoke, riva puna tradicije i pjesme, miris cvijeća i mora – Bibinje je Dalmacija u svom najmirnijem obliku.',
   'bib.p2':'A kad poželite malo više živosti: stari grad Zadar s morskim orguljama i spektaklom zalaska sunca udaljen je samo četvrt sata. Na plaži Punta možete unajmiti SUP, a u mjestu e-bicikle i e-romobile.',
-  'dist.1':'Plaža i riva u Bibinju','dist.1v':'nekoliko minuta hoda','dist.2':'Zračna luka Zadar (ZAD) · 13 km','dist.2v':'≈ 15–20 min','dist.3':'Stari grad Zadar · 9 km','dist.3v':'≈ 15 min','dist.4':'Nin i laguna · 23 km','dist.4v':'≈ 30 min','dist.5':'NP Paklenica · 52 km','dist.5v':'≈ 50 min','dist.6':'NP Krka (Skradin) · 71 km','dist.6v':'≈ 1 h','dist.7':'NP Plitvička jezera · ≈ 145 km','dist.7v':'≈ 2 h',
+  'dist.1':'Plaža i riva u Bibinju','dist.1v':'nekoliko minuta hoda','dist.2':'Zračna luka Zadar (ZAD) · 13 km','dist.2v':'≈ 15–20 min','dist.3':'Stari grad Zadar · 9 km','dist.3v':'≈ 15 min','dist.4':'Nin i laguna · 24 km','dist.4v':'≈ 30 min','dist.5':'NP Paklenica · 52 km','dist.5v':'≈ 50 min','dist.6':'NP Krka (Skradin) · 71 km','dist.6v':'≈ 1 h','dist.7':'NP Plitvička jezera · ≈ 145 km','dist.7v':'≈ 2 h',
   'dist.note':'Približno vrijeme vožnje automobilom, bez gužve.','bib.map':'Pogledajte na karti',
   
   
@@ -1688,56 +1923,56 @@ hr:{
   'faq.q9':'Što je uključeno u cijenu?','faq.a9':'Posteljina, ručnici, Wi-Fi, klima-uređaj, parking te korištenje bazena, vrta, igrališta i roštilja. Zakonsku boravišnu pristojbu jasno navodimo u ponudi.',
   'faq.q10':'Na kojim jezicima mogu poslati upit?','faq.a10':'Na njemačkom, hrvatskom ili engleskom – putem WhatsAppa, e-pošte, telefona ili obrasca za upit.',
   'form.eyebrow':'Upit','form.h2':'Vaše ljeto <em>počinje ovdje.</em>',
-  'form.p':'Recite nam željeni termin. Osobnu ponudu dobivate izravno od domaćice – neobvezujuće i bez naknada platformi.',
+  'form.p':'Recite nam željeni termin. Osobnu ponudu dobivate izravno od domaćice – neobvezujuće i bez posredničkog portala.',
   'form.mail':'E-pošta','form.tel':'Telefon',
   'f.adults':'Odrasli','f.kids':'Djeca','f.apt':'Apartman','f.aptAny':'Svejedno – savjetujte me','f.aptAll':'Cijela kuća (do 16)',
-  'f.name':'Ime i prezime','f.email':'E-pošta','f.msg':'Poruka (neobavezno)','f.msgPh':'Dob djece, vrijeme dolaska, posebne želje …',
-  'f.consent':'Slažem se da se moji podaci koriste za obradu upita. Više u <a href="datenschutz.html">izjavi o privatnosti</a>.',
+  'f.name':'Ime i prezime','f.email':'E-pošta <small>(neobavezno uz WhatsApp)</small>','f.msg':'Poruka (neobavezno)','f.msgPh':'Dob djece, vrijeme dolaska, posebne želje …',
+  'f.consent':'Vaše podatke koristimo isključivo za odgovor na upit. Više u <a href="datenschutz.html">izjavi o privatnosti</a>.',
   'f.sendWa':'Pošalji putem WhatsAppa','f.sendMail':'Pošalji e-poštom',
   'foot.p':'Novo izgrađeno imanje s četiri moderna apartmana, grijanim bazenom i vrtom – uz osobnu brigu, za parove i obitelji.',
   'foot.kontakt':'Kontakt','foot.wa':'Pišite na WhatsApp','foot.adresse':'Adresa','foot.ort':'23205 Bibinje, Hrvatska','foot.map':'Pogledajte na karti',
   'foot.copyright':'© 2026 Haus Dalmatia · Sva prava pridržana','foot.credit':'Fotografije okolice: Wikimedia Commons (CC0 / javno dobro)','foot.imp':'Impresum','foot.ds':'Privatnost',
   'mbar.inq':'Upit','mbar.call':'Nazovi',
   'alt.more':'Apartman More – dnevni boravak','alt.maslina':'Apartman Maslina – dnevni boravak','alt.riva':'Apartman Riva – dnevni boravak','alt.zora':'Studio Zora – dnevni boravak',
-  'alt.view':'Pogled na more s balkona','alt.pool1':'Grijani bazen ispred kuće','alt.pool2':'Bazen navečer','alt.spielplatz':'Dječje igralište u vrtu','alt.plaza':'Šljunčana plaža u Bibinju','alt.padobran':'Vodeni sportovi kod Bibinja',
+  'alt.view':'Pogled na more s balkona – Haus Dalmatia, Bibinje','alt.pool1':'Grijani bazen kuće Haus Dalmatia u Bibinju kod Zadra','alt.pool2':'Bazen navečer','alt.spielplatz':'Dječje igralište u vrtu','alt.plaza':'Šljunčana plaža u Bibinju','alt.padobran':'Vodeni sportovi kod Bibinja',
   'alt.zadar':'Zalazak sunca u Zadru','alt.krka':'Slapovi Skradinski buk u nacionalnom parku Krka','alt.kornati':'Otoci nacionalnog parka Kornati'
 }
 };
 /* Texte, die per Skript erzeugt werden */
 function plPl(n, one, few, many){ var m10 = n % 10, m100 = n % 100; return n === 1 ? one : (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) ? few : many; }
 var T = {
-  de:{ liveNow:'Bibinje jetzt', liveSun:'Sonnenuntergang heute', toTop:'Nach oben', guest:function(n){return n+(n===1?' Gast':' Gäste');}, adult:function(n){return n+(n===1?' Erwachsener':' Erwachsene');}, kid:function(n){return n===0?'keine Kinder':n+(n===1?' Kind':' Kinder');},
-       nights:function(n){return n+(n===1?' Nacht':' Nächte');}, priceReq:'Preis auf Anfrage', from:'ab', night:'/ Nacht', upto:'bis',
+  de:{ fallback:'Nichts geöffnet? Anfrage kopieren und senden an', copy:'Anfrage kopieren', copied:'Kopiert ✓', taken:'Ihre Reisedaten sind übernommen – bitte nur noch Ihren Namen ergänzen.', lbClose:'Schließen', lbPrev:'Vorheriges Bild', lbNext:'Nächstes Bild', lbLabel:'Bildansicht', menuOpen:'Menü öffnen', menuClose:'Menü schließen', pause:'Diashow anhalten', play:'Diashow fortsetzen', showLess:'Weniger anzeigen', liveNow:'Bibinje jetzt', liveSun:'Sonnenuntergang heute', toTop:'Nach oben', guest:function(n){return n+(n===1?' Gast':' Gäste');}, adult:function(n){return n+(n===1?' Erwachsener':' Erwachsene');}, kid:function(n){return n===0?'keine Kinder':n+(n===1?' Kind':' Kinder');},
+       nights:function(n){return n+(n===1?' Nacht':' Nächte');}, priceReq:'Persönliches Angebot', from:'ab', night:'/ Nacht', upto:'bis',
        sugg:function(a){return 'Unser Vorschlag: '+a;}, aptAny:'Egal – bitte beraten', aptAll:'Ganzes Haus (bis 16)',
        errDates:'Bitte Anreise und Abreise wählen (Abreise nach Anreise).', errName:'Bitte Ihren Namen angeben.', errMail:'Bitte eine gültige E-Mail-Adresse angeben.', errConsent:'Bitte der Verarbeitung Ihrer Angaben zustimmen.',
-       okWa:'WhatsApp wurde mit Ihrer Anfrage geöffnet – bitte dort nur noch auf „Senden“ tippen.', okMail:'Ihr E-Mail-Programm wurde mit der Anfrage geöffnet – bitte dort noch absenden.',
+       okWa:'Ihre Anfrage ist vorbereitet. WhatsApp öffnet sich in einem neuen Fenster – dort nur noch auf „Senden“ tippen.', okMail:'Ihre Anfrage ist vorbereitet. Ihr E-Mail-Programm öffnet sich – bitte dort noch absenden.',
        capWarn:function(a,c){return 'Hinweis: '+a+' bietet Platz für bis zu '+c+' Gäste – wir beraten Sie gern zu einer Kombination.';},
        subj:'Anfrage Haus Dalmatia', hello:'Guten Tag Marijana,', intro:'ich interessiere mich für einen Aufenthalt im Haus Dalmatia.',
        lArr:'Anreise', lDep:'Abreise', lGuests:'Gäste', lApt:'Apartment', lName:'Name', lMail:'E-Mail', lMsg:'Nachricht', bye:'Vielen Dank und viele Grüße',
        waInquiry:'Guten Tag, ich möchte gern die Verfügbarkeit im Haus Dalmatia anfragen.', waDirect:'Guten Tag, ich möchte gern direkt im Haus Dalmatia buchen.' },
-  en:{ liveNow:'Bibinje now', liveSun:'Sunset today', toTop:'Back to top', guest:function(n){return n+(n===1?' guest':' guests');}, adult:function(n){return n+(n===1?' adult':' adults');}, kid:function(n){return n===0?'no children':n+(n===1?' child':' children');},
-       nights:function(n){return n+(n===1?' night':' nights');}, priceReq:'Price on request', from:'from', night:'/ night', upto:'up to',
+  en:{ fallback:'Nothing opened? Copy your enquiry and send it to', copy:'Copy enquiry', copied:'Copied ✓', taken:'Your travel dates have been added – just fill in your name.', lbClose:'Close', lbPrev:'Previous image', lbNext:'Next image', lbLabel:'Image viewer', menuOpen:'Open menu', menuClose:'Close menu', pause:'Pause slideshow', play:'Play slideshow', showLess:'Show less', liveNow:'Bibinje now', liveSun:'Sunset today', toTop:'Back to top', guest:function(n){return n+(n===1?' guest':' guests');}, adult:function(n){return n+(n===1?' adult':' adults');}, kid:function(n){return n===0?'no children':n+(n===1?' child':' children');},
+       nights:function(n){return n+(n===1?' night':' nights');}, priceReq:'Personal quote', from:'from', night:'/ night', upto:'up to',
        sugg:function(a){return 'Our suggestion: '+a;}, aptAny:'Any – please advise', aptAll:'Whole house (up to 16)',
        errDates:'Please choose arrival and departure (departure after arrival).', errName:'Please enter your name.', errMail:'Please enter a valid email address.', errConsent:'Please agree to the processing of your details.',
-       okWa:'WhatsApp has opened with your enquiry – just tap “Send” there.', okMail:'Your email app has opened with your enquiry – please send it from there.',
+       okWa:'Your enquiry is ready. WhatsApp opens in a new window – just tap “Send” there.', okMail:'Your enquiry is ready. Your email app is opening – please send it from there.',
        capWarn:function(a,c){return 'Note: '+a+' sleeps up to '+c+' guests – we are happy to suggest a combination.';},
        subj:'Enquiry Haus Dalmatia', hello:'Hello Marijana,', intro:'I am interested in a stay at Haus Dalmatia.',
        lArr:'Arrival', lDep:'Departure', lGuests:'Guests', lApt:'Apartment', lName:'Name', lMail:'Email', lMsg:'Message', bye:'Many thanks and best regards',
        waInquiry:'Hello, I would like to enquire about availability at Haus Dalmatia.', waDirect:'Hello, I would like to book directly at Haus Dalmatia.' },
-  pl:{ liveNow:'Bibinje teraz', liveSun:'Zachód słońca dziś', toTop:'Do góry', guest:function(n){return n+' '+plPl(n,'osoba','osoby','osób');}, adult:function(n){return n+' '+plPl(n,'dorosły','dorosłych','dorosłych');}, kid:function(n){return n===0?'bez dzieci':n+' '+plPl(n,'dziecko','dzieci','dzieci');},
-       nights:function(n){return n+' '+plPl(n,'noc','noce','nocy');}, priceReq:'Cena na zapytanie', from:'od', night:'/ noc', upto:'do',
+  pl:{ fallback:'Nic się nie otworzyło? Skopiuj zapytanie i wyślij na', copy:'Kopiuj zapytanie', copied:'Skopiowano ✓', taken:'Daty podróży zostały przeniesione – wystarczy uzupełnić imię i nazwisko.', lbClose:'Zamknij', lbPrev:'Poprzednie zdjęcie', lbNext:'Następne zdjęcie', lbLabel:'Podgląd zdjęć', menuOpen:'Otwórz menu', menuClose:'Zamknij menu', pause:'Zatrzymaj pokaz', play:'Wznów pokaz', showLess:'Pokaż mniej', liveNow:'Bibinje teraz', liveSun:'Zachód słońca dziś', toTop:'Do góry', guest:function(n){return n+' '+plPl(n,'osoba','osoby','osób');}, adult:function(n){return n+' '+plPl(n,'dorosły','dorosłych','dorosłych');}, kid:function(n){return n===0?'bez dzieci':n+' '+plPl(n,'dziecko','dzieci','dzieci');},
+       nights:function(n){return n+' '+plPl(n,'noc','noce','nocy');}, priceReq:'Indywidualna oferta', from:'od', night:'/ noc', upto:'do',
        sugg:function(a){return 'Nasza propozycja: '+a;}, aptAny:'Obojętnie – proszę doradzić', aptAll:'Cały dom (do 16 osób)',
        errDates:'Prosimy wybrać datę przyjazdu i wyjazdu (wyjazd po przyjeździe).', errName:'Prosimy podać imię i nazwisko.', errMail:'Prosimy podać poprawny adres e-mail.', errConsent:'Prosimy wyrazić zgodę na przetwarzanie danych.',
-       okWa:'WhatsApp został otwarty z Państwa zapytaniem – wystarczy nacisnąć „Wyślij”.', okMail:'Program pocztowy został otwarty z zapytaniem – prosimy je stamtąd wysłać.',
+       okWa:'Zapytanie jest gotowe. WhatsApp otworzy się w nowym oknie – wystarczy nacisnąć „Wyślij”.', okMail:'Zapytanie jest gotowe. Program pocztowy się otwiera – prosimy wysłać wiadomość stamtąd.',
        capWarn:function(a,c){return 'Uwaga: '+a+' mieści do '+c+' osób – chętnie zaproponujemy połączenie apartamentów.';},
        subj:'Zapytanie Haus Dalmatia', hello:'Dzień dobry Pani Marijano,', intro:'interesuje mnie pobyt w Haus Dalmatia.',
        lArr:'Przyjazd', lDep:'Wyjazd', lGuests:'Goście', lApt:'Apartament', lName:'Imię i nazwisko', lMail:'E-mail', lMsg:'Wiadomość', bye:'Dziękuję i pozdrawiam',
        waInquiry:'Dzień dobry, chciałbym/chciałabym zapytać o dostępność w Haus Dalmatia.', waDirect:'Dzień dobry, chciałbym/chciałabym zarezerwować bezpośrednio w Haus Dalmatia.' },
-  hr:{ liveNow:'Bibinje sada', liveSun:'Zalazak sunca danas', toTop:'Na vrh', guest:function(n){var m=n%10,h=n%100;return n+((m===1&&h!==11)?' gost':(m>=2&&m<=4&&(h<12||h>14))?' gosta':' gostiju');}, adult:function(n){var m=n%10,h=n%100;return n+((m===1&&h!==11)?' odrasla osoba':(m>=2&&m<=4&&(h<12||h>14))?' odrasle osobe':' odraslih');}, kid:function(n){return n===0?'bez djece':n+(n===1?' dijete':' djece');},
-       nights:function(n){var m=n%10,h=n%100;return n+((m===1&&h!==11)?' noć':' noći');}, priceReq:'Cijena na upit', from:'od', night:'/ noć', upto:'do',
+  hr:{ fallback:'Ništa se nije otvorilo? Kopirajte upit i pošaljite na', copy:'Kopiraj upit', copied:'Kopirano ✓', taken:'Datumi putovanja su preneseni – upišite još samo svoje ime.', lbClose:'Zatvori', lbPrev:'Prethodna slika', lbNext:'Sljedeća slika', lbLabel:'Pregled slika', menuOpen:'Otvori izbornik', menuClose:'Zatvori izbornik', pause:'Zaustavi prikaz', play:'Nastavi prikaz', showLess:'Prikaži manje', liveNow:'Bibinje sada', liveSun:'Zalazak sunca danas', toTop:'Na vrh', guest:function(n){var m=n%10,h=n%100;return n+((m===1&&h!==11)?' gost':(m>=2&&m<=4&&(h<12||h>14))?' gosta':' gostiju');}, adult:function(n){var m=n%10,h=n%100;return n+((m===1&&h!==11)?' odrasla osoba':(m>=2&&m<=4&&(h<12||h>14))?' odrasle osobe':' odraslih');}, kid:function(n){return n===0?'bez djece':n+(n===1?' dijete':' djece');},
+       nights:function(n){var m=n%10,h=n%100;return n+((m===1&&h!==11)?' noć':' noći');}, priceReq:'Osobna ponuda', from:'od', night:'/ noć', upto:'do',
        sugg:function(a){return 'Naš prijedlog: '+a;}, aptAny:'Svejedno – savjetujte me', aptAll:'Cijela kuća (do 16)',
        errDates:'Odaberite datum dolaska i odlaska (odlazak nakon dolaska).', errName:'Upišite svoje ime.', errMail:'Upišite valjanu adresu e-pošte.', errConsent:'Molimo potvrdite suglasnost za obradu podataka.',
-       okWa:'WhatsApp je otvoren s vašim upitom – samo pritisnite „Pošalji“.', okMail:'Vaš program za e-poštu otvoren je s upitom – pošaljite ga odande.',
+       okWa:'Vaš upit je pripremljen. WhatsApp se otvara u novom prozoru – samo pritisnite „Pošalji“.', okMail:'Vaš upit je pripremljen. Otvara se program za e-poštu – pošaljite ga odande.',
        capWarn:function(a,c){return 'Napomena: '+a+' prima do '+c+' gostiju – rado ćemo predložiti kombinaciju.';},
        subj:'Upit Haus Dalmatia', hello:'Poštovana Marijana,', intro:'zanima me boravak u kući Haus Dalmatia.',
        lArr:'Dolazak', lDep:'Odlazak', lGuests:'Gosti', lApt:'Apartman', lName:'Ime', lMail:'E-pošta', lMsg:'Poruka', bye:'Hvala i lijep pozdrav',
@@ -1818,7 +2053,8 @@ function fillSelects(){
     if (CAP[o.value] && o.value !== 'Ganzes Haus') o.textContent = o.value + ' (' + t.upto + ' ' + CAP[o.value] + ')';
   });
 }
-function suggestApt(n){ return n <= 2 ? 'Zora' : n <= 4 ? 'Maslina / Riva' : n <= 6 ? 'More' : T[curLang].aptAll; }
+// Vorschlag nach Gästezahl (Kapazitäten: More 6, Maslina 4, Riva 4, Zora 2)
+function suggestApt(n){ return n <= 2 ? 'Zora' : n <= 4 ? 'Maslina / Riva' : n <= 6 ? 'More' : n <= 10 ? 'More + Maslina / Riva' : n <= 14 ? 'More + Maslina + Riva' : T[curLang].aptAll; }
 function updateSummary(){
   var t = T[curLang], parts = [];
   var n = nightsBetween(fIn.value, fOut.value);
@@ -1851,6 +2087,7 @@ $('quickForm').addEventListener('submit', function(e){
   if (qOut.value) fOut.value = qOut.value;
   fAdults.value = Math.min(+qGuests.value || 2, 16); fKids.value = 0;
   updateSummary();
+  if (qIn.value && qOut.value){ var o = $('fMsgOut'); o.className = 'form-msg info'; o.textContent = T[curLang].taken; }
   $('anfrage').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
   setTimeout(function(){ (fIn.value ? $('fName') : fIn).focus({preventScroll:true}); }, 700);
 });
@@ -1865,13 +2102,23 @@ function collect(){
            source: location.hostname || 'hausdalmatia.com', sentAt: new Date().toISOString() };
 }
 function validate(d){
-  var t = T[curLang], err = '';
+  var t = T[curLang], err = '', first = null;
   document.querySelectorAll('.ff.err').forEach(function(f){ f.classList.remove('err'); });
-  function mark(id){ $(id).closest('.ff').classList.add('err'); }
-  if (!d.arrival || !d.departure || d.nights < 1){ err = t.errDates; mark('fIn'); mark('fOut'); }
-  else if (!d.name){ err = t.errName; mark('fName'); }
-  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)){ err = t.errMail; mark('fMail'); }
-  else if (!$('fConsent').checked){ err = t.errConsent; }
+  document.querySelectorAll('.ferr').forEach(function(s){ s.remove(); });
+  document.querySelectorAll('#inqForm [aria-invalid]').forEach(function(i){ i.removeAttribute('aria-invalid'); i.removeAttribute('aria-describedby'); });
+  // Fehler direkt am Feld anzeigen und vorlesen lassen
+  function mark(id, msg){
+    var el = $(id), ff = el.closest('.ff');
+    ff.classList.add('err'); el.setAttribute('aria-invalid', 'true');
+    if (msg){ var s = document.createElement('small'); s.className = 'ferr'; s.id = id + 'Err'; s.textContent = msg; ff.appendChild(s); el.setAttribute('aria-describedby', s.id); }
+    if (!first) first = el;
+    if (!err) err = msg;
+  }
+  if (!d.arrival || !d.departure || d.nights < 1){ mark('fIn', t.errDates); mark('fOut'); }
+  if (!d.name) mark('fName', t.errName);
+  var mailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email);
+  if ((sendVia === 'mail' || d.email) && !mailOk) mark('fMail', t.errMail);
+  if (first) first.focus();
   return err;
 }
 function composeText(d){
@@ -1882,8 +2129,8 @@ function composeText(d){
     t.lDep + ': ' + fmt(d.departure) + ' (' + t.nights(d.nights) + ')',
     t.lGuests + ': ' + t.adult(d.adults) + ', ' + t.kid(d.children),
     t.lApt + ': ' + apt,
-    t.lName + ': ' + d.name,
-    t.lMail + ': ' + d.email];
+    t.lName + ': ' + d.name];
+  if (d.email) lines.push(t.lMail + ': ' + d.email);
   if (d.message) lines.push(t.lMsg + ': ' + d.message);
   lines.push('', t.bye, d.name);
   return lines.join('\n');
@@ -1901,11 +2148,22 @@ $('inqForm').addEventListener('submit', function(e){
   var text = composeText(d);
   if (sendVia === 'mail'){
     location.href = 'mailto:' + HD.email + '?subject=' + encodeURIComponent(t.subj + ' · ' + fmt(d.arrival) + '–' + fmt(d.departure)) + '&body=' + encodeURIComponent(text);
-    out.textContent = t.okMail;
   } else {
     window.open(waUrl(text), '_blank', 'noopener');
-    out.textContent = t.okWa;
   }
+  // Rückfallebene, falls sich WhatsApp oder das E-Mail-Programm nicht öffnet
+  out.innerHTML = '';
+  var p1 = document.createElement('p'); p1.textContent = sendVia === 'mail' ? t.okMail : t.okWa;
+  var p2 = document.createElement('p'); p2.className = 'fb';
+  p2.innerHTML = '<span>' + t.fallback + '</span> <a href="mailto:' + HD.email + '">' + HD.email + '</a> · <a href="' + waUrl(text) + '" target="_blank" rel="noopener">WhatsApp</a> ';
+  var cb = document.createElement('button'); cb.type = 'button'; cb.className = 'copy-btn';
+  cb.innerHTML = '<svg class="ic"><use href="#i-copy"/></svg><span></span>'; cb.lastChild.textContent = t.copy;
+  cb.addEventListener('click', function(){
+    function done(){ cb.lastChild.textContent = t.copied; }
+    if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, function(){});
+    else { var ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); done(); } catch(x){} ta.remove(); }
+  });
+  p2.appendChild(cb); out.appendChild(p1); out.appendChild(p2);
   out.classList.add('ok');
 });
 /* =====================================================================
@@ -1915,10 +2173,20 @@ var nav = $('nav');
 function onScroll(){ nav.classList.toggle('scrolled', scrollY > 60); }
 addEventListener('scroll', onScroll, {passive:true}); onScroll();
 var burger = $('burger'), navLinks = $('navLinks');
-function setMenu(open){ navLinks.classList.toggle('open', open); burger.classList.toggle('open', open); burger.setAttribute('aria-expanded', open); document.body.style.overflow = open ? 'hidden' : ''; }
+function setMenu(open){
+  if (open === navLinks.classList.contains('open')) return;
+  navLinks.classList.toggle('open', open); burger.classList.toggle('open', open); burger.setAttribute('aria-expanded', open);
+  burger.setAttribute('aria-label', open ? T[curLang].menuClose : T[curLang].menuOpen);
+  document.body.style.overflow = open ? 'hidden' : ''; document.body.classList.toggle('menu-open', open);
+  ['main', 'footer', '.mbar', 'header.hero'].forEach(function(s){ var el = document.querySelector(s); if (el){ if (open) el.setAttribute('inert', ''); else el.removeAttribute('inert'); } });
+  if (open){ var f = navLinks.querySelector('a'); if (f) setTimeout(function(){ f.focus(); }, 60); } else burger.focus({preventScroll:true});
+}
 burger.addEventListener('click', function(){ setMenu(!navLinks.classList.contains('open')); });
-navLinks.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
-var lb = $('lb'), lbImg = $('lbImg'), lbList = [], lbPos = 0;
+navLinks.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ if (navLinks.classList.contains('open')){ navLinks.classList.remove('open'); burger.classList.remove('open'); burger.setAttribute('aria-expanded', false); burger.setAttribute('aria-label', T[curLang].menuOpen); document.body.style.overflow = ''; document.body.classList.remove('menu-open'); ['main', 'footer', '.mbar', 'header.hero'].forEach(function(s){ var el = document.querySelector(s); if (el) el.removeAttribute('inert'); }); } }); });
+// Tab bleibt im geöffneten Menü
+navLinks.addEventListener('keydown', function(e){ if (e.key !== 'Tab' || !navLinks.classList.contains('open')) return; var f = Array.prototype.slice.call(navLinks.querySelectorAll('a')).concat([burger]); var i = f.indexOf(document.activeElement); if (e.shiftKey && i === 0){ e.preventDefault(); burger.focus(); } else if (!e.shiftKey && i === f.length - 2){ e.preventDefault(); burger.focus(); } });
+burger.addEventListener('keydown', function(e){ if (e.key === 'Tab' && navLinks.classList.contains('open')){ e.preventDefault(); var f = navLinks.querySelectorAll('a'); (e.shiftKey ? f[f.length - 1] : f[0]).focus(); } });
+var lb = $('lb'), lbImg = $('lbImg'), lbList = [], lbPos = 0, lbOpener = null;
 function lbShow(n){
   lbPos = (n + lbList.length) % lbList.length;
   var img = lbList[lbPos];
@@ -1930,8 +2198,22 @@ function lbShow(n){
 function lbOpen(img){
   var inGal = !!img.closest('.gal-track');
   lbList = Array.prototype.slice.call(document.querySelectorAll(inGal ? '.gal-track img.zoom' : 'img.zoom:not(.gal-track img)'));
-  lbShow(lbList.indexOf(img)); lb.classList.add('open'); lb.querySelector('.lb-close').focus();
+  lbOpener = img; lbShow(lbList.indexOf(img)); lb.classList.add('open');
+  ['nav', 'main', 'footer', 'header.hero', '.mbar', '.wa-float', '.to-top'].forEach(function(s){ var el = document.querySelector(s); if (el) el.setAttribute('inert', ''); });
+  lb.querySelector('.lb-close').focus();
 }
+function lbClose(){
+  if (!lb.classList.contains('open')) return;
+  lb.classList.remove('open');
+  ['nav', 'main', 'footer', 'header.hero', '.mbar', '.wa-float', '.to-top'].forEach(function(s){ var el = document.querySelector(s); if (el) el.removeAttribute('inert'); });
+  if (lbOpener) lbOpener.focus({preventScroll:true});
+}
+// Tab bleibt in der Bildansicht
+lb.addEventListener('keydown', function(e){
+  if (e.key !== 'Tab') return;
+  var f = lb.querySelectorAll('button'), i = Array.prototype.indexOf.call(f, document.activeElement);
+  e.preventDefault(); f[(i + (e.shiftKey ? -1 : 1) + f.length) % f.length].focus();
+});
 document.querySelectorAll('img.zoom').forEach(function(img){
   img.setAttribute('tabindex', '0');
   img.setAttribute('role', 'button');
@@ -1942,7 +2224,7 @@ lb.addEventListener('click', function(e){
   if (e.target.closest('.lb-prev')) return lbShow(lbPos - 1);
   if (e.target.closest('.lb-next')) return lbShow(lbPos + 1);
   if (e.target === lbImg) return;
-  lb.classList.remove('open');
+  lbClose();
 });
 addEventListener('keydown', function(e){
   if (!lb.classList.contains('open')) return;
@@ -1968,14 +2250,21 @@ var galMoved = false;
   addEventListener('mouseup', function(){ if (!down) return; down = false; tr.classList.remove('drag'); setTimeout(function(){ galMoved = false; }, 0); });
   tr.addEventListener('mousemove', function(e){ if (!down) return; var dx = e.pageX - sx; if (Math.abs(dx) > 5) galMoved = true; tr.scrollLeft = sl - dx; });
 })();
-addEventListener('keydown', function(e){ if (e.key === 'Escape'){ lb.classList.remove('open'); setMenu(false); } });
+addEventListener('keydown', function(e){ if (e.key === 'Escape'){ if (lb.classList.contains('open')) lbClose(); else setMenu(false); } });
 /* =====================================================================
    TITELBILD: sanft überblendende Fotos
    ===================================================================== */
 (function(){
   var slides = Array.prototype.slice.call(document.querySelectorAll('.hero-bg'));
   var dots = document.querySelectorAll('#heroDots i'), cap = $('heroCap'), i = 0, timer;
+  var pb = $('heroPause'), paused = false;
   if (slides.length < 2 || matchMedia('(prefers-reduced-motion: reduce)').matches){ $('heroDots').hidden = true; return; }
+  pb.hidden = false; pb.setAttribute('aria-label', T[curLang].pause);
+  pb.addEventListener('click', function(){
+    paused = !paused;
+    pb.setAttribute('aria-label', paused ? T[curLang].play : T[curLang].pause);
+    pb.querySelector('use').setAttribute('href', paused ? '#i-play' : '#i-pause');
+  });
   function show(n){
     slides[i].classList.remove('is-on'); dots[i].classList.remove('on');
     i = n; slides[i].classList.add('is-on'); dots[i].classList.add('on');
@@ -1984,7 +2273,7 @@ addEventListener('keydown', function(e){ if (e.key === 'Escape'){ lb.classList.r
   function next(){ var n = (i + 1) % slides.length; if (slides[n].complete && slides[n].naturalWidth) show(n); }
   addEventListener('load', function(){
     slides.forEach(function(s){ if (s.dataset.src){ s.sizes = '100vw'; if (s.dataset.srcset) s.srcset = s.dataset.srcset; s.src = s.dataset.src; } });
-    timer = setInterval(function(){ if (!document.hidden) next(); }, 6500);
+    timer = setInterval(function(){ if (!document.hidden && !paused) next(); }, 6500);
   });
 })();
 /* =====================================================================
@@ -2085,6 +2374,27 @@ addEventListener('keydown', function(e){ if (e.key === 'Escape'){ lb.classList.r
       btn.classList.toggle('show', y > 700); fg.style.strokeDashoffset = (132 * (1 - (max > 0 ? y / max : 0))).toFixed(1);
     }); }, {passive:true});
   }
+})();
+/* =====================================================================
+   BEDIENUNG: Ausflüge aufklappen, Laufband anhalten, Beschriftungen
+   ===================================================================== */
+(function(){
+  var t = T[curLang], b = $('exMore'), g = $('xsGrid');
+  if (b && g){
+    var label = b.querySelector('span'), more = label.textContent;
+    b.addEventListener('click', function(){
+      var open = g.classList.toggle('open');
+      b.setAttribute('aria-expanded', open); label.textContent = open ? t.showLess : more;
+      if (!open) g.scrollIntoView({block: 'start'});
+    });
+  }
+  var mq = document.querySelector('.marquee');
+  if (mq) mq.addEventListener('click', function(){ mq.classList.toggle('paused'); });
+  burger.setAttribute('aria-label', t.menuOpen);
+  lb.setAttribute('aria-label', t.lbLabel);
+  lb.querySelector('.lb-close').setAttribute('aria-label', t.lbClose);
+  lb.querySelector('.lb-prev').setAttribute('aria-label', t.lbPrev);
+  lb.querySelector('.lb-next').setAttribute('aria-label', t.lbNext);
 })();
 </script>
 </body>
