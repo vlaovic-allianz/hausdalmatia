@@ -132,7 +132,14 @@ nav.scrolled .burger span{background:var(--sea)}
 
 /* ---------- Hero ---------- */
 .hero{position:relative;height:min(92svh,880px);min-height:620px;display:flex;align-items:flex-end;background:var(--sea-deep);overflow:hidden}
-.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-slides{position:absolute;inset:0}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.6s ease}
+.hero-bg.is-on{opacity:1;animation:drift 9s ease-out both}
+@keyframes drift{from{transform:scale(1.07)}to{transform:scale(1)}}
+.hero-cap{position:absolute;z-index:3;right:max(24px,env(safe-area-inset-right,0px));bottom:96px;display:flex;align-items:center;gap:14px;color:rgba(255,255,255,.85);font-size:13.5px;font-weight:500}
+.hero-cap .dots{display:flex;gap:6px}
+.hero-cap .dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.4);transition:background .4s,width .4s}
+.hero-cap .dots i.on{background:#fff;width:20px;border-radius:4px}
 .hero:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,40,52,.55) 0%,rgba(15,40,52,.12) 32%,rgba(15,40,52,.2) 55%,rgba(15,40,52,.78) 100%)}
 .hero-content{position:relative;z-index:2;color:#fff;width:100%;padding-bottom:128px;animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
 @keyframes rise{from{opacity:.35;transform:translateY(18px)}to{opacity:1;transform:none}}
@@ -400,6 +407,8 @@ footer a:hover{color:#fff}
   body{padding-bottom:70px}
   .hero{height:auto;min-height:calc(100svh - 70px)}
   .hero-content{padding-top:120px;padding-bottom:110px}
+  .hero-cap{bottom:78px}
+  #heroCap{display:none}
 }
 @media(max-width:640px){
   body{font-size:16.5px}
@@ -534,7 +543,13 @@ footer a:hover{color:#fff}
 
 <!-- ======= HERO ======= -->
 <header class="hero" id="top">
-  <img class="hero-bg" src="bilder/web/hero-meerblick-1600.webp" srcset="bilder/web/hero-meerblick-960.webp 960w, bilder/web/hero-meerblick-1600.webp 1600w, bilder/web/hero-meerblick-2200.webp 2200w" sizes="100vw" alt="" fetchpriority="high" width="2200" height="1467">
+  <div class="hero-slides" aria-hidden="true">
+    <img class="hero-bg is-on" src="bilder/web/hero-meerblick-1600.webp" srcset="bilder/web/hero-meerblick-960.webp 960w, bilder/web/hero-meerblick-1600.webp 1600w, bilder/web/hero-meerblick-2200.webp 2200w" sizes="100vw" alt="Meerblick vom Balkon" data-i18n-alt="alt.view" fetchpriority="high" width="2200" height="1467">
+    <img class="hero-bg" data-src="bilder/web/hero-pool-1600.webp" data-srcset="bilder/web/hero-pool-960.webp 960w, bilder/web/hero-pool-1600.webp 1600w" alt="Beheizter Pool vor dem Haus" data-i18n-alt="alt.pool1" width="1600" height="1067">
+    <img class="hero-bg" data-src="bilder/web/hero-abend-1600.webp" data-srcset="bilder/web/hero-abend-960.webp 960w, bilder/web/hero-abend-1600.webp 1600w" alt="Pool am Abend" data-i18n-alt="alt.pool2" width="1600" height="1067">
+    <img class="hero-bg" data-src="bilder/web/hero-strand-1600.webp" data-srcset="bilder/web/hero-strand-960.webp 960w, bilder/web/hero-strand-1600.webp 1600w" alt="Kieselstrand in Bibinje" data-i18n-alt="alt.plaza" width="1600" height="1067">
+  </div>
+  <div class="hero-cap" aria-hidden="true"><span id="heroCap">Meerblick vom Balkon</span><span class="dots" id="heroDots"><i class="on"></i><i></i><i></i><i></i></span></div>
   <div class="wrap hero-content">
     <a class="rating" href="#reviews"><b>9,9</b><span data-i18n="hero.rating">Außergewöhnlich · 44 Bewertungen auf Booking.com</span></a>
     <h1><span class="kicker" data-i18n="hero.eyebrow">Ferienapartments mit beheiztem Pool · Bibinje bei Zadar</span><span data-i18n="hero.h1">Wo die Adria <em>vor der Tür beginnt.</em></span></h1>
@@ -1058,7 +1073,7 @@ en:{
   'foot.copyright':'© 2026 Haus Dalmatia · All rights reserved','foot.credit':'Surroundings photos: Wikimedia Commons (CC0 / public domain)','foot.imp':'Imprint','foot.ds':'Privacy',
   'mbar.inq':'Enquire','mbar.call':'Call',
   'alt.more':'Apartment More – living area','alt.maslina':'Apartment Maslina – living area','alt.riva':'Apartment Riva – living area','alt.zora':'Studio Zora – living area',
-  'alt.pool1':'Heated pool in front of the house','alt.pool2':'Pool in the evening','alt.spielplatz':'Children’s playground in the garden','alt.plaza':'Pebble beach in Bibinje','alt.padobran':'Water sports off Bibinje',
+  'alt.view':'Sea view from the balcony','alt.pool1':'Heated pool in front of the house','alt.pool2':'Pool in the evening','alt.spielplatz':'Children’s playground in the garden','alt.plaza':'Pebble beach in Bibinje','alt.padobran':'Water sports off Bibinje',
   'alt.zadar':'Sunset in Zadar','alt.krka':'Skradinski Buk waterfalls in Krka National Park','alt.kornati':'Islands of Kornati National Park'
 },
 pl:{
@@ -1156,7 +1171,7 @@ pl:{
   'foot.copyright':'© 2026 Haus Dalmatia · Wszelkie prawa zastrzeżone','foot.credit':'Zdjęcia okolicy: Wikimedia Commons (CC0 / domena publiczna)','foot.imp':'Impressum','foot.ds':'Prywatność',
   'mbar.inq':'Zapytaj','mbar.call':'Zadzwoń',
   'alt.more':'Apartament More – salon','alt.maslina':'Apartament Maslina – salon','alt.riva':'Apartament Riva – salon','alt.zora':'Studio Zora – salon',
-  'alt.pool1':'Podgrzewany basen przed domem','alt.pool2':'Basen wieczorem','alt.spielplatz':'Plac zabaw w ogrodzie','alt.plaza':'Kamienista plaża w Bibinje','alt.padobran':'Sporty wodne przy Bibinje',
+  'alt.view':'Widok na morze z balkonu','alt.pool1':'Podgrzewany basen przed domem','alt.pool2':'Basen wieczorem','alt.spielplatz':'Plac zabaw w ogrodzie','alt.plaza':'Kamienista plaża w Bibinje','alt.padobran':'Sporty wodne przy Bibinje',
   'alt.zadar':'Zachód słońca w Zadarze','alt.krka':'Wodospady Skradinski Buk w Parku Narodowym Krka','alt.kornati':'Wyspy Parku Narodowego Kornati'
 },
 hr:{
@@ -1254,7 +1269,7 @@ hr:{
   'foot.copyright':'© 2026 Haus Dalmatia · Sva prava pridržana','foot.credit':'Fotografije okolice: Wikimedia Commons (CC0 / javno dobro)','foot.imp':'Impresum','foot.ds':'Privatnost',
   'mbar.inq':'Upit','mbar.call':'Nazovi',
   'alt.more':'Apartman More – dnevni boravak','alt.maslina':'Apartman Maslina – dnevni boravak','alt.riva':'Apartman Riva – dnevni boravak','alt.zora':'Studio Zora – dnevni boravak',
-  'alt.pool1':'Grijani bazen ispred kuće','alt.pool2':'Bazen navečer','alt.spielplatz':'Dječje igralište u vrtu','alt.plaza':'Šljunčana plaža u Bibinju','alt.padobran':'Vodeni sportovi kod Bibinja',
+  'alt.view':'Pogled na more s balkona','alt.pool1':'Grijani bazen ispred kuće','alt.pool2':'Bazen navečer','alt.spielplatz':'Dječje igralište u vrtu','alt.plaza':'Šljunčana plaža u Bibinju','alt.padobran':'Vodeni sportovi kod Bibinja',
   'alt.zadar':'Zalazak sunca u Zadru','alt.krka':'Slapovi Skradinski buk u nacionalnom parku Krka','alt.kornati':'Otoci nacionalnog parka Kornati'
 }
 };
@@ -1326,6 +1341,7 @@ function applyLang(lang){
   if (canon) canon.setAttribute('href', 'https://hausdalmatia.com/' + (lang === 'de' ? '' : '?lang=' + lang));
   curLang = lang;
   try { localStorage.setItem('hd-lang', lang); } catch(e){}
+  var on = document.querySelector('.hero-bg.is-on'), hc = $('heroCap'); if (on && hc) hc.textContent = on.alt;
   renderPrices(); fillSelects(); updateSummary();
 }
 /* =====================================================================
@@ -1495,6 +1511,24 @@ document.querySelectorAll('img.zoom').forEach(function(img){
 });
 lb.addEventListener('click', function(){ lb.classList.remove('open'); });
 addEventListener('keydown', function(e){ if (e.key === 'Escape'){ lb.classList.remove('open'); setMenu(false); } });
+/* =====================================================================
+   TITELBILD: sanft überblendende Fotos
+   ===================================================================== */
+(function(){
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.hero-bg'));
+  var dots = document.querySelectorAll('#heroDots i'), cap = $('heroCap'), i = 0, timer;
+  if (slides.length < 2 || matchMedia('(prefers-reduced-motion: reduce)').matches){ $('heroDots').hidden = true; return; }
+  function show(n){
+    slides[i].classList.remove('is-on'); dots[i].classList.remove('on');
+    i = n; slides[i].classList.add('is-on'); dots[i].classList.add('on');
+    cap.textContent = slides[i].alt;
+  }
+  function next(){ var n = (i + 1) % slides.length; if (slides[n].complete && slides[n].naturalWidth) show(n); }
+  addEventListener('load', function(){
+    slides.forEach(function(s){ if (s.dataset.src){ s.sizes = '100vw'; if (s.dataset.srcset) s.srcset = s.dataset.srcset; s.src = s.dataset.src; } });
+    timer = setInterval(function(){ if (!document.hidden) next(); }, 6500);
+  });
+})();
 /* =====================================================================
    START
    ===================================================================== */

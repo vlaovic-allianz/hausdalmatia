@@ -20,6 +20,16 @@ Neue Bilder: in `bilder/` ablegen, dann als WebP in 800 px und 1400 px Breite na
 Entwicklerkonsole prüfen. Ein einziger Syntaxfehler (z. B. ein doppeltes Komma) legt das gesamte
 Skript lahm – genau das war der Fehler der Version vom 07.10.2026.
 
+## Bilder
+
+- `bilder/hd/` enthält die aufgewerteten Master-Fotos (Hochskalierung: Meerblick und Apartment More mit Topaz,
+  alle übrigen kostenlos mit Real-ESRGAN, Open Source). Daraus werden die WebP-Dateien in `bilder/web/` erzeugt.
+- Die Original-Fotos auf der alten WordPress-Seite sind nur etwa 370–600 px breit. Für wirklich scharfe Bilder
+  bitte neue Fotos in voller Kameraauflösung aufnehmen (Handy reicht, querformatig, bei gutem Licht).
+- Umgebungsfotos (Zadar, Krka, Kornaten): Wikimedia Commons, CC0 bzw. gemeinfrei – geprüft am 21.10.2026.
+  Strand- und Wassersportfoto stammen von der eigenen Website; bitte bestätigen, dass sie selbst aufgenommen wurden.
+- Titelbild: vier Fotos blenden nacheinander über (`TITELBILD` im Skript). Reihenfolge = Reihenfolge der `hero-bg`-Bilder im HTML.
+
 ## Vor dem Livegang zu klären
 
 1. **Strandentfernung:** alte Website „300 m“, Booking.com ca. 700 m – bitte messen. Bis dahin steht „wenige Gehminuten“.
