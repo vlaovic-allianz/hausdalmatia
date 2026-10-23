@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://hausdalmatia.com/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hausdalmatia.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hausdalmatia.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://hausdalmatia.com/pl/"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://hausdalmatia.com/hr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hausdalmatia.com/"/>
+  </url>
+  <url>
+    <loc>https://hausdalmatia.com/en/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hausdalmatia.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hausdalmatia.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://hausdalmatia.com/pl/"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://hausdalmatia.com/hr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hausdalmatia.com/"/>
+  </url>
+  <url>
+    <loc>https://hausdalmatia.com/pl/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hausdalmatia.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hausdalmatia.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://hausdalmatia.com/pl/"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://hausdalmatia.com/hr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hausdalmatia.com/"/>
+  </url>
+  <url>
+    <loc>https://hausdalmatia.com/hr/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hausdalmatia.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hausdalmatia.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://hausdalmatia.com/pl/"/>
+    <xhtml:link rel="alternate" hreflang="hr" href="https://hausdalmatia.com/hr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hausdalmatia.com/"/>
+  </url>
+</urlset>

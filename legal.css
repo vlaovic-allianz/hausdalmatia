@@ -1,0 +1,23 @@
+:root{color-scheme:only light}
+@font-face{font-family:'Figtree';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/figtree-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Figtree';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/figtree-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Figtree';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/figtree-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Marcellus';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/marcellus-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Marcellus';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/marcellus-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+:root{--ivory:#fbfaf7;--ivory-deep:#e3ddd2;--ink:#1d2b33;--sea:#163a4b;--sea-deep:#0f2834;--gold:#b48f55;--gold-soft:#dcc59c;--stone:#56646b}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Figtree',system-ui,sans-serif;font-weight:400;color:var(--ink);background:var(--ivory);line-height:1.75;font-size:17px}
+a{color:var(--sea)}
+.top{background:var(--sea-deep);padding:22px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.logo{font-family:'Marcellus',Georgia,serif;font-size:20px;letter-spacing:.3em;text-transform:uppercase;color:#fff;text-decoration:none;line-height:1.2}
+.logo small{display:block;font-family:'Figtree',system-ui,sans-serif;font-size:9px;letter-spacing:.42em;color:var(--gold-soft);margin-top:3px}
+.back{color:var(--gold-soft);font-size:13px;letter-spacing:.12em;text-decoration:none}
+main{max-width:760px;margin:0 auto;padding:70px 24px 90px}
+h1{font-family:'Marcellus',Georgia,serif;font-weight:400;font-size:clamp(36px,5vw,52px);color:var(--sea);margin-bottom:24px;line-height:1.15}
+h2{font-family:'Marcellus',Georgia,serif;font-weight:400;font-size:26px;color:var(--sea);margin:42px 0 10px}
+p{margin-bottom:14px;color:#3d4c54}
+.lead{font-size:19px}
+.fill{background:#fbf1dc;border-bottom:1px dashed var(--gold);padding:0 4px}
+.stand{margin-top:48px;font-size:14px;color:var(--stone)}
+.bottom{border-top:1px solid var(--ivory-deep);padding:26px 24px;text-align:center;font-size:14px;color:var(--stone)}
+.bottom a{color:var(--stone)}
