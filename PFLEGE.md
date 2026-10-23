@@ -65,6 +65,21 @@ Skript lahm – genau das war der Fehler der Version vom 07.10.2026.
 - Beim Versand per WhatsApp ist die E-Mail-Adresse freiwillig; beim Versand per E-Mail Pflicht.
 - Nach dem Absenden erscheint eine Rückfallebene („Anfrage kopieren“, E-Mail-Adresse, WhatsApp-Link), falls sich keine App öffnet.
 
+## Farb-Look und HD-Bilder
+
+- `werkzeuge/look.py` gibt allen Fotos denselben „Haus-Dalmatia-Look“: warmes Adria-Licht, sanfte S-Kurve, Vibrance,
+  kühle Schatten und warme Lichter, feine Detailschärfe. Quelle sind die Master in `bilder/hd/` (bzw. die Original-Fotos),
+  Ergebnis sind die WebP-Dateien in `bilder/web/` (800/1400/1900 px, Meerblick bis 2200 px) und die Film-Master in `bilder/hd-look/`.
+  Neue Fotos: Master in `bilder/hd/` ablegen, in `DIRECT` eintragen, `python3 werkzeuge/look.py` ausführen.
+- Danach den Titelfilm neu erzeugen: `python3 werkzeuge/film.py quer` und `hoch` (MP4) sowie jeweils mit `webm`.
+- Die Hausfotos stammen von der alten Website und haben real nur ca. 470–700 px Detail. Echte 4K-Schärfe gibt es nur mit
+  Original-Aufnahmen in voller Auflösung – diese bitte in `bilder/original/` ablegen.
+
+## Bewegung (GSAP)
+
+`js/bewegung.js` (eigener Code) mit GSAP 3.13 + ScrollTrigger (`js/`, offizielles npm-Paket, „Standard no charge“-Lizenz):
+Titeltext gleitet beim Scrollen weg, Fotos mit Tiefenwirkung, Lichtschein auf den Karten „Direkt buchen“.
+
 ## Effekte
 
 **Luxus-Details** (Skriptblock `LUXUS`, CSS „LUXUS-DETAILS“):

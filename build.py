@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parent
 SITE = 'https://hausdalmatia.com/'
 LOCALES = {'de': 'de_DE', 'en': 'en_GB', 'pl': 'pl_PL', 'hr': 'hr_HR'}
-ASSET = re.compile(r'^(bilder/|fonts/|impressum\.html|datenschutz\.html|legal\.css)')
+ASSET = re.compile(r'^(bilder/|fonts/|js/|css/|impressum\.html|datenschutz\.html|legal\.css)')
 
 
 def load_i18n(src):

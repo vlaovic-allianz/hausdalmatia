@@ -1,0 +1,9 @@
+/* Haus Dalmatia · Bewegung mit GSAP – gilt nur, wenn js/bewegung.js läuft (html.hd-gsap) */
+/* Bildtiefe über eigene Eigenschaften scale/translate, damit der Hover-Zoom (transform) erhalten bleibt */
+.hd-gsap .apt-img img,.hd-gsap .xf-img img,.hd-gsap .mosaic .m img{scale:1.08;translate:0 var(--py,0%)}
+/* Lichtschein unter dem Mauszeiger */
+.hd-gsap .benefit{position:relative;overflow:hidden;isolation:isolate}
+.hd-gsap .benefit > *{position:relative;z-index:1}
+.hd-gsap .benefit:before{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;transition:opacity .45s;
+  background:radial-gradient(360px circle at var(--mx,50%) var(--my,50%),rgba(220,197,156,.16),transparent 62%)}
+.hd-gsap .benefit.lit:before{opacity:1}
